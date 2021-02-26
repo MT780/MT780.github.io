@@ -1,0 +1,25 @@
+.default_scheme {
+	background-color: #F5F5DC;
+	color: #000000;
+	font-family: "Source Code Pro", monospace;
+	margin: 0;
+}
+
+.header {
+	background-color: #9A907E;
+	color: #ffdf64;
+	padding: 1px;
+}
+
+.nav_bar {
+	background-color: #AFC97E;
+	padding: 10px;
+}
+
+.nav_bar a {
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 20px;
+	color: #2E7C9B;
+}
+
