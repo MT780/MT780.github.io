@@ -6,14 +6,15 @@
 }
 
 .header {
-	background-color: #9A907E;
-	color: #ffdf64;
+	background-color: #FFDF64;
+	color: #9A907E;
 	padding: 1px;
 }
 
 .nav_bar {
 	background-color: #AFC97E;
 	padding: 10px;
+	text-align: center;
 }
 
 .nav_bar a {
