@@ -6,6 +6,7 @@
 }
 
 .header {
+<<<<<<< HEAD
 	text-align: center;
 	padding-top: 50px;
 }
@@ -16,11 +17,17 @@ h1.header {
 	border-width: thick;
 	font-size: 60px;
 	display: inline;
+=======
+	background-color: #FFDF64;
+	color: #9A907E;
+	padding: 1px;
+>>>>>>> cddc9d3557ce45d1d6b715c531f8b789b2dbe822
 }
 
 .nav_bar {
 	background-color: #588157;
 	padding: 10px;
+	text-align: center;
 }
 
 .nav_bar a {
