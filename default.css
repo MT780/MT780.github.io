@@ -1,18 +1,25 @@
 .default_scheme {
-	background-color: #F5F5DC;
-	color: #000000;
+	background-color: #FFFFF0;
+	color: #5E4D46;
 	font-family: "Source Code Pro", monospace;
 	margin: 0;
 }
 
 .header {
-	background-color: #9A907E;
-	color: #ffdf64;
-	padding: 1px;
+	text-align: center;
+	padding-top: 50px;
+}
+
+h1.header { 
+	border-bottom-style: double;
+	border-color: #344E41;
+	border-width: thick;
+	font-size: 60px;
+	display: inline;
 }
 
 .nav_bar {
-	background-color: #AFC97E;
+	background-color: #588157;
 	padding: 10px;
 }
 
