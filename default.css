@@ -1,39 +1,49 @@
 .default_scheme {
-	background-color: #FFFFF0;
-	color: #5E4D46;
+	background-color: #CC7F36 /*84A98C*/;
+	color: #2F3E46;
 	font-family: "Source Code Pro", monospace;
 	margin: 0;
 }
 
 .header {
-<<<<<<< HEAD
 	text-align: center;
-	padding-top: 50px;
+	margin-top: 50px;
 }
 
-h1.header { 
+.header h1{ 
 	border-bottom-style: double;
-	border-color: #344E41;
-	border-width: thick;
+	border-color: #CAD2C5;
+	border-width: 10px;
 	font-size: 60px;
 	display: inline;
-=======
-	background-color: #FFDF64;
-	color: #9A907E;
-	padding: 1px;
->>>>>>> cddc9d3557ce45d1d6b715c531f8b789b2dbe822
 }
 
 .nav_bar {
-	background-color: #588157;
-	padding: 10px;
+	margin: 25px;
 	text-align: center;
 }
 
 .nav_bar a {
-	text-align: center;
 	text-decoration: none;
+	border-bottom-style: solid;
+	border-width: 3px;
+	border-color: #CAD2C5;
 	padding: 10px 20px;
-	color: #2E7C9B;
+	color: #2F3E46;
 }
 
+.nav_bar a:hover {
+	text-decoration: none;
+	background-color: #CAD2C5;
+}
+
+.body {
+	background-color: #CAD2C5;
+	margin: 0px 5px 10px;
+	padding: 5px 20px;
+	border-radius: 50px;
+}
+
+.body p {
+	text-indent: 25px;
+}
