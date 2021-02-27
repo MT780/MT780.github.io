@@ -1,0 +1,16 @@
+body {
+	background-color: #50723C;
+	color: #423E28;
+}
+
+h1 {
+	color: #ADEEE3;
+}
+
+a {
+	color: #ADEEE3;
+}
+
+a:hover {
+	color: #423E28;
+}
