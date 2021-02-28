@@ -1,18 +1,19 @@
 body {
-	background-color: #004974;
+	background-color: #6192B8 /*3374B1*/ /*004974*/;
+	color: #2F3E46;
 }
-
+/*
 h1 {
 	color: #CAD2C5;
 }
-
+*/
 a {
-	color: #CAD2C5;
+	color: #2F3E46 /*CAD2C5*/;
 }
-
+/*
 a:hover {
 	color: #000000;
-}
+}*/
 
 .special_content {
 	background-color: #CAD2C5;
