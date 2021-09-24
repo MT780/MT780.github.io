@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat&display=swap");
+@import url("header.css");
+
+body {
+   font-family: "Montserrat", sans-serif, Arial;
+   background-color: #BBF2E2;
+   color: #012326;
+   margin: 0%;
+}
+
+div {
+   padding-left: 1%;
+   padding-right: 1%;
+}

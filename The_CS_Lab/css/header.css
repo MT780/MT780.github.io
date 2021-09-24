@@ -1,0 +1,45 @@
+header {
+   font-family: "Major Mono Display", sans-serif, Arial;
+}
+header>h1 {
+   background-color: #012326;
+   color: #F25C5C;
+   margin: 0%;
+   text-indent: 10%;
+   padding-top: 3%;
+   font-size: 200%;
+}
+
+ul {
+   background-color: #F2E96B;
+   margin-top: 0%;
+   text-indent: 26%;
+   padding-top: 1%;
+   font-size: 150%;
+}
+
+li {
+   display: inline;
+}
+
+a:link {
+   text-decoration: none;
+   color: #012326;
+}
+
+a:hover {
+   text-decoration: none;
+   background-color: #F25C5C;
+   color: #012326;
+   padding-top: 1%;
+}
+
+a:active {
+   text-decoration: none;
+   color: #012326;
+}
+
+a:visited {
+   text-decoration: none;
+   color:#012326;
+}
