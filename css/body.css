@@ -12,3 +12,8 @@ div {
    padding-left: 1%;
    padding-right: 1%;
 }
+
+img.resize {
+   width: 63px;
+   height: 81px;
+}
