@@ -1,31 +1,42 @@
 header {
    font-family: "Major Mono Display", sans-serif, Arial;
+   /*Why does it work when I make it relative here, but not in the div???*/
+   position: relative;
 }
-header>h1 {
+
+div.title_logo {
    background-color: #012326;
    color: #F25C5C;
-   margin: 0%;
-   text-indent: 10%;
-   padding-top: 3%;
+   overflow: auto;
+   padding-top: 1%;
+   width: 100%;
+}
+
+h1.title {
+   float: left;
+   position: absolute;
+   left: 2%;
+   bottom: 4%;
    font-size: 200%;
 }
 
-/*img.align-right {
+img.logo {
+   display: block;
    float: right;
-   margin-right: 50%;
-   display: inline;
-}*/
+   position: relative;
+   right: 1%;
+}
 
 ul {
    background-color: #F2E96B;
-   margin-top: 0%;
-   text-indent: 26%;
-   padding-top: 1%;
+   margin: 0%;
    font-size: 150%;
 }
 
 li {
    display: inline;
+   position: relative;
+   left: 5%;
 }
 
 a:link {
@@ -37,7 +48,6 @@ a:hover {
    text-decoration: none;
    background-color: #F25C5C;
    color: #012326;
-   padding-top: 1%;
 }
 
 a:active {
