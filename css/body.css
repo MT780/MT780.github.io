@@ -7,3 +7,13 @@ body {
    color: #012326;
    margin: 0%;
 }
+
+p.intro {
+   font-weight: bold;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 1%;
+   border: medium solid #012326;
+   border-radius: 10px;
+   width: 75%;
+}
