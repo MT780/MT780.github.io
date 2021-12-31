@@ -1,0 +1,12 @@
+div.resume h1 {
+   text-align: center;
+}
+
+ul.contact_info {
+   text-align: center;
+}
+
+ul.contact_info li {
+   display: inline;
+   padding-right: 2%;
+}

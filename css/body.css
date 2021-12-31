@@ -1,11 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat&display=swap");
 @import url("header.css");
+@import url("portfolio.css");
 
 body {
    font-family: "Montserrat", sans-serif, Arial;
    background-color: #BBF2E2;
    color: #012326;
    margin: 0%;
+}
+
+h2 {
+   
+   border-bottom: 3px solid #012326;
+}
+h2, h3 {
+   padding-left: 1%;
+}
+
+p {
+   padding-left: 2%;
+   padding-right: 1%;
 }
 
 p.intro {
