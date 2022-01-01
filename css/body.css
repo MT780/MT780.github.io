@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat&display=swap");
 @import url("header.css");
 @import url("portfolio.css");
+@import url("documentation.css");
 
 body {
+   font-family: "Montserrat", sans-serif, Arial;
+   background-color: #BBF2E2;
+   color: #012326;
+   margin: 0%;
+}
+
+body.version2 {
    font-family: "Montserrat", sans-serif, Arial;
    background-color: #BBF2E2;
    color: #012326;
@@ -30,4 +38,17 @@ p.intro {
    border: medium solid #012326;
    border-radius: 10px;
    width: 75%;
+}
+
+a:link {
+   text-decoration: none;
+   color: #012326;
+}
+
+a:hover {
+   color: #F25C5C;
+}
+
+a:visited {
+   color: #012326;
 }
