@@ -12,15 +12,26 @@ body {
 
 body.version2 {
    font-family: "Montserrat", sans-serif, Arial;
-   background-color: #BBF2E2;
-   color: #012326;
+   background-color: #012326;
+   color: #BBF2E2;
    margin: 0%;
 }
 
+div.outline1 h1 {
+   text-align: center;
+}
+
+div.outline2 h1 {
+   font-family: "Major Mono Display", sans-serif, Arial;
+   text-align: center;
+   color: #F25C5C;
+   font-size: 400%;
+}
+
 h2 {
-   
    border-bottom: 3px solid #012326;
 }
+
 h2, h3 {
    padding-left: 1%;
 }
@@ -40,7 +51,16 @@ p.intro {
    width: 75%;
 }
 
-a:link {
+ul.contact_info {
+   text-align: center;
+}
+
+ul.contact_info li {
+   display: inline;
+   padding-right: 2%;
+}
+
+/*a:link {
    text-decoration: none;
    color: #012326;
 }
@@ -51,4 +71,4 @@ a:hover {
 
 a:visited {
    color: #012326;
-}
+}*/

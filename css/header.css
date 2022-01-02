@@ -33,6 +33,14 @@ header ul {
    font-size: 150%;
 }
 
+header ul.v2 {
+   background-color: #012326;
+   border-top:2px solid #F2E96B;
+   border-bottom: 2px solid #F2E96B;
+   margin: 0%;
+   font-size: 150%;
+}
+
 header li {
    display: inline;
    position: relative;
@@ -44,18 +52,30 @@ header a:link {
    color: #012326;
 }
 
+ul.v2 a:link {
+   text-decoration: none;
+   color: #F2E96B;
+}
+
 header a:hover {
    text-decoration: none;
    background-color: #F25C5C;
    color: #012326;
 }
 
-header a:active {
+ul.v2 a:hover {
+   text-decoration: none;
+   background-color: #012326;
+   /* So apparently it's a specificity issue, but I don't know how.*/
+   color: #BBF2E2 !important;
+}
+
+header :is(a:active, a:visited){
    text-decoration: none;
    color: #012326;
 }
 
-header a:visited {
+ul.v2 :is(a:active, a:visited) {
    text-decoration: none;
-   color:#012326;
+   color: #F2E96B;
 }
