@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 @import url("header.css");
 
 body {
@@ -47,6 +48,16 @@ p.intro {
    border: medium solid #012326;
    border-radius: 10px;
    width: 75%;
+}
+
+code {
+   font-family: "Ubuntu Mono", "Major Mono Display", sans-serif;
+   display: block;
+   background-color: #F25C5C;
+   color: #012326;
+   font-size: 125%;
+   border-radius: 5px;
+   padding: 1%;
 }
 
 ul.contact_info {

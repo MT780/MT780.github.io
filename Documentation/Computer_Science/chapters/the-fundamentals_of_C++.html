@@ -36,27 +36,74 @@
          <h1>The Fundamentals of C++</h1>
       </div>
       <div>
+         <h2>Setting Up Your Environment</h2>
          <p>
-            The following is the exposition to C++. To write your own code
+            If you already have your environment set up you may skip this
+            section, otherwise keep reading. To write your own code
             you will need a text editor, which like the name states, is an 
-            application that helps you edit text. Luckily, all OS (Operating 
+            application that helps the user edit text. Luckily, all OS (Operating 
             Systems) come with one! For example, Windows has Notepad, MacOS 
             has TextEdit, and Linux usually has Vim. Now I say "usually" 
             since there are multiple distributors that preload the Linux OS 
-            with there own choice of editor, but usually you will find Vim, 
+            with there own choice of editor, but you will most likely encounter Vim, 
             especially if you use Ubuntu. There are also third party editors 
             that come with extra features. The one I am currently using is 
-            Microsoft's Visual Studio Code.
+            Microsoft's Visual Studio Code. Make sure to find the one that is right for
+            you, otherwise you may look at the Intro to Operating Systems
+            lesson to learn how to use Vim. It's great to write your code somewhere, 
+            but like all programers, you need a place to run it. That's where the 
+            terminal comes in!
          </p>
          <p>
-            Talk about Terminal/Shells
+            The terminal is a nifty place that is the bridge between you
+            and your computer. It is actually more complicated than that,
+            but for now we will use this terminology to make it more
+            digestible. For those who are using the MacOS or the Linux OS,
+            you already have access to the terminal. As for Windows users
+            we technically have Windows Powershell. Instead of using PowerShell,
+            I highly recommend you to follow the installation and
+            configuration guide for WSL (Windows Subsystem for Linux) on Microsoft's 
+            site, along with downloading Windows Terminal and Ubuntu from
+            the Microsoft Store. What WSL does is partition a section of your computer
+            for Linux, and is extremely useful. We are almost close to creating our environment,
+            but we need one more thing.
          </p>
          <p>
-            Talk about Compilers
+            We have the terminal, now all we need are the tools
+            to interpret our code; this is where compilers come in. A
+            Compiler is software that takes our
+            commands on the terminal, checks to see if everything is
+            syntactically correct, and then runs our code. It is easy 
+            to install one within the terminal, and I will show you in 
+            the Intro to OS lecture.
          </p>
          <p>
-            Talk about IDEs
+            Remember how I said you need an editor and a terminal
+            to write code, well that's not entirely true. There are applications
+            known as IDEs (Integrated Development Environment)s that come with
+            the same equipment that editors and terminals have, and then some.
+            Almost all the big ones, like Microsoft's Visual Studio - not to
+            get confused with Microsoft's Visual Studio Code which is just 
+            the editor - are free to use, but come with a catch. Basically you
+            can only use them for studying purposes, and can't make a profit
+            unless you buy the business versions, while text editors and
+            terminals are open source (FREE!) and you can do whatever you please.
+            Companies like free, people like free, so it's best to follow
+            the practices. 
          </p>
+      </div>
+      <div>
+         <h1>The Basic Structure Of Any Code</h1>
+         <code>
+            #include &lt;iostream&gt; <br />
+            using namespace std; <br />
+            <br />
+            int main() <br />
+            {<br />
+               cout << "Hello World!" << endl;<br />
+               return 0;<br />
+            }<br />
+         </code>
       </div>
    </body>
 </html>
