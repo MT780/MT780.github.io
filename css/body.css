@@ -60,15 +60,27 @@ ul.contact_info li {
    padding-right: 2%;
 }
 
-/*a:link {
+div.table_of_content {
+   text-align: center;
+   list-style-position: inside;
+   font-size: 200%;
+}
+
+a:link, a:visited {
    text-decoration: none;
    color: #012326;
+}
+
+div.table_of_content :is(a:link, a:visited) {
+   text-decoration: none;
+   color: #F25C5C;
 }
 
 a:hover {
    color: #F25C5C;
 }
 
-a:visited {
-   color: #012326;
-}*/
+div.table_of_content a:hover {
+   color: #F25C5C;
+   border-bottom: 2px solid #F25C5C;
+}
