@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat&display=swap");
 @import url("header.css");
-@import url("portfolio.css");
-@import url("documentation.css");
 
 body {
    font-family: "Montserrat", sans-serif, Arial;
