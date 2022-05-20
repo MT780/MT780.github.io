@@ -37,6 +37,7 @@
       </div>
       <div>
          <h2>Setting Up Your Environment</h2>
+         <img src="../../../images/Type_of_editors_on_windows.png" class="small align_right" alt="" />
          <p>
             If you already have your environment set up you may skip this
             section, otherwise keep reading. To write your own code
@@ -51,30 +52,37 @@
             Microsoft's Visual Studio Code. Make sure to find the one that is right for
             you, otherwise you may look at the Intro to Operating Systems
             lesson to learn how to use Vim. It's great to write your code somewhere, 
-            but like all programers, you need a place to run it. That's where the 
+            but like all programs, you need to run it. That's where the 
             terminal comes in!
          </p>
+         
          <p>
             The terminal is a nifty place that is the bridge between you
-            and your computer. It is actually more complicated than that,
-            but for now we will use this terminology to make it more
-            digestible. For those who are using the MacOS or the Linux OS,
+            and your computer. It can take user input, run other programs,
+            manage files, display output, and much more. For those 
+            who are using the MacOS or the Linux OS,
             you already have access to the terminal. As for Windows users
-            we technically have Windows Powershell. Instead of using PowerShell,
-            I highly recommend you to follow the installation and
+            we have cmd (command-line) and Windows Powershell. Right now
+            would be a good time to point out the controversies behind the 
+            naming scheme and their definitions. There is a difference between,
+            terminal, shell, and command-line, though they act so similarly 
+            that most people often interchange the names. For the sake of uniformity,
+            we will use Linux terminal to write, compile, and run our programs.
+            I highly recommend Window users to follow the installation and
             configuration guide for WSL (Windows Subsystem for Linux) on Microsoft's 
-            site, along with downloading Windows Terminal and Ubuntu from
-            the Microsoft Store. What WSL does is partition a section of your computer
-            for Linux, and is extremely useful. We are almost close to creating our environment,
-            but we need one more thing.
+            site. What WSL does is partition a section of your computer
+            for Linux, and is extremely useful. If you don't want to
+            install WSL, you can still use cmd and Notepad to write,
+            compile, and run your code. We are almost close to 
+            creating our environment, but we need one more thing.
          </p>
+         <img src="../../../images/PowerShell_LinuxTerm_cmd.png" class="small align_left"/>
          <p>
             We have the terminal, now all we need are the tools
-            to interpret our code; this is where compilers come in. A
-            Compiler is software that takes our
-            commands on the terminal, checks to see if everything is
-            syntactically correct, and then runs our code. It is easy 
-            to install one within the terminal, and I will show you in 
+            to interpret our code. A
+            Compiler is software that translates our high-level language,
+            in this case C++, into low level language, which is machine 
+            code. It is easy to install one within the terminal, and I will show you in 
             the Intro to OS lecture.
          </p>
          <p>
@@ -91,29 +99,101 @@
             Companies like free, people like free, so it's best to follow
             the practices. 
          </p>
+         <img src="../../../images/Visual_Studio_pic.png" class="medium align_right"/>
       </div>
       <div>
          <h1>The Basic Structure Of Any Code</h1>
          <code>
-            #include &lt;iostream&gt; <br />
-            using namespace std; <br />
-            <br />
-            int main() <br />
-            {<br />
-               cout << "Hello World!" << endl;<br />
-               return 0;<br />
-            }<br />
+            1 #include &lt;iostream&gt; <br />
+            2 using namespace std; <br />
+            3 <br />
+            4 int main() <br />
+            5 {<br />
+            6 cout << "Hello World!"\n;<br />
+            7 return 0;<br />
+            8 }<br />
          </code>
+         <h2>Reading each line of code</h2>
          <p>
             C++ is case-sensitive, for example, the key
-            term return is different from the word Return. It also has
-            free-form layout, so space and line breaks are ignore during
-            compilation. 
+            term return is different from the word Return. It also has a
+            free-form layout, so space and line breaks are ignored during
+            compilation. I know what you're thinking, if that's the case
+            why can't I write, for example, "s t d" instead of "std" well
+            the compiler ignores the spaces not the key words. Still, you
+            can write each symbol, keyword, integer, and string - when we
+            mean string we're saying a collection of characters - on 
+            their own line and it will still compile like the code above. 
+            The code above consist of multiple statements that we will 
+            examine.
          </p>
-         <h2>#include iostream;</h2>
+         <h3>#include iostream;</h3>
          <p>
-            The #include directives tell the compiler to read the 
-            file within the left and right arrows,
+            On line 1 there is the #include directive, which tells the
+            compiler to look at the contents of the iostream file that is 
+            within the less-than sign and greater-than sign. You will learn more about 
+            the file in the string manipulation section.
+         </p>
+         <h3>using namespace std;</h3>
+         <p>
+            Line 2 tells the compiler to use the default name space to
+            identify terms such as cout; cout is part of the iostream 
+            file. As you will learn, you can 
+            override the functionality of key terms in your
+            program by calling a different name space, but since we're learning, 
+            we will use the standard.
+         </p>
+         <h3>int main()</h3>
+         <p>
+            Let's look at the following statement on line 4, main() is a
+            function for the program. Every program has a main function,
+            and can have additional functions. Notice the parenthesis,
+            here we can provide additional information that the 
+            function might need, though since this is a simple program we
+            can just leave it empty. You will learn more about this in
+            future sections. The keyword int is called a data type, this specific data 
+            type says that the main function can return an integer.
+         </p>
+         <h3>{ ... }</h3>
+         <p>
+            Both lines 5 and 8 help identify where the content of the
+            main function begins and ends.
+         </p>
+         <h3>cout << "Hello World!"\n;</h3>
+         <p>
+            In order to send output to the terminal, you need the
+            term cout, followed by the operator <<. The part "Hello 
+            World!" is considered a string and is defined by the
+            quotation marks "" surrounding the characters. This helps
+            the compiler distinguish code from plain text. The 
+            escape sequence \n is considered one character to the
+            compiler, and it tells the compiler to break and start on
+            a new line in the terminal. The semicolon is like a period,
+            and symbolizes the end of a statement. 
+         </p>
+         <h3>return 0;</h3>
+         <p>
+            Remember how I said the main function expects an integer to be returned,
+            well this is it. On line 7 the compiler says to return 0,
+            this means that there were no errors in the program and that it 
+            can be terminated. However, if there are errors, the terminal
+            will give you a long list of what seems like random words at first,
+            but it is actually important information for fixing your code.  
+         </p>
+      </div>
+      <div>
+         <h1>Errors</h1>
+         <p>
+            There are two types of errors in programming, syntax
+            errors and logical errors. The first type is usually
+            easy to fix because the compiler usually catches it
+            for you. This could happen when you accidentally
+            forget the semicolon or forget an operator. logical
+            errors on the other hand can be a little tricky.
+            It's when the program still runs, but it doesn't do 
+            what you ask it to. Compilers can't find these errors,
+            but a debugger can help you go step by step till you
+            find where you went wrong. 
          </p>
       </div>
    </body>

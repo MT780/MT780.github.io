@@ -27,8 +27,13 @@ div.outline2 h1 {
    font-size: 400%;
 }
 
+h1 {
+   margin-left: 1%;
+}
+
 h2 {
    border-bottom: 3px solid #012326;
+   margin-left: 2%;
 }
 
 h2, h3 {
@@ -38,6 +43,7 @@ h2, h3 {
 p {
    padding-left: 2%;
    padding-right: 1%;
+   margin-left: 1%;
 }
 
 p.intro {
@@ -92,4 +98,29 @@ a:hover {
 div.table_of_content a:hover {
    color: #F25C5C;
    border-bottom: 2px solid #F25C5C;
+}
+
+img.align_left{
+   float: left;
+   margin: 1%;
+}
+
+img.align_right {
+   float: right;
+   margin: 1%;
+}
+
+img.large{
+   max-width: 100%;
+   height: auto;
+}
+
+img.medium {
+   max-width:75%;
+   height: auto;
+}
+
+img.small {
+   max-width: 50%;
+   height: auto;
 }
