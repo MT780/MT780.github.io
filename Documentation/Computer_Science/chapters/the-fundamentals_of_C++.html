@@ -17,7 +17,7 @@
          type="text/css"
          rel="stylesheet"/>
    </head>
-   <body class="version2">
+   <body class="lecture">
       <header>
          <div>
             <h1> The CS L@b </h1>
@@ -33,12 +33,12 @@
          </nav>
       </header>
       <div>
-         <h1>The Fundamentals of C++</h1>
+         <h2>The Fundamentals of C++</h2>
       </div>
       <div>
-         <h2>Setting Up Your Environment</h2>
-         <img src="../../../images/Type_of_editors_on_windows.png" class="small align_right" alt="" />
+         <h3>Setting Up Your Environment</h3>
          <p>
+            <img src="../../../images/Type_of_editors_on_windows.png" class="small align_right" alt="" />
             If you already have your environment set up you may skip this
             section, otherwise keep reading. To write your own code
             you will need a text editor, which like the name states, is an 
@@ -57,6 +57,7 @@
          </p>
          
          <p>
+            <img src="../../../images/PowerShell_LinuxTerm_cmd.png" class="small align_left"/>
             The terminal is a nifty place that is the bridge between you
             and your computer. It can take user input, run other programs,
             manage files, display output, and much more. For those 
@@ -76,7 +77,7 @@
             compile, and run your code. We are almost close to 
             creating our environment, but we need one more thing.
          </p>
-         <img src="../../../images/PowerShell_LinuxTerm_cmd.png" class="small align_left"/>
+         
          <p>
             We have the terminal, now all we need are the tools
             to interpret our code. A
@@ -99,10 +100,12 @@
             Companies like free, people like free, so it's best to follow
             the practices. 
          </p>
-         <img src="../../../images/Visual_Studio_pic.png" class="medium align_right"/>
+         
+         <img src="../../../images/Visual_Studio_pic.png" class="small"/>
+         
       </div>
       <div>
-         <h1>The Basic Structure Of Any Code</h1>
+         <h2>The Basic Structure Of Any Code</h3>
          <code>
             1 #include &lt;iostream&gt; <br />
             2 using namespace std; <br />
@@ -113,7 +116,7 @@
             7 return 0;<br />
             8 }<br />
          </code>
-         <h2>Reading each line of code</h2>
+         <h3>Reading each line of code</h3>
          <p>
             C++ is case-sensitive, for example, the key
             term return is different from the word Return. It also has a
@@ -127,14 +130,14 @@
             The code above consist of multiple statements that we will 
             examine.
          </p>
-         <h3>#include iostream;</h3>
+         <h4>#include iostream;</h4>
          <p>
             On line 1 there is the #include directive, which tells the
             compiler to look at the contents of the iostream file that is 
             within the less-than sign and greater-than sign. You will learn more about 
             the file in the string manipulation section.
          </p>
-         <h3>using namespace std;</h3>
+         <h4>using namespace std;</h4>
          <p>
             Line 2 tells the compiler to use the default name space to
             identify terms such as cout; cout is part of the iostream 
@@ -143,7 +146,7 @@
             program by calling a different name space, but since we're learning, 
             we will use the standard.
          </p>
-         <h3>int main()</h3>
+         <h4>int main()</h4>
          <p>
             Let's look at the following statement on line 4, main() is a
             function for the program. Every program has a main function,
@@ -154,12 +157,12 @@
             future sections. The keyword int is called a data type, this specific data 
             type says that the main function can return an integer.
          </p>
-         <h3>{ ... }</h3>
+         <h4>{ ... }</h4>
          <p>
             Both lines 5 and 8 help identify where the content of the
             main function begins and ends.
          </p>
-         <h3>cout << "Hello World!"\n;</h3>
+         <h4>cout << "Hello World!"\n;</h4>
          <p>
             In order to send output to the terminal, you need the
             term cout, followed by the operator <<. The part "Hello 
@@ -171,7 +174,7 @@
             a new line in the terminal. The semicolon is like a period,
             and symbolizes the end of a statement. 
          </p>
-         <h3>return 0;</h3>
+         <h4>return 0;</h4>
          <p>
             Remember how I said the main function expects an integer to be returned,
             well this is it. On line 7 the compiler says to return 0,
@@ -182,7 +185,7 @@
          </p>
       </div>
       <div>
-         <h1>Errors</h1>
+         <h2>Errors</h2>
          <p>
             There are two types of errors in programming, syntax
             errors and logical errors. The first type is usually

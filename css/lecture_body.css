@@ -1,0 +1,35 @@
+/*
+  The body of the lecture had to be inverted and unique
+  from the main website
+  @background-color unique background to decrease eye strain
+  @color was inverted to complement color
+*/
+body.lecture {
+    background-color: #012326;
+    color: #BBF2E2;
+ }
+
+ body.lecture h2 {
+    margin-left: 1%;
+ }
+
+ /*
+ Special to lectures, this is the layout for code samples
+    @font-family specifically chosen to mimic terminal font
+    @display treats code sample as block rather inline
+    @background-color edgy color
+    @color compliments edgy color
+    @font-size don't know why it's at 125%
+    @border-radius to make corners round
+    @padding 1% so it doesn't touch border
+*/
+ code {
+    font-family: "Ubuntu Mono", "Major Mono Display", sans-serif;
+    display: block;
+    background-color: #F25C5C;
+    color: #012326;
+    font-size: 125%;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 1%;
+ }

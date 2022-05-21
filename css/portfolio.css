@@ -1,0 +1,21 @@
+/*Special header that centers the name and links of portfolio
+  @text-align centers name*/
+
+div.name_n_links {
+    text-align: center;
+ }
+
+h n3.port_ {
+    border-bottom: 3px solid #012326;
+    margin-left: 0%;
+ }
+ 
+/*
+Turns list from block to inline to get rid of automatic dot notes thingy
+   @display gets rid of dot notes
+   @padding-right makes sure give space between link images
+*/
+ul.contact_info li {
+    display: inline;
+    padding-right: 2%;
+ }

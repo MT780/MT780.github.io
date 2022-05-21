@@ -1,7 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 @import url("header.css");
+@import url("portfolio.css");
+@import url("lecture_body.css");
 
+/*The main template for the whole website
+   @font-family from Google fonts that utilize
+   monospace design which helps with sample code
+   and helps with programming aesthetic
+   @background-color is just my favorite color
+   @color was something to contrast with background
+   @margin was placed because the header misbehaves
+   and doesn't go all the way across
+   */
 body {
    font-family: "Montserrat", sans-serif, Arial;
    background-color: #BBF2E2;
@@ -9,43 +20,42 @@ body {
    margin: 0%;
 }
 
-body.version2 {
-   font-family: "Montserrat", sans-serif, Arial;
-   background-color: #012326;
-   color: #BBF2E2;
-   margin: 0%;
-}
-
-div.outline1 h1 {
-   text-align: center;
-}
-
-div.outline2 h1 {
+/*For Intro_to_C++ page, centers and changes main title
+   @font-family changes characters to fancy one
+   @text-align centers title
+   @color change titles color to red
+   @font-size increases it by a lot*/
+div.outline2 h2 {
    font-family: "Major Mono Display", sans-serif, Arial;
    text-align: center;
    color: #F25C5C;
    font-size: 400%;
 }
 
-h1 {
-   margin-left: 1%;
-}
-
-h2 {
-   border-bottom: 3px solid #012326;
-   margin-left: 2%;
-}
-
-h2, h3 {
-   padding-left: 1%;
-}
-
+/*The general layout for text
+  @font-size must increase readability
+  @margin-left set to 1% since body's margin set to 0%
+  @margin-right set to 1% since body's margin set to 0%
+  @line-height set to 1.75 to increase readability, note,
+   word space should never be bigger than line height
+  @word-spacing is there to help increase readability*/
 p {
-   padding-left: 2%;
-   padding-right: 1%;
+   font-size: 150%;
    margin-left: 1%;
+   margin-right: 1%;
+   line-height: 1.75em;
+   word-spacing: .15em;
 }
 
+/*A unique paragraph layout used for the Home page
+  @font-weight is bold to increase readability
+  @margin-left helps center the paragraph
+  @margin-right helps center the paragraph
+  @padding is set to 1 to space the paragraph from boarder
+  @border set's it to be a blue box
+  @border-radius rounds the curves to 10px
+  @width makes paragraph appear to be floating center
+   without taking too much space*/
 p.intro {
    font-weight: bold;
    margin-left: auto;
@@ -54,25 +64,6 @@ p.intro {
    border: medium solid #012326;
    border-radius: 10px;
    width: 75%;
-}
-
-code {
-   font-family: "Ubuntu Mono", "Major Mono Display", sans-serif;
-   display: block;
-   background-color: #F25C5C;
-   color: #012326;
-   font-size: 125%;
-   border-radius: 5px;
-   padding: 1%;
-}
-
-ul.contact_info {
-   text-align: center;
-}
-
-ul.contact_info li {
-   display: inline;
-   padding-right: 2%;
 }
 
 div.table_of_content {
@@ -102,12 +93,12 @@ div.table_of_content a:hover {
 
 img.align_left{
    float: left;
-   margin: 1%;
+   margin-right: 3%;
 }
 
 img.align_right {
    float: right;
-   margin: 1%;
+   margin-left: 3%;
 }
 
 img.large{
