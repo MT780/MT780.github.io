@@ -1,13 +1,17 @@
-/*Special header that centers the name and links of portfolio
+/*Special header that centers tiles
   @text-align centers name*/
-
-div.name_n_links {
+div.center {
     text-align: center;
  }
 
-h n3.port_ {
+ /*Special header that underline the word for h2 used in portfolio
+   @border-bottom sets the thickness type and color
+   @padding-left shifts title a little to the right so it doesn't
+    touch left screen
+*/
+.title_underline h2{
     border-bottom: 3px solid #012326;
-    margin-left: 0%;
+    padding-left: .5%;
  }
  
 /*
@@ -19,3 +23,5 @@ ul.contact_info li {
     display: inline;
     padding-right: 2%;
  }
+
+ 

@@ -1,4 +1,14 @@
 /*
+Used for table of content list
+   @list-style-position positions the marker center with chapters
+   @font-size is special size to increase readability
+*/
+div.table_of_content {
+   list-style-position: inside;
+   font-size: 200%;
+}
+
+/*
   The body of the lecture had to be inverted and unique
   from the main website
   @background-color unique background to decrease eye strain
@@ -9,10 +19,13 @@ body.lecture {
     color: #BBF2E2;
  }
 
- body.lecture h2 {
-    margin-left: 1%;
+ div.actual_body {
+    margin: .5%;
  }
 
+ .actual_body img {
+    padding: .5%;
+ }
  /*
  Special to lectures, this is the layout for code samples
     @font-family specifically chosen to mimic terminal font
