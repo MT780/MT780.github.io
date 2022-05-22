@@ -36,7 +36,7 @@ body.lecture {
     @border-radius to make corners round
     @padding 1% so it doesn't touch border
 */
- code {
+ code.example {
     font-family: "Ubuntu Mono", "Major Mono Display", sans-serif;
     display: block;
     background-color: #F25C5C;
@@ -44,5 +44,16 @@ body.lecture {
     font-size: 125%;
     border-radius: 10px;
     padding: 1%;
-    margin: 1%;
+    margin-top: 1%;
+ }
+
+ code.syntax {
+   font-family: "Ubuntu Mono", "Major Mono Display", sans-serif;
+   display: block;
+   background-color: #BBF2E2;
+   color: #012326;
+   font-size: 125%;
+   border-radius: 10px;
+   padding: 1%;
+   margin-top: 1%;
  }
