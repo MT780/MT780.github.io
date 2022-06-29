@@ -34,10 +34,10 @@
       </header>
       <div class="actual_body">
       <div>
-         <h2>The Fundamentals of C++</h2>
+         <h1>The Fundamentals of C++</h1>
       </div>
       <div>
-         <h3>Setting Up Your Environment</h3>
+         <h2>Setting Up Your Environment</h2>
          <p>
             <img src="../../../images/Type_of_editors_on_windows.png" class="medium align_right" alt="" />
             If you already have your environment set up you may skip this
@@ -88,7 +88,7 @@
             the Intro to OS lecture.
          </p>
          
-         <p class="last_pic">
+         <p>
             <img src="../../../images/Visual_Studio_pic.png" class="medium align_right"/>
             Remember how I said you need an editor and a terminal
             to write code, well that's not entirely true. There are applications
@@ -103,12 +103,9 @@
             Companies like free, people like free, so it's best to follow
             the practices. 
          </p>
-         
-         
-         
       </div>
       <div>
-         <h2>The Basic Structure Of Any Code</h3>
+         <h2>The Basic Structure Of Any Code</h2>
          <code class="example">
             1 #include &lt;iostream&gt; <br />
             2 using namespace std; <br />
@@ -203,10 +200,128 @@
          </p>
       </div>
       <div>
+         <h2>Before Going Into Programming</h2>
+         <p>
+            You probably want to run your first program right away. 
+            That's great, and I want you to keep that ambition, but 
+            there are some prerequisites that you should complete 
+            first before diving in. Not to say that you can't program 
+            right away, humans are smart and can adapt, but it helps 
+            when you know the fundamentals. Overall, this section 
+            gives you a couple of pointers on where to start, and 
+            also a quick guide towards writing, compiling, and 
+            running your first program.
+         </p>
+         <p>
+            First you must know how to navigate, use, and 
+            troubleshoot the computer. If you're a complete 
+            beginner when it comes to computers, then I highly
+             recommend getting a book that's for the CompTIA A+ exam. 
+             It teaches you about Windows, Linux, and MAC operating 
+             systems - basically IT stuff that doesn't involve 
+             programming. It also teaches you about the system's 
+             hardware and how to troubleshoot. It might take a while 
+             to read and comprehend, but it's well worth the time. 
+             Nothing is more embarrassing than a Computer Scientist 
+             who doesn't know how to update their drivers. Before 
+             looking for books, first visit the CompTIA website. 
+             There you can find the recent version for the CompTIA A+ 
+             exam - currently we're on tests 1001 and 1002, with 1101 
+             and 1102 on the horizon. Notice how the test is split up 
+             into two (one's for troubleshooting software and the 
+             other is hardware), don't get discouraged it's basically 
+             a two in one situation. After that you can go to Amazon 
+             or some other retailer that provides a book. If you 
+             already know how to use your system, the next thing is 
+             the terminal.
+         </p>
+         <p>
+            The terminal appears to be a simple tool at first glance. 
+            Might be an empty window with no text, might show some 
+            text explaining that you need to update. Whatever the case 
+            is, it's more complicated under the hood, and mastering it 
+            is the best thing you can ever do. I highly recommend you 
+            reading the Operating Systems section, but once again, you 
+            can probably get by just knowing the fundamentals. Besides 
+            terminals, a computer scientist should have a solid 
+            foundation in math. 
+         </p>
+         <p>
+            An alarming amount of programming websites and YouTube 
+            tutorials don't show this, but you need to have a solid 
+            foundation in math. Anyone can program, but a Computer 
+            Scientist knows about time complexities and Big-O notation, 
+            all of which involves mathematics. You can probably get away 
+            with a couple of sections in these lectures without knowing 
+            too much, but you need at least a solid foundation in 
+            calculus. Not to mention that you also need to learn about 
+            discreet mathematics and combinatorics for the more 
+            complicated situations. Luckily all of this will be 
+            mentioned in the math section of this website. You're 
+            probably tired of hearing the word math, good thing we're 
+            finally going to program. 
+         </p>
+      </div>
+      <div>
          <h2>Writing, Compiling, and running Code</h2>
          <p>
-            
+            In this section I assume that you have your terminal 
+            opened and are ready for the next instructions. If you seem 
+            to be having difficulties at any point, please refer to the 
+            internet since I cannot anticipate every issue. For now, we 
+            will be going over basic commands, updating the terminal, 
+            installing the compiler by getting the build-essential 
+            package, creating a directory, 
+            creating a C++ file, compiling that file, and running that 
+            file in that order. 
          </p>
+         <h3>Commands</h3>
+         <p>
+            Before writing our program it's essential to know how to 
+            navigate our terminal. In this section we will be going 
+            over fundamental commands. If you wish to know more visit
+            the operating systems section, or research it online.
+         </p>
+
+         <h4>pwd Command</h4>
+         <code class="syntax"> 
+            ~$ pwd
+         </code>
+         <p>
+            <img src="../../../images/pwd_cmd.png" class="small"/> <br /> 
+            Notifies you which directory you're currently on.
+         </p>
+
+         <h4>ls Command</h4>
+         <code class="syntax">
+            ~$ ls
+         </code>
+         <p>
+            <img src="../../../images/ls_cmd.png" class="small" /> <br />
+            Provides a preview of the subdirectories in the current directory you're in.
+         </p>
+
+         <h4>cd Command</h4>
+         <code class="syntax">
+            ~$ cd directory_name <br />
+            ~$ cd .. <br />
+            ~$ cd <br />
+         </code>
+         <p>
+            <img src="../../../images/cd_cmd.png" class="small" /> <br />
+            Helps navigate the directory. Can require additional
+            input, for instance, if you want to move into a subdirectory 
+            then you type and enter the subdirectory's name after the cd
+            command. If you want to go back one directory you simply type two periods 
+            after the cd command. Note, if you know the location of a 
+            directory you want to visit, then chain together a mixture
+            of the two periods (..) and directory names with 
+            multiple forward slashes (/) between each one. Looking at the
+            example, notice the location depicted
+            in the green section, or notice the subdirectories
+            when we enter the command ls.
+         </p>
+
       </div>
       </div>
    </body>
