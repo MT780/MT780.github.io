@@ -53,7 +53,7 @@
             Microsoft's Visual Studio Code. Make sure to find the one that is right for
             you, otherwise you may look at the Intro to Operating Systems
             lesson to learn how to use Vim. It's great to write your code somewhere, 
-            but like all programs, you need to run it. That's where the 
+            but like all programs, you need a place to run it. That's where the 
             terminal comes in!
          </p>
          
@@ -106,7 +106,7 @@
       </div>
       <div>
          <h2>The Basic Structure Of Any Code</h2>
-         <code class="example">
+         <code class="example" id="HelloWorld">
             1 #include &lt;iostream&gt; <br />
             2 using namespace std; <br />
             3 <br />
@@ -130,7 +130,7 @@
             The code above consist of multiple statements that we will 
             examine.
          </p>
-         <h4>#include iostream;</h4>
+         <h4>#include &lt;iostream&gt;</h4>
          <p>
             On line 1 there is the #include directive, which tells the
             compiler to look at the contents of the iostream file that is 
@@ -160,12 +160,14 @@
          <h4>{ ... }</h4>
          <p>
             Both lines 5 and 8 help identify where the content of the
-            main function begins and ends.
+            main function begins and ends. This is one of the many locations 
+            where you will put your actual program in, basically where your 
+            code goes.
          </p>
-         <h4>cout << "Hello World!"\n;</h4>
+         <h4>cout &lt;&lt; "Hello World!"\n;</h4>
          <p>
             In order to send output to the terminal, you need the
-            term cout, followed by the operator <<. The part "Hello 
+            term cout, followed by the two less-than-arrows operator <<. The part "Hello 
             World!" is considered a string and is defined by the
             quotation marks "" surrounding the characters. This helps
             the compiler distinguish code from plain text. The 
@@ -191,7 +193,7 @@
             errors and logical errors. The first type is usually
             easy to fix because the compiler usually catches it
             for you. This could happen when you accidentally
-            forget the semicolon or forget an operator. logical
+            forget the semicolon or forget an operator. Logical
             errors on the other hand can be a little tricky.
             It's when the program still runs, but it doesn't do 
             what you ask it to. Compilers can't find these errors,
@@ -208,9 +210,8 @@
             first before diving in. Not to say that you can't program 
             right away, humans are smart and can adapt, but it helps 
             when you know the fundamentals. Overall, this section 
-            gives you a couple of pointers on where to start, and 
-            also a quick guide towards writing, compiling, and 
-            running your first program.
+            talks about knowing your system, knowing the terminal,
+            and knowing math.
          </p>
          <p>
             First you must know how to navigate, use, and 
@@ -230,8 +231,8 @@
              and 1102 on the horizon. Notice how the test is split up 
              into two (one's for troubleshooting software and the 
              other is hardware), don't get discouraged it's basically 
-             a two in one situation. After that you can go to Amazon 
-             or some other retailer that provides a book. If you 
+             a two in one situation. After that you can go to a retailer 
+             that provides the book. If you 
              already know how to use your system, the next thing is 
              the terminal.
          </p>
@@ -248,12 +249,12 @@
          </p>
          <p>
             An alarming amount of programming websites and YouTube 
-            tutorials don't show this, but you need to have a solid 
-            foundation in math. Anyone can program, but a Computer 
+            tutorials don't show this, but you need to have a background
+            in math. Anyone can program, but a Computer 
             Scientist knows about time complexities and Big-O notation, 
             all of which involves mathematics. You can probably get away 
             with a couple of sections in these lectures without knowing 
-            too much, but you need at least a solid foundation in 
+            too much, but you need at least a good understanding in 
             calculus. Not to mention that you also need to learn about 
             discreet mathematics and combinatorics for the more 
             complicated situations. Luckily all of this will be 
@@ -263,17 +264,14 @@
          </p>
       </div>
       <div>
-         <h2>Writing, Compiling, and running Code</h2>
+         <h2>Preparing and Understanding Your Environment</h2>
          <p>
             In this section I assume that you have your terminal 
             opened and are ready for the next instructions. If you seem 
             to be having difficulties at any point, please refer to the 
             internet since I cannot anticipate every issue. For now, we 
             will be going over basic commands, updating the terminal, 
-            installing the compiler by getting the build-essential 
-            package, creating a directory, 
-            creating a C++ file, compiling that file, and running that 
-            file in that order. 
+            and installing the compiler. 
          </p>
          <h3>Commands</h3>
          <p>
@@ -313,15 +311,237 @@
             input, for instance, if you want to move into a subdirectory 
             then you type and enter the subdirectory's name after the cd
             command. If you want to go back one directory you simply type two periods 
-            after the cd command. Note, if you know the location of a 
-            directory you want to visit, then chain together a mixture
-            of the two periods (..) and directory names with 
-            multiple forward slashes (/) between each one. Looking at the
+            after the cd command. Rather than using cd all the time, if you know the location of a 
+            directory you want to visit, you can create a path by adding
+            forward slashes (/) to each step. Looking at the
             example, notice the location depicted
             in the green section, or notice the subdirectories
             when we enter the command ls.
          </p>
 
+         <h4>mkdir Command</h4>
+         <code class="syntax">
+            ~$ mkdir directory_name
+         </code>
+         <p>
+            <img src="../../../images/mkdir_cmd.png" class="small" /> <br />
+            Allows you to create a subdirectory in the current directory you're in.
+         </p>
+
+         <h4>vim Command</h4>
+         <code class="syntax">
+            ~$ vim file_name.cpp
+         </code>
+         <p>
+            <img src="../../../images/vim_cmd.png" class="small" /> <br />
+            <img src="../../../images/cpp_file_instance.png" class="small align_right" />
+            Allows you to create and access the C++ file to edit.
+            You need to learn additional modes and commands to edit, manipulate,
+            save, and more. If you start typing right away, you might
+            notice a letter or two missing, that's because we're not
+            initially in insert mode. If you're not in 
+            insert mode  shown at bottom of the window - simply press 
+            the character (i). To quit any of the several modes, simply
+            press the escape key. You might forget you're not in insert
+            mode and will try to delete characters by hitting backspace,
+            if you do so the cursor will simple move to the left instead of
+            deleting the letters. To fix this just hit the (i) key again.
+         </p>
+         <p>
+            <img src="../../../images/set_nmbr_cmd.png" class="small align_left"/>
+            Vim comes with its own special commands that you can enter 
+            in the command line located at the bottom of the window. Before typing a 
+            command, exit out of any mode you're currently on.
+            Once out of the modes, start your command with a colon (:). If 
+            <img src="../../../images/override.png" class="small align_right"/> 
+            you wish to know more simply enter ":help" on the command line to get more information,
+            though we will go over a few of the basics. If you want line
+            numbering all you have to do is enter ":set number" in the command line, really useful.
+            If you want to save your file all you have to do is type ":w" in the 
+            command line and press enter. If you want to quit use the following 
+            command ":q". Note, sometime you can't quit before saving, so if you 
+            want to force quit, all you have to do is enter ":q!". Warning, all
+            progress will be loss, so the better option is to use the save and quit 
+            command ":wq". 
+         </p>
+         <p>   
+            <img src="../../../images/saved_file.png" class="small align_left"/>
+            For context, VIM is an open source editor. It comes with some distributors
+            of linux like Ubuntu, but if you don't have it the terminal will complain 
+            and suggest installing it using whatever command it gives you. Once again, 
+            you can use any editor you like, but for educational purposes we will be 
+            using VIM for the time being. 
+         </p> 
+
+         <h4>rmdir Command</h4>
+         <code class="syntax">
+            ~$ rmdir directory_name
+         </code>
+         <p>
+            <img src="../../../images/mkdir_cmd.png" class="small" /> <br />
+            Allows you to remove a subdirectory in the current directory you're in. Warning,
+            only allows you to remove empty directories. 
+         </p>
+
+         <h4>rm Command</h4>
+         <code class="syntax">
+            ~$ rm file_name
+         </code>
+         <p>
+            <img src="../../../images/rm_cmd.png" class="small" /> <br />
+            Allows you to remove files.
+         </p>
+
+         <h4>sudo Command</h4>
+         <code class="syntax">
+            ~$ sudo ...
+         </code>
+         <p>
+            <img src="../../../images/sudo_cmd.png" class="small" /> <br />
+            Gives you administrative access over operations. Note, it
+            will often ask you for the password before doing its task, so
+            make sure you remember the password. With this in 
+            mind, we can move on to the next section. 
+         </p>
+
+
+         <h3>Updating</h3>
+         <p>
+            To avoid any issues when installing the compiler, it's always a good 
+            idea to check for updates. To do this there are a set of instructions 
+            you should follow. First, we must update the package list by entering
+            the following command:
+         </p>
+         <code class="example">
+            ~$ sudo apt-get update
+         </code>
+         <p>
+            The command "apt-get update" is part of APT (Advanced Package Tool)
+            that helps manage software. In this case, we're trying to get the 
+            updates so we can then upgrade and receive the proper packages. 
+            Packages is just another way to say applications. To upgrade, 
+            type the following in the terminal:
+         </p>
+         <code class="example">
+            ~$ sudo apt-get upgrade
+         </code>
+         <p>
+            We're almost done, but we still need to make sure we upgrade critical
+            packages while it cleans up unnecessary packages. Type the following:
+         </p>
+         <code class="example">
+            ~$ sudo apt-get dist-upgrade
+         </code>
+         <p>
+            If successful everything should be up to date and we can continue
+            towards installing the compiler for our task.
+         </p>
+
+         <h3>Installing Compiler</h3>
+         <p>
+            The GNU Compiler Collection (GCC) is free software, more specifically, 
+            it's a compiler that supports multiple languages and is compatible 
+            with different types of hardware and operating systems. It has 
+            matured since its origin and has given us the GNU C++ Compiler, also 
+            known as g++, which allows us to compile both .c an .cpp files in C++.
+         </p>
+         <p>
+            There are two methods to download the package, but for this instance we will 
+            use the build-essential route since it includes other key features like: 
+            libraries, debuggers, and the compiler itself. To do this simply, 
+            type the following:
+         </p>
+         <code class="example">
+            ~$ sudo apt install build-essential
+         </code>
+         <p>
+            Afterwards, you can check to see if you have g++ by entering:
+         </p>
+         <code class="example">
+            ~$ g++ --version
+         </code>
+         <p>
+            <img src="../../../images/gpp_version.png" class="medium" /> <br />
+            If you see something similar to the image above then you have successfully 
+            installed the package and are ready to write your first program. 
+         </p>
+      </div>
+      <div>
+         <h2>Writing, Compiling, and running Code</h2>
+         <p>
+            We will walk through the steps as we begin the introduction of programming.
+            We first need to set up a personal directory to store our programs, in this 
+            case let's call it "Programs". 
+         </p>
+         <code class="example">
+            ~$ mkdir Programs
+         </code>
+         <p>
+            After creating our directory, let's access it with the cd command.
+         </p>
+         <code class="example">
+            ~$ cd Programs
+         </code>
+         <p>
+            Once inside our directory we can begin creating our programming files. 
+            Use the vim command and call your file "HelloWorld.cpp".
+         </p>
+         <code class="example">
+            ~$ vim HelloWorld.cpp
+         </code>
+         <p>
+            Once the text editor opens remember to hit the (i) key to begin 
+            insert mode. Type the Hello World <a href="#HelloWorld" class="lecture">example</a> from the beginning of the 
+            lecture. Once completed you can save your progress by getting out of 
+            insert mode and typing the save quick command (:wq). We can now begin the 
+            compilation process.
+         </p>
+         <p>
+            Similar to the terminal and the editor, g++ has its own unique commands.
+            The first step is to translate our .cpp file into an object file; it's 
+            a file with the extension .o attached to it. To clarify, the object 
+            file contains machine level code - an example is assembly language - 
+            which is different from high-level code - an example would be C++. The 
+            machine level code is what the system understands. To 
+            start the process type:
+         </p>
+         <code class="syntax">
+            ~$ g++ -c file_name.cpp
+         </code>
+         <code class="example">
+            ~$ g++ -c HelloWorld.cpp
+         </code>
+         <p>
+            Once the object file is created you can see it in your directory by 
+            typing ls. Notice how it has the same name as the C++ file, this is 
+            normal. The next step is to name and create an executable file; for us 
+            the executable file has a .out extension. This file will run our program 
+            and provide output. Use the following example to create it:
+         </p>
+         <code class="syntax">
+            ~$ g++ -o executable_file_name file_name.cpp
+         </code>
+         <code class="example">
+            ~$ g++ -c HelloWorld HelloWorld.cpp
+         </code>
+         <p>
+            Typing the command ls will allow you to see the file. Notice how 
+            there is no extension with this file. Finally, to run it 
+            we use the dot-forward-slash (./) to denote the current directory with 
+            the name of the executable file attached so we can access it like so:
+         </p>
+         <code class="syntax">
+            ~$ ./executable_file_name
+         </code>
+         <code class="example">
+            ~$ ./HelloWorld 
+         </code>
+         <p>
+            <img src="../../../images/output.png" class="small" /> <br />
+            Once you hit enter you should be able to see the output below, like 
+            the example above. Congratulations you are officially a programmer!
+            If you wish to continue please read into the next section. 
+         </p>
       </div>
       </div>
    </body>

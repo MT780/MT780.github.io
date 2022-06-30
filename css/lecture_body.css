@@ -57,3 +57,12 @@ body.lecture {
    padding: 1%;
    margin-top: 1%;
  }
+
+ a.lecture:link, a.lecture:visited {
+   text-decoration: none;
+   color: #F25C5C;
+}
+
+a.lecture:hover {
+   color: #BBF2E2;
+}
