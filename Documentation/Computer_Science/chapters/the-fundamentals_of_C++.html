@@ -43,12 +43,12 @@
             If you already have your environment set up you may skip this
             section, otherwise keep reading. To write your own code
             you will need a text editor, which like the name states, is an 
-            application that helps the user edit text. Luckily, all OS (Operating 
-            Systems) come with one! For example, Windows has Notepad, MacOS 
+            application that helps the user edit text. Luckily, all operating 
+            systems (OS) come with one! For example, Windows has Notepad, MacOS 
             has TextEdit, and Linux usually has Vim. Now I say "usually" 
             since there are multiple distributors that preload the Linux OS 
-            with there own choice of editor, but you will most likely encounter Vim, 
-            especially if you use Ubuntu. There are also third party editors 
+            with their own choice of editor, but you will most likely encounter Vim, 
+            especially if you use Ubuntu. There are also third-party editors 
             that come with extra features. The one I am currently using is 
             Microsoft's Visual Studio Code. Make sure to find the one that is right for
             you, otherwise you may look at the Intro to Operating Systems
@@ -64,7 +64,7 @@
             manage files, display output, and much more. For those 
             who are using the MacOS or the Linux OS,
             you already have access to the terminal. As for Windows users
-            we have cmd (command-line) and Windows Powershell. Right now
+            we have command-line (cmd) and Windows PowerShell. Right now,
             would be a good time to point out the controversies behind the 
             naming scheme and their definitions. There is a difference between,
             terminal, shell, and command-line, though they act so similarly 
@@ -72,8 +72,8 @@
             we will use Linux terminal to write, compile, and run our programs.
             I highly recommend Window users to follow the installation and
             configuration guide for WSL (Windows Subsystem for Linux) on Microsoft's 
-            site. What WSL does is partition a section of your computer
-            for Linux, and is extremely useful. If you don't want to
+            website. What WSL does is partition a section of your computer
+            for Linux and is extremely useful. If you don't want to
             install WSL, you can still use cmd and Notepad to write,
             compile, and run your code. We are almost close to 
             creating our environment, but we need one more thing.
@@ -82,21 +82,21 @@
          <p>
             We have the terminal, now all we need are the tools
             to interpret our code. A
-            Compiler is software that translates our high-level language,
-            in this case C++, into low level language, which is machine 
+            compiler is software that translates our high-level language,
+            in this case C++, into low level language such as Assembly which is machine 
             code. It is easy to install one within the terminal, and I will show you in 
-            the Intro to OS lecture.
+            both the Intro to OS lecture and towards the end of this lecture.
          </p>
          
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/Visual_Studio_pic.png" class="medium align_right"/>
             Remember how I said you need an editor and a terminal
             to write code, well that's not entirely true. There are applications
-            known as IDEs (Integrated Development Environment)s that come with
+            known as integrated development environments (IDE)s that come with
             the same equipment that editors and terminals have, and then some.
             Almost all the big ones, like Microsoft's Visual Studio - not to
             get confused with Microsoft's Visual Studio Code which is just 
-            the editor - are free to use, but come with a catch. Basically you
+            the editor - are free to use but come with a catch. Basically, you
             can only use them for studying purposes, and can't make a profit
             unless you buy the business versions, while text editors and
             terminals are open source (FREE!) and you can do whatever you please.
@@ -105,7 +105,7 @@
          </p>
       </div>
       <div>
-         <h2>The Basic Structure Of Any Code</h2>
+         <h2>The Basic Structure of Any Code</h2>
          <code class="example" id="HelloWorld">
             1 #include &lt;iostream&gt; <br />
             2 using namespace std; <br />
@@ -119,7 +119,7 @@
          <h3>Reading each line of code</h3>
          <p>
             C++ is case-sensitive, for example, the key
-            term return is different from the word Return. It also has a
+            term <i>return</i> is different from the word Return. It also has a
             free-form layout, so space and line breaks are ignored during
             compilation. I know what you're thinking, if that's the case
             why can't I write, for example, "s t d" instead of "std" well
@@ -134,13 +134,14 @@
          <p>
             On line 1 there is the #include directive, which tells the
             compiler to look at the contents of the iostream file that is 
-            within the less-than sign and greater-than sign. You will learn more about 
-            the file in the string manipulation section.
+            within the less-than operator (&lt;) and greater-than operator (&gt;). You will learn more about 
+            the file in the string manipulation section. For now, just know
+            that it deals with input and output instructions. 
          </p>
          <h4>using namespace std;</h4>
          <p>
             Line 2 tells the compiler to use the default name space to
-            identify terms such as cout; cout is part of the iostream 
+            identify terms such as <i>cout</i> which is part of the iostream 
             file. As you will learn, you can 
             override the functionality of key terms in your
             program by calling a different name space, but since we're learning, 
@@ -149,31 +150,31 @@
          <h4>int main()</h4>
          <p>
             Let's look at the following statement on line 4, main() is a
-            function for the program. Every program has a main function,
-            and can have additional functions. Notice the parenthesis,
-            here we can provide additional information that the 
-            function might need, though since this is a simple program we
-            can just leave it empty. You will learn more about this in
-            future sections. The keyword int is called a data type, this specific data 
+            function for the program. Each function carries out an 
+            algorithm - also known as a process - which consist of 
+            code. The parenthesis is where we can store parameters - 
+            additional instructions for the function to run -
+            though since this is a simple program we
+            can just leave it empty. You will learn more about functions in
+            future sections. The keyword <i>int</i> is called a data type, this specific data 
             type says that the main function can return an integer.
          </p>
          <h4>{ ... }</h4>
          <p>
             Both lines 5 and 8 help identify where the content of the
             main function begins and ends. This is one of the many locations 
-            where you will put your actual program in, basically where your 
-            code goes.
+            where you will put majority of your code in.
          </p>
          <h4>cout &lt;&lt; "Hello World!"\n;</h4>
          <p>
-            In order to send output to the terminal, you need the
-            term cout, followed by the two less-than-arrows operator <<. The part "Hello 
+            To send output to the terminal, you need the
+            term <i>cout</i>, followed by the two less-than-arrows operator &lt;&lt;. The part "Hello 
             World!" is considered a string and is defined by the
             quotation marks "" surrounding the characters. This helps
-            the compiler distinguish code from plain text. The 
+            the compiler distinguish code from plain text it must read. The 
             escape sequence \n is considered one character to the
             compiler, and it tells the compiler to break and start on
-            a new line in the terminal. The semicolon is like a period,
+            a new line in the terminal. The semicolon is like a period
             and symbolizes the end of a statement. 
          </p>
          <h4>return 0;</h4>
@@ -202,12 +203,12 @@
          </p>
       </div>
       <div>
-         <h2>Before Going Into Programming</h2>
+         <h2>Before Going into Programming</h2>
          <p>
             You probably want to run your first program right away. 
             That's great, and I want you to keep that ambition, but 
-            there are some prerequisites that you should complete 
-            first before diving in. Not to say that you can't program 
+            there are some prerequisites that will make the process 
+            easier. Not to say that you can't program 
             right away, humans are smart and can adapt, but it helps 
             when you know the fundamentals. Overall, this section 
             talks about knowing your system, knowing the terminal,
@@ -225,14 +226,13 @@
              to read and comprehend, but it's well worth the time. 
              Nothing is more embarrassing than a Computer Scientist 
              who doesn't know how to update their drivers. Before 
-             looking for books, first visit the CompTIA website. 
-             There you can find the recent version for the CompTIA A+ 
-             exam - currently we're on tests 1001 and 1002, with 1101 
-             and 1102 on the horizon. Notice how the test is split up 
-             into two (one's for troubleshooting software and the 
-             other is hardware), don't get discouraged it's basically 
-             a two in one situation. After that you can go to a retailer 
-             that provides the book. If you 
+             looking for books, first visit the CompTIA website to
+             find the most recent test versions that' supported.
+             Currently we're on test 1001 and 1002 which has plenty 
+             of support, with 1101 and 1102 on the horizon - 
+             currently doesn't have many books. Afterwards, you 
+             can go to a retailer that provides the book for both; 
+             usually the test are bundled together. If you 
              already know how to use your system, the next thing is 
              the terminal.
          </p>
@@ -241,9 +241,10 @@
             Might be an empty window with no text, might show some 
             text explaining that you need to update. Whatever the case 
             is, it's more complicated under the hood, and mastering it 
-            is the best thing you can ever do. I highly recommend you 
+            is important. I highly recommend you 
             reading the Operating Systems section, but once again, you 
-            can probably get by just knowing the fundamentals. Besides 
+            can probably get by just knowing the fundamentals which we 
+            will discuss later in this lecture. Besides 
             terminals, a computer scientist should have a solid 
             foundation in math. 
          </p>
@@ -256,7 +257,7 @@
             with a couple of sections in these lectures without knowing 
             too much, but you need at least a good understanding in 
             calculus. Not to mention that you also need to learn about 
-            discreet mathematics and combinatorics for the more 
+            discreet mathematics, combinatorics, and linear algebra for the more 
             complicated situations. Luckily all of this will be 
             mentioned in the math section of this website. You're 
             probably tired of hearing the word math, good thing we're 
@@ -287,7 +288,7 @@
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/pwd_cmd.png" class="small"/> <br /> 
-            Notifies you which directory you're currently on.
+            Notifies which directory you're currently on.
          </p>
 
          <h4>ls Command</h4>
@@ -313,8 +314,8 @@
             command. If you want to go back one directory you simply type two periods 
             after the cd command. Rather than using cd all the time, if you know the location of a 
             directory you want to visit, you can create a path by adding
-            forward slashes (/) to each step. Looking at the
-            example, notice the location depicted
+            forward-slashes (/) to each step. Looking at the
+            example, notice the path depicted
             in the green section, or notice the subdirectories
             when we enter the command ls.
          </p>
@@ -340,12 +341,12 @@
             save, and more. If you start typing right away, you might
             notice a letter or two missing, that's because we're not
             initially in insert mode. If you're not in 
-            insert mode  shown at bottom of the window - simply press 
-            the character (i). To quit any of the several modes, simply
+            insert mode  shown at bottom of the window then press 
+            the character (i) on your keyboard. To quit any of the several modes,
             press the escape key. You might forget you're not in insert
-            mode and will try to delete characters by hitting backspace,
-            if you do so the cursor will simple move to the left instead of
-            deleting the letters. To fix this just hit the (i) key again.
+            mode and will try to delete characters by hitting backspace which 
+            will cause the cursor to move to the left instead of
+            deleting the letters. To fix this hit the (i) key again.
          </p>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/set_nmbr_cmd.png" class="small align_left"/>
@@ -354,23 +355,23 @@
             command, exit out of any mode you're currently on.
             Once out of the modes, start your command with a colon (:). If 
             <img src="../../../images/C++/the_fundamentals_of_C++/override.png" class="small align_right"/> 
-            you wish to know more simply enter ":help" on the command line to get more information,
+            you wish to know more simply enter (:help) on the command line to get more information,
             though we will go over a few of the basics. If you want line
-            numbering all you have to do is enter ":set number" in the command line, really useful.
-            If you want to save your file all you have to do is type ":w" in the 
+            numbering all you have to do is enter (:set number) in the command line, really useful.
+            If you want to save your file all you have to do is type (:w) in the 
             command line and press enter. If you want to quit use the following 
-            command ":q". Note, sometime you can't quit before saving, so if you 
-            want to force quit, all you have to do is enter ":q!". Warning, all
+            command (:q). Note, sometime you can't quit before saving, so if you 
+            want to force quit, all you have to do is enter (:q!). Warning, all
             progress will be loss, so the better option is to use the save and quit 
-            command ":wq". 
+            command (:wq). 
          </p>
          <p>   
             <img src="../../../images/C++/the_fundamentals_of_C++/saved_file.png" class="small align_left"/>
-            For context, VIM is an open source editor. It comes with some distributors
-            of linux like Ubuntu, but if you don't have it the terminal will complain 
+            Remember, Vim is an open-source editor. It comes with some distributors
+            of Linux like Ubuntu, but if you don't have it the terminal will complain 
             and suggest installing it using whatever command it gives you. Once again, 
             you can use any editor you like, but for educational purposes we will be 
-            using VIM for the time being. 
+            using Vim for the time being. 
          </p> 
 
          <h4>rmdir Command</h4>
@@ -443,7 +444,7 @@
             it's a compiler that supports multiple languages and is compatible 
             with different types of hardware and operating systems. It has 
             matured since its origin and has given us the GNU C++ Compiler, also 
-            known as g++, which allows us to compile both .c an .cpp files in C++.
+            known as g++, which allows us to compile both .c and .cpp files in terms of C++.
          </p>
          <p>
             There are two methods to download the package, but for this instance we will 
@@ -467,7 +468,7 @@
          </p>
       </div>
       <div>
-         <h2>Writing, Compiling, and running Code</h2>
+         <h2>Writing, Compiling, and Running Code</h2>
          <p>
             We will walk through the steps as we begin the introduction of programming.
             We first need to set up a personal directory to store our programs, in this 
@@ -497,13 +498,11 @@
             compilation process.
          </p>
          <p>
-            Similar to the terminal and the editor, g++ has its own unique commands.
+            Like the terminal and the editor, g++ has its own unique commands.
             The first step is to translate our .cpp file into an object file; it's 
             a file with the extension .o attached to it. To clarify, the object 
-            file contains machine level code - an example is assembly language - 
-            which is different from high-level code - an example would be C++. The 
-            machine level code is what the system understands. To 
-            start the process type:
+            file contains machine level code which is something the system can 
+            understand. To start the process type:
          </p>
          <code class="syntax">
             ~$ g++ -c file_name.cpp
@@ -514,7 +513,10 @@
          <p>
             Once the object file is created you can see it in your directory by 
             typing ls. Notice how it has the same name as the C++ file, this is 
-            normal. The next step is to name and create an executable file; for us 
+            normal. In the case where you do get an error it will most likely be 
+            a syntax error, which will identify the location of the error in the form 
+            of text. Simply go back in and edit your file. 
+            The next step is to name and create an executable file; for us 
             the executable file has a .out extension. This file will run our program 
             and provide output. Use the following example to create it:
          </p>
@@ -522,7 +524,7 @@
             ~$ g++ -o executable_file_name file_name.cpp
          </code>
          <code class="example">
-            ~$ g++ -c HelloWorld HelloWorld.cpp
+            ~$ g++ -o HelloWorld HelloWorld.cpp
          </code>
          <p>
             Typing the command ls will allow you to see the file. Notice how 
