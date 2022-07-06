@@ -36,14 +36,6 @@
            <div>
               <h1>Integer, Floats, and Strings Oh My</h1>
               <h2>Comments</h2>
-              <p>
-               One of the best decisions a programmer can make is taking notes. 
-               Sure you will get to a point where you can understand the fundamental 
-               meaning of the code, but do you remember the bug related to it? 
-               Do you remember if that line of code affects other parts of code? Do 
-               you remember why you put it there in the first place? That's why we 
-               create comments. 
-              </p>
               <code class="syntax">
                  /* <br />
                  Block text <br />
@@ -51,27 +43,397 @@
                  <br />
                  // Line comment <br />
               </code>
+              <p>
+               Adds one or more lines of text that are ignored by the compiler to help make code readable. Adding two forward-slashes (//) will cause the compiler to ignore any text on that line. Caution, any line before and after the (//) will be read by the compiler. To have the compiler ignore a specific section of text, enclose it within the opening forward-slash-asterisk (/*), and the closing asterisk-forward-slash (*/). Programmers often use comments to explain code that is not clearly understood at first glance. Sometimes, programmers use comments to omit code to tell the compiler to ignore a specific section. This method can help determine the issue, but there are more useful methods.
+              </p>
+
+              <h2>Variable Declaration and Definition</h2>
+              <code class="syntax">
+               data_type variable_name;<br />
+               data_type variable_name = expression;<br />
+              </code>
               <code class="example">
-               1 #include &lt;iostream&gt; <br />
-               2 using namespace std; <br />
-               3 <br />
-               4 /*Main functions returns the string Hello World to the terminal<br />
-               5   @return terminates the function, if there are no errors*/<br />
-               6 int main() <br />
-               7 {<br />
-               8 //Cout displays the code to the terminal for the user<br />
-               6 cout << "Hello World!"\n;<br />
-               7 return 0;<br />
-               8 }<br />
+               int feet;<br />
+               int inches = 0;<br />
+               string student_first_name;<br />
+               string student_last_name = "";<br />
               </code>
               <p>
-                 There are two types of comments that you can create, block text and
-                 line comments. Block texts can span multiple lines as long as they
-                 are within the forward slash and asterisks /*...*/. Line comments 
-                 on the other hand can only be one line and are identified by the 
-                 two forward slashes //. There main purpose is to help the programmer
-                 understand the code they're looking at.
+               Declares a variable, and optionally defines a variable by assigning it a value. To declare a variable, the program needs at least a data type and the variable's name. The variable's name strictly starts with a letter or underscore (_), followed by a combination of letters, numbers, or underscores. Both spaces between and symbols are not allowed. It is illegal to use a word that is already reserved by the C++ programming language. It is best to assign a value to the variable right away, even if it's a default value like zero (0) or empty quotations (“”). The program can fill undefined variables with random data, which can potentially take up a lot of space, meaning less resources.   
               </p>
+
+              <h2>Reassignment</h2>
+              <code class="syntax">
+               variable_name = expression;
+              </code>
+              <code class="example">
+               inches = 2;<br />
+               student_last_name = "Campbell";<br />
+              </code>
+              <p>
+               Reassigns a new value to an already declared/defined variable, thus overwriting the existing value. Once initialized/defined, the variable will store its data type information. This makes the variable easier to reference and update later, as the programmer doesn't need to reference the data type again during reassignment. Note, the equal sign (=) is called the assignment operator and does not mean “equal to”. This is later explained in the arithmetic and mathematical functions section. For now, know that the assignment operator assigns the right value to the left value. Depending on the data type appended at the beginning, a variable can hold integers, decimals, strings, and more. 
+              </p>
+
+              <h2>Data Types</h2>
+              <p>
+               The most fundamental data types include, but are not limited to, integers, floating-points, and strings. 
+              </p>
+              <h3>Integer and Floating-Point</h3>
+              <code class="example">
+               short number_of_students_drop = -7;<br />
+               unsigned long long humans_on_earth = 7800000000;<br />
+              </code>
+              <p>
+               Integer data types exclude decimals, but include whole numbers and negative numbers. Depending on the range of numbers, integer data types come in short, int, and long long. With short having the smallest range and long long having the largest range (table 2.1). To exclusively use whole numbers (only positive integers) use unsigned short, unsigned, and unsigned long long. Depending on the application, use the right data type to be efficient as possible.  
+              </p>
+              <p>
+               Floating-point variables can hold both decimal and integers. Depending on the range, floating-point data types come in float, double, and long double. The data type float has the smallest decimal places, while long double has the largest decimal places. Floating-point numbers don't use unsigned. The reason we don't always use floating-point variables, is because integers can be more efficient as seen in table 2.1 with the typical size. Keep in mind that the table is an estimation, and that each system has different ranges.
+              </p>
+              <table>
+               <tr>
+                  <th>Type</th>
+                  <th>Typical Range</th>
+                  <th>Typical Size</th>
+               </tr>
+               <tr>
+                  <td>long long</td>
+                  <td>-9,223,372,036,754, 775, 808 - 9,223,372,036,854,775,807</th>
+                  <td>8 bytes</td>
+               </tr>
+               <tr>
+                  <td>unsigned long long</td>
+                  <td>0 - 18,446,744,073,709,551,615</td>
+                  <td>8 bytes</td>
+               </tr>
+               <tr>
+                  <td>int</td>
+                  <td>-2,147,483,648 - 2,147,483,647</td>
+                  <td>4 bytes</td>
+               </tr>
+               <tr>
+                  <td>unsigned int</td>
+                  <td>0 - 4,294,967,295</td>
+                  <td>4 bytes</td>
+               </tr>
+               <tr>
+                  <td>short</td>
+                  <td>-32,768 - 32,767</td>
+                  <td>2 bytes</td>
+               </tr>
+               <tr>
+                  <td>unsigned short</td>
+                  <td>0 - 65,535</td>
+                  <td>2 bytes</td>
+               </tr>
+               <tr>
+                  <td>float</td>
+                  <td>range of about ±10^38 and about 7 significant decimal digits</td>
+                  <td>4 bytes</td>
+               </tr>
+               <tr>
+                  <td>double</td>
+                  <td>range of about ± 10^308 and about 15 significant decimal digits</td>
+                  <td>8 bytes</td>
+               </tr>
+               <tr>
+                  <td>long double</td>
+                  <td>Just a lot bigger than double</td>
+                  <td>12 bytes</td>
+               </tr>
+              </table>
+              <p>
+               Caution, integer values can be assigned to floating-point variables, but floating-point values cannot be assigned to integer variables. To overcome this issue, change the expression's data type using static cast. 
+              </p>
+              <code class="syntax">
+               static_cast&lt;data_type&gt;(expression);
+              </code>
+              <code class="example">
+               float more_precise_inches = static_cast&lt;float&gt;(inches);
+              </code>
+
+              <h3>Strings and Characters</h3>
+              <code class="syntax">
+               string username = "xXUltimateGamer42Xx";<br />
+               char multi_choice_answer = 'A';<br />
+              </code>
+              <p>
+               There are two data types when storing characters in a variable: string and char. The characters are based off the American Standard Code for Information Interexchange (ASCII), and consist of numbers, symbols, and letters. According to the C++ language, there is a difference from the character numbers and integer numbers. For example, the character “1” acts more like a symbol, while the integer 1 acts more like a digit you can use during calculations. A string variable can hold zero or more characters within its double quotation marks (“”), while a char variable must hold exactly one character within its single quotations (''). Both string and char data types are already part of the C++ standard library, and can specifically be found in the string header file. Sometimes, characters can get misinterpreted by the compiler because of its significance in the C++ language. To avoid this issue with strings, use the following escape sequences to let the compiler know it's a character. 
+              </p>
+              <table>
+               <tr>
+                  <th>Escape Sequences</th>
+                  <th>Definition</th>
+               </tr>
+               <tr>
+                  <td>\'</td>
+                  <td>Compiler considers single quote as part of the string</td>
+               </tr>
+               <tr>
+                  <td>\"</td>
+                  <td>Compiler considers double quote as part of the string</td>
+               </tr>
+               <tr>
+                  <td>\?</td>
+                  <td>Compiler considers question mark as part of the string</td>
+               </tr>
+               <tr>
+                  <td>\\</td>
+                  <td>Compiler considers backslash as part of the string</td>
+               </tr>
+              </table>
+
+              <h3>Enum Types</h3>
+              <code class="syntax">
+               enum data_type_name {value<sub>1</sub>, value<sub>2</sub>, ..., value<sub>n</sub>};
+              </code>
+              <code class="example">
+               enum guitar_string {E, A, D, G, B, e};
+              </code>
+              <p>
+               Enumeration is a user defined data type that establishes a finite set of values. In our example, the data type is guitar_string, which has six possible values as represent within the curly-braces ({}). To use the user defined data type with variables, append the user data type before the variables as if it were a string or integer. 
+              </p>
+              <code class="example">
+               guitar_string plucked = D;
+              </code>
+
+              <h2>Constants</h2>
+              <p>
+               Before moving on from data types, there is one important type qualifier to know. A constant is a type qualifier that provides additional information to data types. More specifically, the keyword const makes sure that the value of the defined variable doesn't change during run time. 
+              </p>
+              <code class="syntax">
+               const data_type variable_name = expression;
+              </code>
+              <code class="example">
+               const float GRAVITY = -9.81;
+              </code>
+              <p>
+               It is considered good practice to capitalize constants to differentiate them from regular variables. Avoid using magic numbers when defining constants. Magic numbers are values that don't have any significant meaning. In the example, -9.81 has significant meaning since it is the amount of force (in newtons) gravity has on objects in Earth.
+              </p>
+
+              <h2>Expressions</h2>
+              <p>
+               Both groups of data types have unique rules when it comes to assigning an expression (in this case the value on the right of the assignment operator) to their variable.
+              </p>
+
+              <h3>Arithmetic and Mathematical Functions</h3>
+              <p>
+               Just like regular math, arithmetic expressions in C++ can include addition (+), subtraction (-), multiplication (*), and division (/) operators. C++ implements an additional operator called the modulo operator (%) , which finds the remainder when dividing. Note, the modulo operator is only used with integers, not with floating-points. Furthermore, arithmetic expressions can use variables as their operands, along with integers and decimals. The programming language also includes an exponential notation operator (E), to make it easier for programmers to do scientific notation. For exponential notation, know that the base is 10. Like math, operators have an order of precedence. The following is a list of common operators' precedence from high to low:
+              </p>
+              <table>
+               <tr>
+                  <th>Level of Precedence</th>
+                  <th>Operators</th>
+               </tr>
+               <tr>
+                  <td>High</td>
+                  <td>Parenthesis ()</td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td>Exponents x<sup>n</sup></td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td>Multiplication (*), Division (/), and Modulo (%)</td>
+               </tr>
+               <tr>
+                  <td>Low</td>
+                  <td>Addition (+), Subtraction (-)</td>
+               </tr>
+              </table>
+              <p>
+               Some operators are grouped together since they have equal precedence. Use the left-to-right rule as you would in math. 
+              </p>
+              <p>
+               On top of these operators, C++ has included increment (++) and decrement (--) operators because of how common we use them in programming. Both operators are the equivalent of a variable adding/subtracting 1 to itself, and assigning the new value to itself:
+              </p>
+              <code class="example">
+               x++; //same as x = x + 1;<br />
+               x--; //same as x = x - 1;<br />
+              </code>
+              <p>
+               In math terms, x cannot possibly equal x + 1. Though, in programming terms, the equal sign (=) is the assignment operator. Remember, the assignment operator just assigns the right expression to the left variable, either initializing the variable's value or overwriting the existing variable's value. Since the variable on the left side of the assignment operator is often used in the right expression, C++ has expanded on its assignment operator. This includes, but are not limited to, the addition assignment (+=), the subtraction assignment (-=), the division assignment (/=), and the multiplication assignment (*=) operators:
+              </p>
+              <code class="example">
+               a += 2 //same as a = a + 2;<br />
+               b -= a + 1 //same as b = b - a + 1;<br />
+               c /= 4 //same as c = c / 4;<br />
+               d *= 3 * c//same as d = d * 3 * c;<br />
+              </code>
+              <p>
+               To use more complicated math expressions, implement the cmath file in the #include directives. This file includes a set of C++ functions that act like their math counterparts. To avoid confusion, both math functions and C++ functions are two different meanings. A function in math is denoted by (f) and is a rule, stating every element (x) in set A has one element (f(x)) in set B. A function in C++ is a block of code that can rely on additional information to carry out a process, and quite possibly return information. Unless it is specified that we are using math functions, assume we are referring to C++ functions. The following is a list of common functions in the cmath library:
+              </p>
+              <table>
+               <tr>
+                  <th>Functions</th>
+                  <th>Description</th>
+               </tr>
+               <tr>
+                  <td>pow(x, n)</td>
+                  <td>x to the n power</td>
+               </tr>
+               <tr>
+                  <td>sqrt(x)</td>
+                  <td>the square root of x</td>
+               </tr>
+               <tr>
+                  <td>cbrt(x)</td>
+                  <td>the cube root of x</td>
+               </tr>
+               <tr>
+                  <td>exp(x)</td>
+                  <td>e to the power of x</td>
+               </tr>
+               <tr>
+                  <td>log(x)</td>
+                  <td>natural log of x</td>
+               </tr>
+               <tr>
+                  <td>log10(x)</td>
+                  <td>common log of x (base 10)</td>
+               </tr>
+               <tr>
+                  <td>cos(x)</td>
+                  <td>cosine of x (in radians)</td>
+               </tr>
+               <tr>
+                  <td>sin(x)</td>
+                  <td>sine of x (in radians)</td>
+               </tr>
+               <tr>
+                  <td>tan(x)</td>
+                  <td>tangent of x (in radians)</td>
+               </tr>
+               <tr>
+                  <td>acos(x)</td>
+                  <td>arccosine of x (in radians)</td>
+               </tr>
+               <tr>
+                  <td>asin(x)</td>
+                  <td>arcsine of x (in radians)</td>
+               </tr>
+               <tr>
+                  <td>atan(x)</td>
+                  <td>arctangent of x (in radians)</td>
+               </tr>
+              </table>
+              <p>
+               For a complete list of the functions please google cmath C++. 
+              </p>
+              <p>
+               When it comes to readability it's best to follow common practices. Put space between binary operators (+, -, *, /, and %), but don't put space between unary operators, for example, the negative sign (-). Do not put space between a function name and its parenthesis, but put space after every C++ keyword. 
+              </p>
+
+              <h3>Concatenation and Substring Functions</h3>
+              <p>
+               Like arithmetic, string variables are allowed in string expressions, and can even be concatenated (put together) with the plus operator (+). Note, it is possible to put strings and string variables together during concatenation, but at least one operand must be a string variable on either side of the plus operator. It is not possible to mix string data types and char data types during concatenation.
+              </p>
+              <code class="example">
+               string h = “Hello”;<br />
+               string w = “World”;<br />
+               string hw = h + “ “ + w;<br />
+              </code>
+              <p>
+               It is a good time to point out that the string header file acts like a class. It will take some time to clarify, which is why we will go into more detail in the Classes and Overriding lectures. For now, consider a class as a collection of functions that an object (in this case our variable) can use. The declaration of an object is an instance of a class that can provide additional information for the class' functions to utilize. The process of using a class' function is called a member function call and looks like the following:
+              </p>
+              <code class="syntax">
+               variable_name.function_name(parameter<sub>1</sub>,parameter<sub>2</sub>,…,parameter<sub>n</sub>);
+              </code>
+              <code class="example">
+               hw.length();
+              </code>
+              <p>
+               The length function  returns the length of the string variable (hw) as a positive integer. This is one of the many functions used in the string header file. The following are a couple of essential string functions, and to find out more google “string header file c++”.
+              </p>
+              <table>
+               <tr>
+                  <th>Function Name</th>
+                  <th>Definition</th>
+               </tr>
+               <tr>
+                  <th>hw.length()</th>
+                  <th>Returns length of string variable as a positive integer</th>
+               </tr>
+               <tr>
+                  <th>hw.substr(i)</th>
+                  <th>Returns substring of hw from index i to end of string</th>
+               </tr>
+               <tr>
+                  <th>hw.substr(i, n)</th>
+                  <th>Returns substring of hw from index i to the length of n</th>
+               </tr>
+               <tr>
+                  <th>getline(f, s)</th>
+                  <th>Read string s from the input of stream f</th>
+               </tr>
+              </table>
+              <p>
+               With the substr(i) function, notice how it mentions index. Each character of the string is indexed with a number from 0 to k. Meaning the first character of the string is 0, and the last character of the string is kth index. Back then, computers started counting at 0 instead of 1. Though we have the capability to start at one, tradition has been kept for compatibility reasons. As for the process of reading string s from the input of stream f, it will be explained in the output and input statements section. 
+              </p>
+
+              <h2>Output and Input Statements</h2>
+              <p>
+               Just like the previous lecture, an output statement is composed of the keyword cout from the C++ standard library, and one or more expressions. Each expression has the double less-than operator (<<) appended to the beginning of it:
+              </p>
+              <code class="syntax">
+               cout &lt; expression<sub>1</sub> &lt;  expression<sub>2</sub> &lt; … &lt; expression<sub>n</sub>;
+              </code>
+              <code class="example">
+               string period = “.”;<br />
+               cout &lt; “The answer to life is “ &lt; 4 * 10 + 2 &lt; period &lt; “\n”;<br />
+              </code>
+              <p>
+               Output statements print the value of each expression to the screen. In our case it is the terminal.  It is possible to put integer, floating-point, char, string, and enum variables in the output statement. Note, it is possible to bypass the variable definition and place the expression in the output statement.
+              </p>
+              <p>
+               Sometimes output doesn't come out as expected. To format output, include the iomanip header file in the #include directive. Once the header file is included, it is possible to use the following functions in the expressions of cout statements.
+              </p>
+              <table>
+               <tr>
+                  <th>Command Name</th>
+                  <th>Description</th>
+               </tr>
+               <tr>
+                  <td>setw(x)</td>
+                  <td>sets the width of the next output field depending on variable x.</td>
+               </tr>
+               <tr>
+                  <td>setprecision(x)</td>
+                  <td>Sets the subsequent floating-point numbers depending on x.</td>
+               </tr>
+               <tr>
+                  <td>fixed</td>
+                  <td>Prints trailing zeros.</td>
+               </tr>
+              </table>
+              <p>
+               As for input statements, they are composed of the keyword cin from the C++ standard library, and one or more variables. Each variable has the double greater-than operatory (>>) appended to the beginning of it:
+              </p>
+              <code class="syntax">
+               cin >> variable<sub>1</sub> >>  variable<sub>2</sub> >> … >> variable<sub>n</sub>;
+              </code>
+              <code class="example">
+               string month_of_birth = “”;<br />
+               string day_of_birth = “”;<br />
+               int year_of_birth = 0;<br />
+               cin >> month_of_birth >> day_of_birth >> year_of_birth;<br />
+              </code>
+              <p>
+               Input statements obtain input from the user and store it in one or more predefined variables for the program to use. Caution, even if not explicitly stated, the new line escape sequence (\n) is added at the end of each input statement. In the instance where a user types more than one word (a sentence) for a string variable, the variable will only take one word before it reaches a space and either dumps the rest of the sentence or stores it in another string variable. To store a sentence in a string variable, use the getline function.
+              </p>
+              <code class="syntax">
+               getline(cin, variable_name);
+              </code>
+              <code class="example">
+               string full_name = “”;<br />
+               getline(cin, full_name);<br />
+              </code>
+              <p>
+               Caution, if a getline function is called after cin queries input, then the function will read the leftovers from the previous cin. For example, remember how every cin leaves a (\n) escape sequence, if getline is called then the function will read and execute the (\n) before it can even query the user for information. To avoid this, use the following command before getline:
+              </p>
+              <code class="example">
+               cin.ignore(256, '\n'); 
+              </code>
            </div>
         </div>
     </body>
