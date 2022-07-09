@@ -44,7 +44,7 @@
                  // Line comment <br />
               </code>
               <p>
-               Adds one or more lines of text that are ignored by the compiler to help make code readable. Adding two forward-slashes (//) will cause the compiler to ignore any text on that line. Caution, any line before and after the (//) will be read by the compiler. To have the compiler ignore a specific section of text, enclose it within the opening forward-slash-asterisk (/*), and the closing asterisk-forward-slash (*/). Programmers often use comments to explain code that is not clearly understood at first glance. Sometimes, programmers use comments to omit code to tell the compiler to ignore a specific section. This method can help determine the issue, but there are more useful methods.
+               Comments are one or more lines of text that are ignored by the compiler. They are used for documentation purposes to help users understand the program. Adding the symbol (//) will cause the compiler to ignore any text after it that's on the same line. Caution, anything before the symbol and any line after will be read by the compiler. To have the compiler ignore multiple lines of text, enclose it with the (/*) symbol in the beginning, and the (*/) symbol at the end. Sometimes, programmers use comments to omit code to tell the compiler to ignore a specific section. This method can help determine the issue, but there are more useful options.
               </p>
 
               <h2>Variable Declaration and Definition</h2>
@@ -59,7 +59,7 @@
                string student_last_name = "";<br />
               </code>
               <p>
-               Declares a variable, and optionally defines a variable by assigning it a value. To declare a variable, the program needs at least a data type and the variable's name. The variable's name strictly starts with a letter or underscore (_), followed by a combination of letters, numbers, or underscores. Both spaces between and symbols are not allowed. It is illegal to use a word that is already reserved by the C++ programming language. It is best to assign a value to the variable right away, even if it's a default value like zero (0) or empty quotations (“”). The program can fill undefined variables with random data, which can potentially take up a lot of space, meaning less resources.   
+               Declares a variable, and optionally defines a variable by assigning it a value. The program will store any information of the variable so it can later be referenced during run time. To declare a variable, the program needs at least a data type and the variable's name. The variable's name strictly starts with a letter or underscore (_), followed by a combination of letters, numbers, or underscores. Both spaces and symbols are not allowed when naming a variable. It is illegal to use a keyword that is already reserved by the C++ programming language. It is best to assign a value to the variable right away, even if it's a default value like zero (0) or empty quotations (“”). The program can fill undefined variables with random data, which can potentially take up a lot of space, meaning less resources.   
               </p>
 
               <h2>Reassignment</h2>
@@ -71,7 +71,7 @@
                student_last_name = "Campbell";<br />
               </code>
               <p>
-               Reassigns a new value to an already declared/defined variable, thus overwriting the existing value. Once initialized/defined, the variable will store its data type information. This makes the variable easier to reference and update later, as the programmer doesn't need to reference the data type again during reassignment. Note, the equal sign (=) is called the assignment operator and does not mean “equal to”. This is later explained in the arithmetic and mathematical functions section. For now, know that the assignment operator assigns the right value to the left value. Depending on the data type appended at the beginning, a variable can hold integers, decimals, strings, and more. 
+               Reassigns a new value to an already declared/defined variable, thus overwriting the existing value. The data type doesn't need to be expressed, since it was stored into memory when the variable was defined. Note, the equal sign (=) is called the assignment operator and does not mean “equal to”. This is later explained in the arithmetic and mathematical functions section. For now, know that the assignment operator assigns the right value to the left value. Depending on the data type appended at the beginning, a variable can hold integers, decimals, strings, and more. 
               </p>
 
               <h2>Data Types</h2>
@@ -84,16 +84,16 @@
                unsigned long long humans_on_earth = 7800000000;<br />
               </code>
               <p>
-               Integer data types exclude decimals, but include whole numbers and negative numbers. Depending on the range of numbers, integer data types come in short, int, and long long. With short having the smallest range and long long having the largest range (table 2.1). To exclusively use whole numbers (only positive integers) use unsigned short, unsigned, and unsigned long long. Depending on the application, use the right data type to be efficient as possible.  
+               Integer types define a variable as including whole numbers and negative numbers, but exclude decimals. To reference a variable as a integer type use the keyword <i>int</i>. Due to memory constraints and the limited range of <i>int</i>, there are two modifiers that change the range of the integer type: <i>short</i> and <i>long long</i>. The two modifiers can be substitutions for the <i>int</i> data type, with <i>short</i> having a smaller range and <i>long long</i> having a larger range (<a href="#table_2_1" class="lecture">table 2.1</a>). To exclusively use whole numbers (only positive integers), attach the keyword <i>unsigned</i> before the data type or any of the modifiers. Depending on the application, use the right data type to be efficient as possible.  
               </p>
               <p>
-               Floating-point variables can hold both decimal and integers. Depending on the range, floating-point data types come in float, double, and long double. The data type float has the smallest decimal places, while long double has the largest decimal places. Floating-point numbers don't use unsigned. The reason we don't always use floating-point variables, is because integers can be more efficient as seen in table 2.1 with the typical size. Keep in mind that the table is an estimation, and that each system has different ranges.
+               Floating-point types define a variable as holding both decimal and integer values. Depending on the range, floating-point data types come in float, double, and long double. The data type float has the smallest decimal places, while long double has the largest decimal places. Floating-point numbers don't use unsigned. The reason we don't always use floating-point variables, is because integers can be more efficient as seen in <a href="#table_2_1" class="lecture">table 2.1</a> with the typical memory size. Keep in mind that the table is an estimation, and that each system has different ranges.
               </p>
-              <table>
+              <table id="table_2_1">
                <tr>
-                  <th>Type</th>
+                  <th>Data Type and Modifiers</th>
                   <th>Typical Range</th>
-                  <th>Typical Size</th>
+                  <th>Typical Memory Size</th>
                </tr>
                <tr>
                   <td>long long</td>
@@ -142,7 +142,7 @@
                </tr>
               </table>
               <p>
-               Caution, integer values can be assigned to floating-point variables, but floating-point values cannot be assigned to integer variables. To overcome this issue, change the expression's data type using static cast. 
+               Caution, integer values can be assigned to floating-point variables, but floating-point values cannot be assigned to integer variables. Doing so will cause the value to loose anything after the decimal point. To convey a change in data types to the user, use static cast. 
               </p>
               <code class="syntax">
                static_cast&lt;data_type&gt;(expression);
@@ -157,7 +157,7 @@
                char multi_choice_answer = 'A';<br />
               </code>
               <p>
-               There are two data types when storing characters in a variable: string and char. The characters are based off the American Standard Code for Information Interexchange (ASCII), and consist of numbers, symbols, and letters. According to the C++ language, there is a difference from the character numbers and integer numbers. For example, the character “1” acts more like a symbol, while the integer 1 acts more like a digit you can use during calculations. A string variable can hold zero or more characters within its double quotation marks (“”), while a char variable must hold exactly one character within its single quotations (''). Both string and char data types are already part of the C++ standard library, and can specifically be found in the string header file. Sometimes, characters can get misinterpreted by the compiler because of its significance in the C++ language. To avoid this issue with strings, use the following escape sequences to let the compiler know it's a character. 
+               There are two data types when storing characters in a variable: <i>string</i> and <i>char</i>. The characters are based off the American Standard Code for Information Interexchange (ASCII), and consist of numbers, symbols, and letters. According to the C++ language, there is a difference from the character numbers and integer numbers. For example, the character “1” acts more like a symbol, while the integer 1 acts more like a digit you can use during calculations. A string variable can hold zero or more characters within its double quotation marks (“”), while a char variable must hold exactly one character within its single quotations (''). Both <i>string</i> and <i>char</i> data types are already part of the C++ standard library, and can specifically be found in the string header file. Sometimes, characters can get misinterpreted by the compiler because of its significance in the C++ language. To avoid this issue with strings, use the following escape sequences to let the compiler know it's a character. 
               </p>
               <table>
                <tr>
@@ -196,10 +196,7 @@
                guitar_string plucked = D;
               </code>
 
-              <h2>Constants</h2>
-              <p>
-               Before moving on from data types, there is one important type qualifier to know. A constant is a type qualifier that provides additional information to data types. More specifically, the keyword const makes sure that the value of the defined variable doesn't change during run time. 
-              </p>
+              <h2>Constant</h2>
               <code class="syntax">
                const data_type variable_name = expression;
               </code>
@@ -207,7 +204,7 @@
                const float GRAVITY = -9.81;
               </code>
               <p>
-               It is considered good practice to capitalize constants to differentiate them from regular variables. Avoid using magic numbers when defining constants. Magic numbers are values that don't have any significant meaning. In the example, -9.81 has significant meaning since it is the amount of force (in newtons) gravity has on objects in Earth.
+               A constant, denoted by the keyword <i>const</i>, is a type qualifier that prevents any variable's value to change during run time. The type qualifier can be attached to the beginning of any data type listed in the previous table. It is considered good practice to capitalize constants to differentiate them from regular variables. Avoid using magic numbers when defining constants. Magic numbers are values that don't have any significant meaning. In the example, -9.81 has significant meaning since it is the amount of force (in newtons) gravity has on objects in Earth.
               </p>
 
               <h2>Expressions</h2>
