@@ -35,29 +35,35 @@
       <div class="actual_body">
       <div>
          <h1>The Fundamentals of C++</h1>
+         <p>
+            This lecture serves as an introduction to C++ and overall programming. It focuses on terminology, structure, and step by step instructions for C++ coding. The only prerequisites for this lecture are to have a working computer and a fundamental understanding of how to use it. The first section goes over the programming environment, explaining the applications and tools needed to write and run code. The next section will analyze basic code to understand its structure, keywords, and symbols. The final section goes into detail about the whole process, from preparing the proper tools to executing your first program. 
+         </p>
       </div>
       <div>
-         <h2>Setting Up Your Environment</h2>
+         <h2>Knowing your Programming Environment</h2>
+         <p>
+            A programming environment is a set of tools that aids a developer in creating a operational program. The tools mention here are absolutely essential and will be explained in detail. These tools include a text editor, a terminal, and a compiler.  
+         </p>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/Type_of_editors_on_windows.png" class="medium align_right" alt="" />
-            Those who have a solid foundation with editors, terminals, and compilers can skip this section. Otherwise, to write code, programmers need a text editor; an application that helps users write and edit text. Luckily, all operating systems (OS) come with one. For example, Windows has Notepad, MacOS has TextEdit, and Linux usually has Vim. Keyword "usually" since there are multiple distributors that preload the Linux OS with their own choice of editor, but most will encounter Vim, especially if using the most popular Linux distribution: Ubuntu. There are also free third-party editors that come with extra features, such as Microsoft's Visual Studio Code. For learning purposes and uniformity, later sections will describe how to use Vim. Before even using code, programmers need to communicate with the system. That's where the terminal comes in.
+            Referring to the first tool, a <b>text editor</b> is an application that helps users write and edit text. Luckily, all operating systems (OS)s come with one. For example, Microsoft Windows has <i>Notepad</i>, MacOS has <i>TextEdit</i>, and the popular Ubuntu - one of the many distributors of Linux OS - has <i>Vim</i>. Programmers are not limited to these three text editors. There are open-source text editors that can come with extra features, such as <i>Microsoft's Visual Studio Code</i>. The options can be overwhelming, which is why for learning purposes and uniformity, this lecture and following lectures will use Vim. The reason for using Vim is because it's compatibility with all operating systems, and it's open-source software. Vim is also an application that can be used in the terminal. The terminal is an important part of the programming environment. 
          </p>
          
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/PowerShell_LinuxTerm_cmd.png" class="medium align_left"/>
-            The terminal is the bridge between the user and the computer. It can take user input, run other programs, manage files, display output, and much more. For MacOS and Linux OS users, the system has access to the terminal. As for Windows users, the system has command-line (cmd) and Windows PowerShell.  
+            The <b>terminal</b> is a text interface. It looks like a simple window with a couple of characters and a blinking cursor. All recent operating systems have a terminal. Unfortunately, the terminal by itself isn't useful, which is why there are shells and command-line tools. A <b>shell</b> is a program - also known as a <b>command-line interpreter</b> - that gives a user access to the operating system services by providing a list of commands the user can input in the terminal. There are many shells that can be used with the terminal. Some popular ones include <i>Bash</i>, <i>PowerShell</i>, and <i>Command Prompt (cmd)</i>. Caution, the shell isn't a visible application, it works in the background only giving hints of its existence through the terminal. Together, they allow users to access command-line applications (like Vim), manipulate files, install other tools, and other services a programmer needs.   
          </p>
          <p>   
-            Now would be a good time to point out the controversies behind the naming scheme and their definitions. There is a difference between terminal, shell, and command-line, though they act so similarly that most people often interchange the names. For the sake of uniformity, the following sections and lectures will use Linux terminal to write, compile, and run programs. It is highly recommend for Windows users to follow the installation and configuration guide for Windows Subsystem for Linux (WSL) on Microsoft's website. WSL partitions a section of the system for Linux and is extremely useful. For those who don't want to install WSL, it is possible to use cmd and Notepad to write, compile, and run code.
+            For learning purposes, this lecture and future lectures will use the terminal along with bash. Both linux OS and MacOS come with Bash shells in the terminal. Windows users need to take an extra step by installing <i>Windows Subsystem for Linux</i> (WSL) using the guide on the Microsoft <a href = "https://docs.microsoft.com/en-us/windows/wsl/install" target = "_blank" class = "lecture">website</a>. Windows Subsystem for linux creates a Linux environment on a Windows system, allowing user to execute Bash commands on the terminal and more. For those who don't want to install WSL, it is possible to use cmd and Notepad, but additional research is required. With the terminal and Bash, it is possible to write and store code. Though, to have the program run the terminal needs to install a compiler. 
          </p>
          
          <p>
-            Besides the terminal, programmers need tools to interpret code. That tool is known as a compiler. A compiler is software that translates high-level language (like C++) into low level language (such as assembly) for the system to understand. It is easy to install one within the terminal, and later sections will explain the installation process.
+            A <b>compiler</b> is software that translates high-level language (like C++) into low level language (such as assembly) for the system to understand. One of the most popular compilers is the GNU C++ Compiler - also known as g++ - and is what this lecture will use to help translate code. It is easy to install one within the terminal, and later sections will explain the installation process. Having to do all these steps can be a hassle, fortunately for some there are applications that simplify this process, allowing them to code right away. 
          </p>
          
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/Visual_Studio_pic.png" class="medium align_right"/> 
-            Technically, there are applications known as integrated development environments (IDE)s that come with the same equipment that editors and terminals have, and then some. Almost all the big ones, like Microsoft's Visual Studio - not to get confused with Microsoft's Visual Studio Code which is just the editor - are free to use but come with a catch. Basically, the software can only be used for studying purposes, and programmers can't make a profit unless they buy the business versions. While text editors and terminals are open source (FREE!). Companies like free, people like free, so it's best to follow the practices.
+            <i>Integrated development environments</i> (IDE)s are applications that come with the same equipment that editors and terminals have, and then some. Warning, some of them state that they are free to use under certain conditions, like Microsoft's Visual Studio - not to get confused with Microsoft's Visual Studio Code which is just the editor. Basically, the software can only be used for studying purposes, and programmers can't make a profit unless they buy the business versions. While text editors and terminals are open source (FREE!). Companies like free, people like free, so it's best to follow the practices. Before writing any code, it is essential to understand what is written. 
          </p>
       </div>
       <div>
@@ -105,21 +111,6 @@
          <h2>Errors</h2>
          <p>
             There are two types of errors in programming, syntax errors and logical errors. The first type is usually easy to fix because the compiler usually catches it. This could happen when a programmer forgets the semicolon or forgets an operator. Logical errors on the other hand can be a little tricky. It's when the program still runs but it doesn't do the task it was supposed to do. Compilers can't find these errors, but a debugger can help find where the issue is at.
-         </p>
-      </div>
-      <div>
-         <h2>Before Going into Programming</h2>
-         <p>
-            Many people want to program right away. It's great to have those ambitions, but there are some prerequisites that will make the process easier. This section talks about how essential it is to know systems, terminals, and math.
-         </p>
-         <p>
-            It is essential to navigate, use, and troubleshoot computers. For complete beginners, CompTIA A+ helps those who are new to their systems. It teaches about Windows, Linux, and MAC operating systems - basically IT stuff that doesn't involve programming. It also teaches about the system's hardware and how to troubleshoot. It might take a while to read and comprehend, but it's well worth the time. Nothing is more embarrassing than a Computer Scientist who doesn't know how to update their drivers. Before looking for books, first visit the CompTIA website to find the most recent test versions that are supported. For example, the website states that test versions 1001/1002 are currently support, with 1101/1102 support coming in a couple of months. After finding the information needed, go to a retailer that provides the book for the CompTIA A+ exam; the book usually incorporates both test versions. For those who know about systems, the next step is learning how to use the terminal.
-         </p>
-         <p>
-            The terminal appears to be a simple tool at first glance. Might be an empty window with no text, might show some text explaining how an update is needed. Whatever the case is, it's more complicated under the hood, and mastering it is important. It is highly recommended to read the Operating Systems lectures, but the next section will go into the fundamentals. Besides terminals, a computer scientist should have a solid foundation in math.
-         </p>
-         <p>
-            An alarming amount of programming websites and YouTube tutorials don't show this, but math is heavily integrated in our programs. Anyone can program, but a Computer Scientist knows about time complexities and Big-O notation, all of which involves mathematics. It is possible to learn the first couple of lectures without knowing too much, but computer scientists are required to have a good understanding in calculus. Not to mention, they also need to learn about discreet mathematics, combinatorics, and linear algebra for the more complicated situations. Luckily, all of this will be mentioned in the math lectures of this website.
          </p>
       </div>
       <div>
@@ -240,9 +231,6 @@
          </p>
 
          <h3>Installing Compiler</h3>
-         <p>
-            The GNU Compiler Collection (GCC) is free software. More specifically, it's a compiler that supports multiple languages and is compatible with different types of hardware and operating systems. It has matured since its origin and has given us the GNU C++ Compiler, also known as g++, which allows us to compile both (.c) and (.cpp) files in terms of C++.
-         </p>
          <p>
             There are two methods to download the package, but for this instance, use the build-essential route since it includes other key features like: libraries, debuggers, and the compiler itself. To do this, type the following:
          </p>
