@@ -39,7 +39,7 @@
          </p>
          <h2>Knowing your Programming Environment</h2>
          <p>
-            A programming environment is a set of tools that aids a developer in creating a operational program. The tools mention here are absolutely essential and will be explained in detail. These tools include a text editor, a terminal, and a compiler.  
+            A programming environment is a set of tools that aids a developer in creating a operational program. The tools mentioned here are essential and will be explained in detail. They include a text editor, a terminal, and a compiler.  
          </p>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/Type_of_editors_on_windows.png" class="medium align_right" alt="" />
@@ -48,10 +48,10 @@
          
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/PowerShell_LinuxTerm_cmd.png" class="medium align_left"/>
-            The <b>terminal</b> is a text interface. It looks like a simple window with a couple of characters and a blinking cursor. All recent operating systems have a terminal. Unfortunately, the terminal by itself isn't useful, which is why there are shells and command-line tools. A <b>shell</b> is a program - also known as a <b>command-line interpreter</b> - that gives a user access to the operating system services by providing a list of commands the user can input in the terminal. There are many shells that can be used with the terminal. Some popular ones include <i>Bash</i>, <i>PowerShell</i>, and <i>Command Prompt (cmd)</i>. Caution, the shell isn't a visible application, it works in the background only giving hints of its existence through the terminal. Together, they allow users to access command-line applications (like Vim), manipulate files, install other tools, and other services a programmer needs.   
+            The <b>terminal</b> is a text interface. It looks like a simple window with a couple of characters and a blinking cursor. All recent operating systems have a terminal. Unfortunately, the terminal by itself isn't useful, which is why there are shells and command-line tools. A <b>shell</b> is a program - also known as a <b>command-line interpreter</b> - that gives a user access to the operating system services by providing a list of commands the user can input in the terminal. There are many shells that can be used with the terminal. Some popular ones include <i>Bash</i>, <i>PowerShell</i>, and <i>Command Prompt (cmd)</i>. Caution, the shell isn't a visible application, it works in the background only giving hints of its existence through the terminal. Together, they allow users to access command-line applications (like Vim), manipulate files, install other tools, and other services for a programmer.   
          </p>
          <p>   
-            For learning purposes, this lecture and future lectures will use the terminal along with bash. Both linux OS and MacOS come with Bash shells in the terminal. Windows users need to take an extra step by installing <i>Windows Subsystem for Linux</i> (WSL) using the guide on the Microsoft <a href = "https://docs.microsoft.com/en-us/windows/wsl/install" target = "_blank" class = "lecture">website</a>. Windows Subsystem for linux creates a Linux environment on a Windows system, allowing user to execute Bash commands on the terminal and more. For those who don't want to install WSL, it is possible to use cmd and Notepad, but additional research is required. With the terminal and Bash, it is possible to write and store code. Though, to have the program run the terminal needs to install a compiler. 
+            For learning purposes, this lecture and future lectures will use the terminal along with bash. Both Linux OS and MacOS come with Bash shells in the terminal. Windows users need to take an extra step by installing <i>Windows Subsystem for Linux</i> (WSL) using the guide on the Microsoft <a href = "https://docs.microsoft.com/en-us/windows/wsl/install" target = "_blank" class = "lecture">website</a>. WSL creates a Linux environment on a Windows system, allowing user to execute Bash commands on the terminal and more. For those who don't want to install WSL, it is possible to use cmd and Notepad, but additional research is required. With the terminal and Bash, it is possible to write and store code. Though, to have the program run, the terminal needs to install a compiler. 
          </p>
          
          <p>
@@ -64,7 +64,7 @@
          </p>
          <h2>The Basic Structure of Any Code</h2>
          <p>
-            Here is a simple HelloWorld program which contains a couple lines of code. It provides the fundamental structure of how every C++ program is built. C++ is case-sensitive. For example, the key term <i>return</i> is different from the word Return. It also has a free-form layout, so space and line breaks are ignored during compilation. Caution, compiler doesn't ignore the content between line breaks. For example, "s t d" is interpreted as the letters s, t, and d while "std" is interpreted as the keyword <i>std</i>. Still, a programmer can write each symbol, keyword, integer, and string - a collection of characters encased with double quotation marks ("") - on their own line, and it will still compile like the code below. The following will explain each line in great detail.  
+            Here is a simple HelloWorld program which contains a couple lines of code. It provides the fundamental structure of how every C++ program is built. C++ is case-sensitive. For example, the key term <i>return</i> is different from the word Return. It also has a free-form layout, so space and line breaks are ignored during compilation. Caution, compiler doesn't ignore the content between line breaks. For example, "s t d" is interpreted as the letters s, t, and d while "std" is interpreted as the keyword <i>std</i>. Still, a programmer can write each symbol, keyword, integer, and string - a collection of characters encased with double quotation marks ("") - on their own line, and it will still compile like the code below. The following will explain each line in detail.  
          </p>
          <code class="example" id="HelloWorld">
             1 #include &lt;iostream&gt; <br />
@@ -84,11 +84,11 @@
          </p>
          <h3>using namespace std;</h3>
          <p>
-            Line 3 tells the compiler to use the standard name space to identify keywords in the programmer's code that are a part of header file's list of commands. An example would be the keyword <i>cout</i>, since it is a part of the iostream's list of commands. It is possible to override the functionality of key terms in the program by calling a different name space, but due to learning circumstances, these lectures will use the standard.
+            Line 3 tells the compiler to use the standard name space to identify keywords in the programmer's code that are a part of the header file's list of commands. An example would be the keyword <i>cout</i>, since it is a part of the iostream's list of commands. It is possible to override the functionality of key terms in the program by calling a different name space, but due to learning circumstances, these lectures will use the standard.
          </p>
          <h3>int main()</h3>
          <p>
-            Let's look at the following statement on line 5. The <i>main()</i> is a function for the program. Every program has a main function and can have additional functions. Each function carries out a process, which consist of code. The parentheses are where we can store parameters - additional instructions for the function to use - though since this is a simple program, it is left empty. Functions will be explained in future lectures. Finally, the keyword <i>int</i> is called a data type, this specific data type says that the main function can return an integer.
+            Let's look at the following statement on line 5. The <i>main()</i> is a function for the program. Every program has a main function and can have additional functions. Each function carries out a process, which consist of code. The parentheses are where we can store parameters - additional instructions for the function to use - though since this is a simple program, it is left empty. Functions will be explained in future lectures. Finally, the keyword <i>int</i> is called a data type, this specific data type says that the main function should return an integer.
          </p>
          <h3>{ ... }</h3>
          <p>
@@ -96,7 +96,7 @@
          </p>
          <h3>cout &lt;&lt; "Hello World!"\n;</h3>
          <p>
-            The code above uses the keyword <i>cout</i>, followed by two less-than operators (&lt;&lt;) to send anything on the right side of the operators to the terminal. The part "Hello World!" is the <i>string</i> that is sent and displayed in the terminal. Remember, a string is a set of characters surrounded by double quotation marks (""). The double quotation marks help the compiler distinguish between code and text for the user to view. The <i>escape sequence</i>, newline (\n), is one character according to the compiler. It tells the compiler to break from the existing line, and to start on a new line in the terminal. The semicolon (;) is like a period and symbolizes the end of a statement.
+            The code above uses the keyword <i>cout</i>, followed by two less-than operators (&lt;&lt;) to send anything on the right side of the operators to the terminal. The part "Hello World!" is the <i>string</i> that is sent and displayed in the terminal. Remember, a string is a set of characters surrounded by double quotation marks (""). The double quotation marks help the compiler distinguish between code and text for the user to view. The <i>escape sequence</i>, newline (\n), is also a string - one character according to the compiler. It tells the compiler to break from the existing line, and to start on a new line in the terminal. The semicolon (;) is like a period and symbolizes the end of a statement.
          </p>
          <h3>return 0;</h3>
          <p>
@@ -104,11 +104,11 @@
          </p>
          <h2>Errors</h2>
          <p>
-            There are two types of errors in programming, syntax errors and logical errors. A <b>syntax error</b> is a compilation error that detects missing symbols, values, and keywords from the program. An example would be when a programmer forgets the semicolon or forgets an operator. This is usually display in the terminal, stating the file and the location of the error in that file. A <b>logical error</b> happens during the execution of the program and is only caught by the user. It can be anything from the code misbehaving and giving wrong values to not give values at all. Compilers can't find these errors, but a debugger can help find where the issue is at.
+            There are two types of errors in programming, syntax errors and logical errors. A <b>syntax error</b> is a compilation error that detects missing symbols, values, and keywords from the program. An example would be a programmer forgetting to insert a semicolon at the end of a statement, or forgetting an operator. This is usually displayed in the terminal, stating the file and the location of the error. A <b>logical error</b> happens during the execution of the program and is only caught by the user. It can be anything from the code misbehaving and giving wrong values to not give values at all. Compilers can't find these errors, but a debugger can help find where the issue is at.
          </p>
          <h2>Preparing and Understanding the Terminal</h2>
          <p>
-            In this section I assume that you have your terminal with Bash opened and are ready for the next instructions. This lecture will try to anticipate any issues, but for further assistance please search online. For now, we will be going over basic commands, updating the terminal, installing the compiler, and running code. 
+            In this section I assume that you have your terminal with Bash opened and are ready for the next instructions. This lecture will try to anticipate any issues, but for further assistance please search online. For now, this lecture will go over the basic commands, updating the terminal, installing the compiler, and running code. 
          </p>
          <h3>Commands</h3>
          <p>
@@ -141,7 +141,7 @@
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/cd_cmd.png" class="small" /> <br />
-            Helps navigate the directory and can require additional input. For instance, to step into a subdirectory, type and enter the subdirectory's name after the cd command. To step back one directory, type two periods after the cd command. To step all the way back to the origin of the directory, enter cd by itself. Rather than using cd for every step, if the path of the desired directory is known, type the path after the command cd and then enter. Looking at the example, notice the path depicted in the green section, or notice the subdirectories when we enter the command ls.
+            Helps navigate the directory and can require additional input. For instance, to step into a subdirectory, type and enter the subdirectory's name after the cd command. To step back one directory, type two periods after the cd command. To step all the way back to the origin of the directory, enter cd by itself. Rather than using cd for every step, if the path of the desired directory is known, type the path after the command cd and then enter. Looking at the example, notice the path depicted in the green section, or notice the subdirectories when entering the command ls.
          </p>
 
          <h4>mkdir Command</h4>
@@ -160,15 +160,15 @@
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/vim_cmd.png" class="small" /> <br />
             <img src="../../../images/C++/the_fundamentals_of_C++/cpp_file_instance.png" class="small align_right" />
-            Creates and accesses the user defined C++ file. Note, these files have a (.cpp) extension which can be interpreted as “C Plus Plus”. Vim has modes and commands to edit, manipulate, save, and more. Typing right away will cause the first few characters from the keyboard to not register. To start writing/editing text, press the character (i) on the keyboard. This is known as insert mode, and is shown at the bottom of the window. To quit any of the several modes, press the escape key. Deleting characters while not in insert mode will cause the cursor to move to the left instead of deleting the letters. To fix this, hit the (i) key again.
+            Creates and accesses the user defined C++ file. Note, these files have a (.cpp) extension which can be interpreted as “C Plus Plus”. Vim has modes and commands to edit, manipulate, save, and more. Typing right away will cause the first few characters from the keyboard to not register. To start writing/editing text, press the character (i) on the keyboard. This is known as insert mode and is shown at the bottom of the window. To quit any of the several modes, press the escape key. Deleting characters while not in insert mode will cause the cursor to move to the left instead of deleting the letters. To fix this, hit the (i) key again.
          </p>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/set_nmbr_cmd.png" class="small align_left"/>
-            Vim has unique commands that can be entered in the command line, located at the bottom of the window. Before typing a command, exit out of any mode. Each command starts with a colon (:). <img src="../../../images/C++/the_fundamentals_of_C++/override.png" class="small align_right"/>To know more about Vim, enter (:help) on the command line. This lecture will go over a few of the basic commands. To get line numbering, enter (:set number) in the command line. For saving files, type (:w) in the command line and press enter. To quit Vim and go back to the terminal, use the following command (:q). Note, if a file has been edited and the quit command is executed before saving, Vim will warn the user about unsaved changes. To bypass this enter the force quit command (:q!). Warning, all progress will be lost, so the better option is to use the save and quit command (:wq).
+            Vim has unique commands that can be entered in the command line, located at the bottom of the window. Before typing a command, exit out of any mode. Each command starts with a colon (:). <img src="../../../images/C++/the_fundamentals_of_C++/override.png" class="small align_right"/>To know more about Vim, enter (:help) on the command line. This lecture will go over a few of the basic commands. To get line numbering, enter (:set number) in the command line. For saving files, type (:w) in the command line and press enter. To quit Vim and go back to the terminal, use the following command (:q). Note, if a file has been edited and the quit command is executed before saving, Vim will warn the user about unsaved changes. To bypass this, enter the force quit command (:q!). Warning, all progress will be lost, so the better option is to use the save and quit command (:wq).
          </p>
          <p>   
             <img src="../../../images/C++/the_fundamentals_of_C++/saved_file.png" class="small align_left"/>
-            Remember, Vim is an open-source editor. It comes with some distributors of Linux like Ubuntu, but if it's not installed, the terminal will complain and suggest installing it using whatever command it provides. Any editor can work with C++ files, but for educational purposes, this lecture will use Vim. 
+            Remember, Vim is an open-source editor. It comes with some distributors of Linux like Ubuntu, but if it's not installed, the terminal will complain and suggest installing it using whatever command it provides.
          </p> 
 
          <h4>rmdir Command</h4>
@@ -242,19 +242,19 @@
 
          <h3>Updating</h3>
          <p>
-            To avoid issues when installing the compiler check for updates. To do this, there are a set of instructions to follow. First, update the package list by entering the following command:
+            To avoid issues when installing the compiler, you need to check for updates. To do this, there are a set of instructions to follow. First, update the package list by entering the following command:
          </p>
          <code class="example">
             $ sudo apt-get update
          </code>
          <p>
-            The command "apt-get update" is part of the Advanced Package Tool (APT) that helps manage software. In this case, the command above is trying to get updates on the current packages to allow users to upgrade to the proper software. Packages is just another way to say applications or software. To upgrade, type the following in the terminal:
+            The command "apt-get update" is part of the Advanced Package Tool (APT) that helps manage software. In this case, the command above is trying to get updates on the current packages to allow users to upgrade to the proper software. Packages are just another way to say applications or software. To upgrade, type the following in the terminal:
          </p>
          <code class="example">
             $ sudo apt-get upgrade
          </code>
          <p>
-            The last step ensures critical packages are upgraded, while it cleans up unnecessary packages. Type the following:
+            The last step ensures critical packages are upgraded, while cleaning up unnecessary packages. Type the following:
          </p>
          <code class="example">
             $ sudo apt-get dist-upgrade
@@ -312,7 +312,7 @@
             $ g++ -c HelloWorld.cpp
          </code>
          <p>
-            Once the object file is created it will be in the current directory. Use command (ls) to view the new file. Notice how it has the same name as the C++ file, this is normal. At this point a syntax error may show instead of a file. The error's text will identify the location of the error in the form of text in the terminal. Simply go back and edit the file. If successful, the next step is to name and create an executable file. For C++, the executable file has a (.out) extension. This file will run and provide output from the program. Use the following example to create it:
+            Once the object file is created, it will be shown in the current directory. Use command (ls) to view the new file. Notice how it has the same name as the C++ file, this is normal. At this point a syntax error may show instead of a file. The error's text in the terminal will identify the location of the error. Simply go back and edit the file. If successful, the next step is to name and create an executable file. For C++, the executable file has a (.out) extension. This file will run teh program and execute any output from the program. Use the following example to create it:
          </p>
          <code class="syntax">
             $ g++ -o executable_file_name file_name.cpp
@@ -321,7 +321,7 @@
             $ g++ -o HelloWorld HelloWorld.cpp
          </code>
          <p>
-            Typing the command (ls) will show the updated contents of the current directory. Notice how there is no extension with this file. To run it, use the dot-forward-slash (./) to denote the current directory with the name of the executable file attached ike so:
+            Typing the command (ls) will show the updated contents of the current directory. Notice how there is no extension with this file. To run it, use the dot-forward-slash (./) to denote the current directory with the name of the executable file attached like so:
          </p>
          <code class="syntax">
             $ ./executable_file_name
