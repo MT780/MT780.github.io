@@ -33,13 +33,10 @@
          </nav>
       </header>
       <div class="actual_body">
-      <div>
          <h1>The Fundamentals of C++</h1>
          <p>
             This lecture serves as an introduction to C++ and overall programming. It focuses on terminology, structure, and step by step instructions for C++ coding. The only prerequisites for this lecture are to have a working computer and a fundamental understanding of how to use it. The first section goes over the programming environment, explaining the applications and tools needed to write and run code. The next section will analyze basic code to understand its structure, keywords, and symbols. The final section goes into detail about the whole process, from preparing the proper tools to executing your first program. 
          </p>
-      </div>
-      <div>
          <h2>Knowing your Programming Environment</h2>
          <p>
             A programming environment is a set of tools that aids a developer in creating a operational program. The tools mention here are absolutely essential and will be explained in detail. These tools include a text editor, a terminal, and a compiler.  
@@ -65,58 +62,53 @@
             <img src="../../../images/C++/the_fundamentals_of_C++/Visual_Studio_pic.png" class="medium align_right"/> 
             <i>Integrated development environments</i> (IDE)s are applications that come with the same equipment that editors and terminals have, and then some. Warning, some of them state that they are free to use under certain conditions, like Microsoft's Visual Studio - not to get confused with Microsoft's Visual Studio Code which is just the editor. Basically, the software can only be used for studying purposes, and programmers can't make a profit unless they buy the business versions. While text editors and terminals are open source (FREE!). Companies like free, people like free, so it's best to follow the practices. Before writing any code, it is essential to understand what is written. 
          </p>
-      </div>
-      <div>
          <h2>The Basic Structure of Any Code</h2>
+         <p>
+            Here is a simple HelloWorld program which contains a couple lines of code. It provides the fundamental structure of how every C++ program is built. C++ is case-sensitive. For example, the key term <i>return</i> is different from the word Return. It also has a free-form layout, so space and line breaks are ignored during compilation. Caution, compiler doesn't ignore the content between line breaks. For example, "s t d" is interpreted as the letters s, t, and d while "std" is interpreted as the keyword <i>std</i>. Still, a programmer can write each symbol, keyword, integer, and string - a collection of characters encased with double quotation marks ("") - on their own line, and it will still compile like the code below. The following will explain each line in great detail.  
+         </p>
          <code class="example" id="HelloWorld">
             1 #include &lt;iostream&gt; <br />
-            2 using namespace std; <br />
-            3 <br />
-            4 int main() <br />
-            5 {<br />
-            6 cout << "Hello World!"\n;<br />
-            7 return 0;<br />
-            8 }<br />
+            2 <br />
+            3 using namespace std; <br />
+            4 <br />
+            5 int main() <br />
+            6 {<br />
+            7 cout &lt;&lt; "Hello World!" &lt;&lt; "\n";<br />
+            8 return 0;<br />
+            9 }<br />
          </code>
-         <h3>Reading each line of code</h3>
+
+         <h3>#include &lt;iostream&gt;</h3>
          <p>
-            C++ is case-sensitive. For example, the key term <i>return</i> is different from the word Return. It also has a free-form layout, so space and line breaks are ignored during compilation. Caution, compiler doesn't ignore the content between line breaks. For example, "s t d" is interpreted as the letters s, t, and d while "std" is interpreted as the keyword <i>std</i>. Still, a programmer can write each symbol, keyword, integer, and string - when we mean string we're saying a collection of characters - on their own line, and it will still compile like the code above. The code above consists of multiple statements that will be examined.
+            On line 1, there is the <i>#include</i> directive, which tells the compiler to look at the contents of the <i>iostream</i> header file that is within the less-than operator (&lt;) and greater-than operator (&gt;). The iostream file contains a list of input and output commands to query the user for information, or to display information to the user. This file will be examined in more detail in the stream manipulation lecture. Note, to use multiple header files in C++, each one needs a #include directives which can span multiple lines in the beginning of a program.   
          </p>
-         <h4>#include &lt;iostream&gt;</h4>
+         <h3>using namespace std;</h3>
          <p>
-            On line 1, there is the #include directive, which tells the compiler to look at the contents of the iostream header file that is within the less-than operator (&lt;) and greater-than operator (&gt;). The iostream file, along with other files, will be explained in the String Manipulation lecture. For now, know that it deals with input and output commands. 
+            Line 3 tells the compiler to use the standard name space to identify keywords in the programmer's code that are a part of header file's list of commands. An example would be the keyword <i>cout</i>, since it is a part of the iostream's list of commands. It is possible to override the functionality of key terms in the program by calling a different name space, but due to learning circumstances, these lectures will use the standard.
          </p>
-         <h4>using namespace std;</h4>
+         <h3>int main()</h3>
          <p>
-            Line 2 tells the compiler to use the default name space to identify terms such as <i>cout</i>, which is part of the iostream file. It is possible to override the functionality of key terms in the program by calling a different name space, but due to learning circumstances, these lectures will use the standard.
+            Let's look at the following statement on line 5. The <i>main()</i> is a function for the program. Every program has a main function and can have additional functions. Each function carries out a process, which consist of code. The parentheses are where we can store parameters - additional instructions for the function to use - though since this is a simple program, it is left empty. Functions will be explained in future lectures. Finally, the keyword <i>int</i> is called a data type, this specific data type says that the main function can return an integer.
          </p>
-         <h4>int main()</h4>
+         <h3>{ ... }</h3>
          <p>
-            Let's look at the following statement on line 4. The main() is a function for the program. Every program has a main function and can have additional functions. Each function carries out a process, which consist of code. The parentheses are where we can store parameters - additional instructions for the function to use - though since this is a simple program, it is left empty. Functions will be explained in future lectures. Finally, the keyword int is called a data type, this specific data type says that the main function can return an integer.
+            Both lines 6 and 9 help identify where the code of the main function begins and ends. This is one of the many locations where programmers will write their code.
          </p>
-         <h4>{ ... }</h4>
+         <h3>cout &lt;&lt; "Hello World!"\n;</h3>
          <p>
-            Both lines 5 and 8 help identify where the code of the main function begins and ends. This is one of the many locations where programmers will write their code..
+            The code above uses the keyword <i>cout</i>, followed by two less-than operators (&lt;&lt;) to send anything on the right side of the operators to the terminal. The part "Hello World!" is the <i>string</i> that is sent and displayed in the terminal. Remember, a string is a set of characters surrounded by double quotation marks (""). The double quotation marks help the compiler distinguish between code and text for the user to view. The <i>escape sequence</i>, newline (\n), is one character according to the compiler. It tells the compiler to break from the existing line, and to start on a new line in the terminal. The semicolon (;) is like a period and symbolizes the end of a statement.
          </p>
-         <h4>cout &lt;&lt; "Hello World!"\n;</h4>
+         <h3>return 0;</h3>
          <p>
-            The code above uses the term cout, followed by two less-than-arrows operator (&lt;&lt;) to send anything on the right side of the operator to the terminal. The part "Hello World!" is the content displayed in the terminal and is considered a string. Remember, a string is a set of characters surrounded by double quotation marks "". The double quotation marks help the compiler distinguish between code and text for the user to view. The escape sequence, newline (\n), is one character according to the compiler. It tells the compiler to break from the existing line, and to start on a new line in the terminal. The semicolon is like a period and symbolizes the end of a statement.
+            Remember how I said the main function expects an integer to be returned, well this is it. On line 8, the compiler says to return 0. The digit 0 is considered a flag, it signals the compiler that there were no errors in the program, and that it can be terminated. However, if there are errors, the terminal will provide a long list of what seems like random words at first, but it is actually important information to fix the code.
          </p>
-         <h4>return 0;</h4>
-         <p>
-            Remember how I said the main function expects an integer to be returned, well this is it. On line 7, the compiler says to return 0. The digit 0 is considered a flag, it signals the compiler that there were no errors in the program, and that it can be terminated. However, if there are errors, the terminal will provide a long list of what seems like random words at first, but it is actually important information to fix the code.
-         </p>
-      </div>
-      <div>
          <h2>Errors</h2>
          <p>
-            There are two types of errors in programming, syntax errors and logical errors. The first type is usually easy to fix because the compiler usually catches it. This could happen when a programmer forgets the semicolon or forgets an operator. Logical errors on the other hand can be a little tricky. It's when the program still runs but it doesn't do the task it was supposed to do. Compilers can't find these errors, but a debugger can help find where the issue is at.
+            There are two types of errors in programming, syntax errors and logical errors. A <b>syntax error</b> is a compilation error that detects missing symbols, values, and keywords from the program. An example would be when a programmer forgets the semicolon or forgets an operator. This is usually display in the terminal, stating the file and the location of the error in that file. A <b>logical error</b> happens during the execution of the program and is only caught by the user. It can be anything from the code misbehaving and giving wrong values to not give values at all. Compilers can't find these errors, but a debugger can help find where the issue is at.
          </p>
-      </div>
-      <div>
          <h2>Preparing and Understanding the Terminal</h2>
          <p>
-            In this section I assume that you have your terminal opened and are ready for the next instructions. This lecture will try to anticipate any issues, but for further assistance please search online. For now, we will be going over basic commands, updating the terminal, and installing the compiler. 
+            In this section I assume that you have your terminal with Bash opened and are ready for the next instructions. This lecture will try to anticipate any issues, but for further assistance please search online. For now, we will be going over basic commands, updating the terminal, installing the compiler, and running code. 
          </p>
          <h3>Commands</h3>
          <p>
@@ -205,6 +197,47 @@
             <img src="../../../images/C++/the_fundamentals_of_C++/sudo_cmd.png" class="small" /> <br />
             This command gives administrative access over operations. Any commands with sudo tagged onto it will initially ask for a password before doing its task, so make sure to remember the password. Knowing sudo, will allow users to update and install packages.
          </p>
+         <p>
+            To summarize, the following is a list of the commands that were reviewed during this lecture.
+         </p>
+         <table>
+            <tr>
+               <th>Commands</th>
+               <th>Definitions</th>
+            </tr>
+            <tr>
+               <td>pwd</td>
+               <td>Provides a path to the currently accessed directory</td>
+            </tr>
+            <tr>
+               <td>ls</td>
+               <td>Provides a preview of the subdirectories in the current directory</td>
+            </tr>
+            <tr>
+               <td>cd</td>
+               <td>Helps navigate the directory and can require additional input</td>
+            </tr>
+            <tr>
+               <td>mkdir</td>
+               <td>Create a subdirectory in the current directory</td>
+            </tr>
+            <tr>
+               <td>vim</td>
+               <td>Creates and accesses the user defined C++ file</td>
+            </tr>
+            <tr>
+               <td>rmdir</td>
+               <td>Removes a subdirectory in the current directory</td>
+            </tr>
+            <tr>
+               <td>rm</td>
+               <td>Removes files that are in the current directory</td>
+            </tr>
+            <tr>
+               <td>sudo</td>
+               <td>Gives administrative access over operations</td>
+            </tr>
+         </table>
 
 
          <h3>Updating</h3>
@@ -247,8 +280,6 @@
             <img src="../../../images/C++/the_fundamentals_of_C++/gpp_version.png" class="medium" /> <br />
             If you see something like the image above, then the compiler has been successfully installed. The next step is to write a program. 
          </p>
-      </div>
-      <div>
          <h2>Writing, Compiling, and Running Code</h2>
          <p>
             To begin, set up a user defined directory to store programs, in this case call it "Programs". 
@@ -302,7 +333,6 @@
             <img src="../../../images/C++/the_fundamentals_of_C++/output.png" class="small" /> <br />
             Once submitted, the output will be displayed on the next line in the terminal. If it runs and there are issues with the output, then it is considered a logical error. To fix this, go back into the file and carefully look for the problem. Once fixed, use the last 3 steps to compile and execute the program again. Congratulations, you are officially a programmer! If you wish to continue, please read the next section.
          </p>
-      </div>
       </div>
    </body>
 </html>

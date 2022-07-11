@@ -47,9 +47,9 @@ div.non_header_marker li{
  }
 
 
-h3, h4 {
-   margin-left: .5%;
-   margin-right: .5%;
+.actual_body h1, h2, h3, h4 {
+   margin-left: 5%;
+   margin-right: 5%;
 }
 
 /*The general layout for text

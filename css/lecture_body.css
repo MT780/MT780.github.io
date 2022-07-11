@@ -45,6 +45,8 @@ body.lecture {
     border-radius: 10px;
     padding: 1%;
     margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
  }
 
  code.syntax {
@@ -55,7 +57,21 @@ body.lecture {
    font-size: 125%;
    border-radius: 10px;
    padding: 1%;
-   margin-top: 1%;
+   margin-left: 5%;
+   margin-right: 5%;
+ }
+
+ table {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ th {
+   border-bottom: 2px solid #BBF2E2;
+ }
+
+ td {
+   border-bottom: 1px solid #BBF2E2;
  }
 
  a.lecture:link, a.lecture:visited {
