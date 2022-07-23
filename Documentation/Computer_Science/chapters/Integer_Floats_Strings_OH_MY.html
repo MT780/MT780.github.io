@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title> Integer, Floats, and Strings OH MY! </title>
+      <title> Variables, Expressions, and Statements </title>
 
       <meta name="description"
-         content="Integer, Floats, and Strings OH MY!"/>
+         content="Variables, Expressions, and Statements"/>
       <meta name="robots"
          content="nofollow" />
       <meta http-equiv="author"
@@ -33,7 +33,10 @@
              </nav>
         </header>
         <div class="actual_body">
-              <h1>Integer, Floats, and Strings Oh My</h1>
+              <h1>Data Types, Expressions, and Statements</h1>
+              <p>
+               On the surface, a good portion of programming may seem like mathematics, which to an extent it is. There appears to be operators, operands, expressions, and variables throughout code. We know what they mean, but to a computer it doesn't initially understand these terms and symbols. Only when a programmer provides these definitions does it act accordingly. Because of this nature, we have the ability to redefine some of these terms and symbols to be more flexible. In this lesson, we will focus on this flexibility as we discuss comments, primitive data types, objects,  data types, these terms and symbols to get an idea of how programming works comments, the structure of declaring a data type  and statements. On top of that there will be new header files to include in the #include directive, along with the introduction of objects. The first thing to do is to create documentation for the programmer.  
+              </p>
               <h2>Comments</h2>
               <code class="syntax">
                  /* <br />
@@ -43,22 +46,39 @@
                  // Line comment <br />
               </code>
               <p>
-               Comments are one or more lines of text that are ignored by the compiler. They are used for documentation purposes to help users understand the program. Adding the symbol (//) will cause the compiler to ignore any text after it that's on the same line. Caution, anything before the symbol and any line after will be read by the compiler. To have the compiler ignore multiple lines of text, enclose it with the (/*) symbol in the beginning, and the (*/) symbol at the end. Sometimes, programmers use comments to omit code to tell the compiler to ignore a specific section. This method can help determine the issue, but there are more useful options.
+               <b>Comments</b> are one or more lines of text that are ignored by the compiler. They are used for documentation purposes to help users understand the program. A line comment, denoted by the two forward slashes (//), will cause the compiler to ignore any text after it that's on the same line. Caution, anything before the symbol and any line after will be read by the compiler. To have the compiler ignore multiple lines of text, use a block text comment. A block text comment is enclose with the (/*) symbol in the beginning, and the (*/) symbol at the end. Sometimes, programmers use comments to omit code to tell the compiler to ignore a specific section. This method can help determine the issue, but there are more useful options.
               </p>
 
               <h2>Variable Declaration and Definition</h2>
-              <code class="syntax">
-               data_type variable_name;<br />
-               data_type variable_name = expression;<br />
-              </code>
-              <code class="example">
-               int feet;<br />
-               int inches = 0;<br />
-               string student_first_name;<br />
-               string student_last_name = "";<br />
-              </code>
               <p>
-               Declares a variable, and optionally defines a variable by assigning it a value. The program will store any information of the variable so it can later be referenced during run time. To declare a variable, the program needs at least a data type and the variable's name. The variable's name strictly starts with a letter or underscore (_), followed by a combination of letters, numbers, or underscores. Both spaces and symbols are not allowed when naming a variable. It is illegal to use a keyword that is already reserved by the C++ programming language. It is best to assign a value to the variable right away, even if it's a default value like zero (0) or empty quotations (“”). The program can fill undefined variables with random data, which can potentially take up a lot of space, meaning less resources.   
+               In programming, a <b>variable</b> is a unique identifier that references a location in memory that can store a value of that specific type. To <i>declare</i> a variable, the statement needs at least a data type and variable name. 
+               <code class="syntax">
+                  data_type variable_name;<br />
+                 </code>
+                 <code class="example">
+                  int feet;<br />
+                 </code>
+               A variable's name should strictly start with a letter or underscore (_), followed by a combination of letters, numbers, or additional underscores. Both spaces and symbols (with the exception of the underscore) are not allowed when naming a variable. It is illegal to use a keyword that is already reserved by the C++ programming language. A variable's name should have meaning, so programmers aren't confused. For example, a variable named <i>inches</i> has more meaning than a variable named <i>x</i>. 
+               <code class="example">
+               //Not Allowed<br />
+               int 1st_var; //has digit as first character <br />
+               int turning-point; //has (-) which is a symbol <br />
+               int feet to inches; //has spaces between <br />
+               int cout; //has a reserved keyword <br />
+               <br />
+               //Allowed <br />
+               int var_1st;<br />
+               int turning_point;<br />
+               int feet_to_inches;<br />
+               </code>
+               It is best to <i>define</i> a variable right away by assigning it a value. Not doing so can potentially assign a random value. This happens when designating a memory location to a variable, as that location may already be filled with data from a previous program. Defining a variable will provide an empty location of memory, thus avoiding the issue.
+               <code class="syntax">
+               data_type variable_name = expression;<br />
+               </code>
+               <code class="example">
+               int inches = 0;<br />
+               </code>
+               It is possible to refer to a variable throughout the program, and even reassign a variable's value.
               </p>
 
               <h2>Reassignment</h2>
@@ -67,15 +87,14 @@
               </code>
               <code class="example">
                inches = 2;<br />
-               student_last_name = "Campbell";<br />
               </code>
               <p>
-               Reassigns a new value to an already declared/defined variable, thus overwriting the existing value. The data type doesn't need to be expressed, since it was stored into memory when the variable was defined. Note, the equal sign (=) is called the assignment operator and does not mean “equal to”. This is later explained in the arithmetic and mathematical functions section. For now, know that the assignment operator assigns the right value to the left value. Depending on the data type appended at the beginning, a variable can hold integers, decimals, strings, and more. 
+               Reassigns a new value to an already declared/defined variable, thus overwriting the existing value. The data type doesn't need to be expressed, since it was stored into memory when the variable was defined. Note, the equal sign (=) is called the assignment operator and does not mean “equal to”. This is later explained in the arithmetic and mathematical functions section. For now, know that the assignment operator assigns the right value to the left variable. Depending on the data type appended at the beginning, a variable can hold integers, decimals, strings, and more. 
               </p>
 
               <h2>Data Types</h2>
               <p>
-               The most fundamental data types include, but are not limited to, integers, floating-points, and strings. 
+               From the various data types used in C++, the most fundamental are number types. 
               </p>
               <h3>Integer and Floating-Point</h3>
               <code class="example">
@@ -83,48 +102,56 @@
                unsigned long long humans_on_earth = 7800000000;<br />
               </code>
               <p>
-               Integer types define a variable as including whole numbers and negative numbers, but exclude decimals. To reference a variable as a integer type use the keyword <i>int</i>. Due to memory constraints and the limited range of <i>int</i>, there are two modifiers that change the range of the integer type: <i>short</i> and <i>long long</i>. The two modifiers can be substitutions for the <i>int</i> data type, with <i>short</i> having a smaller range and <i>long long</i> having a larger range (<a href="#table_2_1" class="lecture">table 2.1</a>). To exclusively use whole numbers (only positive integers), attach the keyword <i>unsigned</i> before the data type or any of the modifiers. Depending on the application, use the right data type to be efficient as possible.  
+               Number types include both integer and floating-point data types. <b>Integer</b> types specify a variable as including whole numbers and negative whole numbers, but exclude decimals. To reference a variable as an integer type use the keyword <i>int</i>. To describe int in more detail, it is possible to use modifiers. <b>Modifiers</b> change the range and sign of an integer type. Range modifiers change the minimum and maximum value an integer type can have. From the smallest range to the biggest range, the following modifiers can be appended before the keyword int: <i>short</i>, <i>long</i> and <i>long long</i>. In addition, there are sign modifiers that include or exclude negative values, and are called <i>signed</i> and <i>unsigned</i> respectively. These modifiers can be attached in front of a range modifier, or attached to the int data type itself. If the program requires more precise number values, there are specific data types for the situation.  
               </p>
               <p>
-               Floating-point types define a variable as holding both decimal and integer values. Depending on the range, floating-point data types come in float, double, and long double. The data type float has the smallest decimal places, while long double has the largest decimal places. Floating-point numbers don't use unsigned. The reason we don't always use floating-point variables, is because integers can be more efficient as seen in <a href="#table_2_1" class="lecture">table 2.1</a> with the typical memory size. Keep in mind that the table is an estimation, and that each system has different ranges.
-              </p>
+               <b>Floating-point</b> types specify a variable as holding both decimal and integer values. From the smallest decimal places to the biggest decimal places, floating-point types come in a range of <i>float</i>, <i>double</i>, and <i>long double</i>. Caution, floating-point types don't use sign modifiers. The reason we don't always use floating-point variables is because integers can be more efficient with storage. The following table shows typical memory size of each data type along with a rough estimate of their range (<a href="#table_2_1" class="lecture">table 2.1</a>).
+               </p>
               <table id="table_2_1">
                <tr>
-                  <th>Data Type and Modifiers</th>
+                  <th></th>
+                  <th>Data Types</th>
                   <th>Typical Range</th>
                   <th>Typical Memory Size</th>
                </tr>
                <tr>
-                  <td>long long</td>
-                  <td>-9,223,372,036,754, 775, 808 - 9,223,372,036,854,775,807</th>
-                  <td>8 bytes</td>
+                  <td rowspan="8">Integer Types</td>
+                  <td>signed long long int</td>
+                  <td>-9,223,372,036,754,775,808 - 9,223,372,036,854,775,807</th>
+                  <td rowspan="2">64 bits</td>
                </tr>
                <tr>
-                  <td>unsigned long long</td>
+                  <td>unsigned long long int</td>
                   <td>0 - 18,446,744,073,709,551,615</td>
-                  <td>8 bytes</td>
                </tr>
                <tr>
-                  <td>int</td>
+                  <td>signed long int</td>
                   <td>-2,147,483,648 - 2,147,483,647</td>
-                  <td>4 bytes</td>
+                  <td rowspan="4">32 bits</td>
+               </tr>
+               <tr>
+                  <td>unsigned long int</td>
+                  <td>0 - 4,294,967,295</td>
+               </tr>
+               <tr>
+                  <td>signed int</td>
+                  <td>-2,147,483,648 - 2,147,483,647</td>
                </tr>
                <tr>
                   <td>unsigned int</td>
                   <td>0 - 4,294,967,295</td>
-                  <td>4 bytes</td>
                </tr>
                <tr>
-                  <td>short</td>
+                  <td>signed short int</td>
                   <td>-32,768 - 32,767</td>
-                  <td>2 bytes</td>
+                  <td rowspan="2">16 bits</td>
                </tr>
                <tr>
-                  <td>unsigned short</td>
+                  <td>unsigned short int</td>
                   <td>0 - 65,535</td>
-                  <td>2 bytes</td>
                </tr>
                <tr>
+                  <td rowspan="3">Floating-point Types</td>
                   <td>float</td>
                   <td>range of about ±10^38 and about 7 significant decimal digits</td>
                   <td>4 bytes</td>
@@ -141,8 +168,74 @@
                </tr>
               </table>
               <p>
-               Caution, integer values can be assigned to floating-point variables, but floating-point values cannot be assigned to integer variables. Doing so will cause the value to loose anything after the decimal point. To convey a change in data types to the user, use static cast. 
-              </p>
+               Using the table above, we will examine the range of number types. For instance, notice how it says bits for each row under Typical Range. A bit can hold only two values: 1 (electricity going through) or 0 (no electricity going through). That being said, by adding more bits their can be a combination of 1s and 0s, with each combination representing unique value. For a number type's range, each combination of bits - which have a radix of 2 - can represent a numerical value of radix 10. For example, 000 is the equivalent of 0 and 001 is the equivalent of 1 and so forth. For more information on binary arithmetic, please visit the digital design lectures. When it comes to unsigned integer types, the range is from 0 to 2<sup>n</sup> - 1. Where (n) is the number of bits and 2 represents the base for radix 2. For signed integers, the range is from -(2<sup>n</sup>/2) to ((2<sup>n</sup>/2) - 1). These equation can explain our range for integer types. Looking at both signed long int and signed int, notice that they have the same range. That's because these values aren't exact, and only represent an estimation since every system has different ranges. Though, it is safe to assumed that signed long int is at least the same size of signed int, if not bigger which it usually is. Typing integer types for each variable can be time consuming, which is why there are shorthand versions. To save time, it is automatically assumed that a variable is signed, unless specified. Further, it is possible to remove int from any of the range modifiers. Applying the two recent rules to integer types, the following table is how programmers represent those data types within their code.
+               </p>
+
+               <table id="table_2_1">
+                  <tr>
+                     <th></th>
+                     <th>Data Types</th>
+                     <th>Typical Range</th>
+                     <th>Typical Memory Size</th>
+                  </tr>
+                  <tr>
+                     <td rowspan="8">Integer Types</td>
+                     <td>long long</td>
+                     <td>-9,223,372,036,754,775,808 - 9,223,372,036,854,775,807</th>
+                     <td rowspan="2">64 bits</td>
+                  </tr>
+                  <tr>
+                     <td>unsigned long long</td>
+                     <td>0 - 18,446,744,073,709,551,615</td>
+                  </tr>
+                  <tr>
+                     <td>long</td>
+                     <td>-2,147,483,648 - 2,147,483,647</td>
+                     <td rowspan="4">32 bits</td>
+                  </tr>
+                  <tr>
+                     <td>unsigned long</td>
+                     <td>0 - 4,294,967,295</td>
+                  </tr>
+                  <tr>
+                     <td>int</td>
+                     <td>-2,147,483,648 - 2,147,483,647</td>
+                  </tr>
+                  <tr>
+                     <td>unsigned int</td>
+                     <td>0 - 4,294,967,295</td>
+                  </tr>
+                  <tr>
+                     <td>short</td>
+                     <td>-32,768 - 32,767</td>
+                     <td rowspan="2">16 bits</td>
+                  </tr>
+                  <tr>
+                     <td>unsigned short</td>
+                     <td>0 - 65,535</td>
+                  </tr>
+                  <tr>
+                     <td rowspan="3">Floating-point Types</td>
+                     <td>float</td>
+                     <td>range of about ±10^38 and about 7 significant decimal digits</td>
+                     <td>4 bytes</td>
+                  </tr>
+                  <tr>
+                     <td>double</td>
+                     <td>range of about ± 10^308 and about 15 significant decimal digits</td>
+                     <td>8 bytes</td>
+                  </tr>
+                  <tr>
+                     <td>long double</td>
+                     <td>Just a lot bigger than double</td>
+                     <td>12 bytes</td>
+                  </tr>
+                 </table>
+
+               <p>
+                  Regarding both floating-points and integers, an integer expressions can be assigned to a floating point variable with no issues, but a floating point expression can't be assigned to an integer variable. If you try to assign a floating point value to an integer variable, the integer variable will only keep anything before the decimal point, thus loosing information. In the situation where you want to change the data type, you can use static cast.   
+               </p>
+
               <code class="syntax">
                static_cast&lt;data_type&gt;(expression);
               </code>
@@ -150,13 +243,17 @@
                float more_precise_inches = static_cast&lt;float&gt;(inches);
               </code>
 
+              <p>
+               Besides holding integers and decimals, a variable can also hold one or more characters. 
+              </p>
+
               <h3>Strings and Characters</h3>
               <code class="syntax">
                string username = "xXUltimateGamer42Xx";<br />
                char multi_choice_answer = 'A';<br />
               </code>
               <p>
-               There are two data types when storing characters in a variable: <i>string</i> and <i>char</i>. The characters are based off the American Standard Code for Information Interexchange (ASCII), and consist of numbers, symbols, and letters. According to the C++ language, there is a difference from the character numbers and integer numbers. For example, the character “1” acts more like a symbol, while the integer 1 acts more like a digit you can use during calculations. A string variable can hold zero or more characters within its double quotation marks (“”), while a char variable must hold exactly one character within its single quotations (''). Both <i>string</i> and <i>char</i> data types are already part of the C++ standard library, and can specifically be found in the string header file. Sometimes, characters can get misinterpreted by the compiler because of its significance in the C++ language. To avoid this issue with strings, use the following escape sequences to let the compiler know it's a character. 
+               To store one or more characters, use the string type and the character type. Before declaring these data types, it is always a good idea to implement the <i>string</i> header file in the #include directive. To declare a <b>string</b> type variable use the keyword <i>string</i>. Like the previous lecture, a <b>string</b> value is a collection of characters encapsulated in double quotation marks ("") and can hold zero or more characters. A <b>character</b> type is denoted as <i>char</i> and is attached to the beginning of a variable which can hold a single character in single quotations (''). The characters are based off the American Standard Code for Information Interexchange (ASCII), and consist of numbers, symbols, and letters. According to the C++ language, there is a difference from the character numbers and integer numbers. For example, the character “1” acts more like a symbol, while the integer 1 acts more like a digit you can use during calculations. Both string and character types are already part of the C++ standard library, and can specifically be found in the string header file. Sometimes, characters can get misinterpreted by the compiler because of its significance in the C++ language. To avoid this issue with strings, use the following escape sequences to let the compiler know it's a character. 
               </p>
               <table>
                <tr>
@@ -189,7 +286,7 @@
                enum guitar_string {E, A, D, G, B, e};
               </code>
               <p>
-               Enumeration is a user defined data type that establishes a finite set of values. In our example, the data type is guitar_string, which has six possible values as represent within the curly-braces ({}). To use the user defined data type with variables, append the user data type before the variables as if it were a string or integer. 
+               Enumeration is a user defined data type that establishes a finite set of values. In our example, the data type is guitar_string, which has six possible values as represented within the curly-braces ({}). To use the user defined data type with variables, append the user defined data type before the variable as if it were a string or integer. 
               </p>
               <code class="example">
                guitar_string plucked = D;
@@ -203,7 +300,7 @@
                const float GRAVITY = -9.81;
               </code>
               <p>
-               A constant, denoted by the keyword <i>const</i>, is a type qualifier that prevents any variable's value to change during run time. The type qualifier can be attached to the beginning of any data type listed in the previous table. It is considered good practice to capitalize constants to differentiate them from regular variables. Avoid using magic numbers when defining constants. Magic numbers are values that don't have any significant meaning. In the example, -9.81 has significant meaning since it is the amount of force (in newtons) gravity has on objects in Earth.
+               A <b>constant</b>, denoted by the keyword <i>const</i>, is a type qualifier that prevents any variable's value to change during run time. The type qualifier can be attached to the beginning of any data type listed in the previous table. It is considered good practice to capitalize constant variables to differentiate them from regular variables. Avoid using magic numbers when defining constants. Magic numbers are values that don't have any significant meaning. In the example, -9.81 has significant meaning since it is the amount of force (in newtons) gravity has on objects in Earth.
               </p>
 
               <h2>Expressions</h2>
@@ -257,11 +354,15 @@
                d *= 3 * c//same as d = d * 3 * c;<br />
               </code>
               <p>
-               To use more complicated math expressions, implement the cmath file in the #include directives. This file includes a set of C++ functions that act like their math counterparts. To avoid confusion, both math functions and C++ functions are two different meanings. A function in math is denoted by (f) and is a rule, stating every element (x) in set A has one element (f(x)) in set B. A function in C++ is a block of code that can rely on additional information to carry out a process, and quite possibly return information. Unless it is specified that we are using math functions, assume we are referring to C++ functions. The following is a list of common functions in the cmath library:
+               To use more complicated math expressions, implement the <i>cmath</i> header file in the #include directives. This file includes a set of C++ function calls that act like their math counterparts. A <b>function call</b> orders a function defined in the header file or program to execute and possibly return a value by calling its name and optionally providing additional values within the parentheses.
+               <code class="syntax">
+                  function_name(parameter<sub>1</sub>, parameter<sub>2</sub>, ..., parameter<sub>k</sub>);
+               </code> 
+               To avoid confusion, both math functions and C++ functions are two different meanings. A function in math is denoted by (f) and is a rule, stating every element (x) in set A has one element (f(x)) in set B. A function in C++ carries out a process depending on the content of the block statement and the function's parameters. Unless it is specified that we are using math functions, assume we are referring to C++ functions. The following is a list of common functions in the cmath library:
               </p>
               <table>
                <tr>
-                  <th>Functions</th>
+                  <th>Functions Calls</th>
                   <th>Description</th>
                </tr>
                <tr>
