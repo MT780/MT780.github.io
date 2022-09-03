@@ -35,56 +35,94 @@
       <div class="actual_body">
          <h1>The Fundamentals of C++</h1>
          <p>
-            This lecture serves as an introduction to C++ and overall programming. It focuses on terminology, structure, and step by step instructions for C++ coding. The only prerequisites for this lecture are to have a working computer and a fundamental understanding of how to use it. The first section goes over the programming environment, explaining the applications and tools needed to write and run code. The next section will analyze basic code to understand its structure, keywords, and symbols. The final section goes into detail about the whole process, from preparing the proper tools to executing your first program. 
+            This lecture serves as an introduction to C++ and overall programming. It focuses on terminology, structure, and step by step instructions for C++ coding. The only prerequisites for this lecture are to have a working computer and a fundamental understanding of how to use it. The first section goes over the programming environment, explaining the applications and tools needed to write, compile, and run code. The next section will analyze basic code to understand its structure, keywords, and symbols. The final section goes into detail about the whole process, from preparing the proper tools to executing your first program. 
          </p>
          <h2>Knowing your Programming Environment</h2>
          <p>
-            A programming environment is a set of tools that aids a developer in creating a operational program. The tools mentioned here are essential and will be explained in detail. They include a text editor, a terminal, and a compiler.  
+            A programming environment is a set of tools that aids a developer in creating a operational program. The tools mentioned here are essential and will be explained in detail. They include a text editor, a terminal, compiler, and a debugger.  
          </p>
+         <h3>The Text Editor</h3>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/Type_of_editors_on_windows.png" class="medium align_right" alt="" />
-            Referring to the first tool, a <b>text editor</b> is an application that helps users write and edit text. Luckily, all operating systems (OS)s come with one. For example, Windows OS has Notepad, MacOS has TextEdit, ChromeOS has Nano (more on that later), and the popular Ubuntu - one of the many distributors of Linux OS - has <i>Vim</i>. For chromebook users, it is possible to install one via the Google Play Store, but it's recommended to enable the Linux environment and use their text editor. For chromebooks created during and after 2019, you can view the installation guide via the following <a href="https://support.google.com/chromebook/answer/9145439?hl=en" target="_blank" class="lecture">website</a>. Programmers are not limited to these four text editors. There are also open-source text editors that can come with extra features, such as <i>Microsoft's Visual Studio Code</i>. The options can be overwhelming, so for learning purposes and uniformity, this lecture and following lectures will use Vim. The reason for using Vim is because it's compatibility with all operating systems, and it's open-source software. Vim is also an application that can be installed and used in the terminal. The terminal is an important part of the programming environment. 
+            Referring to the first tool, a <b>text editor</b> is an application that helps users write and edit text. Luckily, all operating systems (OS) come with one. For example, Windows OS has Notepad, MacOS has TextEdit, ChromeOS has Nano (more on that later), and the popular Ubuntu - one of the many distributors of Linux OS - has <i>Vim</i>. 
+         </p>
+         <p>
+            For chromebook users, it is possible to install one via the Google Play Store, but it's recommended to enable the Linux environment and use their text editor. For chromebooks created during and after 2019, you can view the installation guide via the following <a href="https://support.google.com/chromebook/answer/9145439?hl=en" target="_blank" class="lecture">website</a>. Programmers are not limited to these four text editors. There are also open-source text editors that can come with extra features, such as <i>Microsoft's Visual Studio Code</i>. 
+         </p>
+         <p>
+            For learning purposes and uniformity, this lecture and following lectures will use Vim. The reason for using Vim is because it's compatible with all operating systems, it's still relevant for today, and it's open-source software. Also, Vim is a program that comes integrated with every OS's terminal. The terminal is an important part of the programming environment that will be examined next. 
          </p>
          
+         <h3>The Terminal</h3>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/PowerShell_LinuxTerm_cmd.png" class="medium align_left"/>
-            The <b>terminal</b> is a text interface. It looks like a simple window with a couple of characters and a blinking cursor. All recent operating systems have a terminal. Unfortunately, the terminal by itself isn't useful, which is why there are shells. A <b>shell</b> is a program - also known as a <b>command-line interpreter</b> - that gives a user access to the operating system services by providing a list of commands the user can input in the terminal. There are many shells that can be used with the terminal. Some popular ones include <i>Bash</i>, <i>PowerShell</i>, and <i>Command Prompt (cmd)</i>. Caution, the shell isn't a visible application, it works in the background only giving hints of its existence through the terminal and its commands. Together, they allow users to access command-line applications (like Vim), manipulate files, install other tools, and other services a programmer needs.   
+            The <b>terminal</b> is a text interface. It looks like a simple window with a couple of characters and a blinking cursor. All operating systems have a terminal. Unfortunately, the terminal by itself isn't useful, which is why there are shells. A <b>shell</b> is a program - also known as a <b>command-line interpreter</b> - that gives a user access to the operating system services by providing a list of commands the user can input in the terminal. There are many shells that can be used with the terminal. Some popular ones include <i>Bash</i>, <i>PowerShell</i>, and <i>Command Prompt (cmd)</i>. Caution, the shell isn't a visible application, it works in the background only giving hints of its existence through the terminal and its commands. Together, they allow users to access command-line applications (like Vim), manipulate files, install other tools, and other services a programmer needs.   
          </p>
          <p>   
             For learning purposes, this lecture and future lectures will use the terminal along with bash. Both Linux OS and MacOS come with Bash shells in the terminal. Windows users need to take an extra step by installing <i>Windows Subsystem for Linux</i> (WSL) using the guide on the Microsoft <a href = "https://docs.microsoft.com/en-us/windows/wsl/install" target = "_blank" class = "lecture">website</a>. WSL creates a Linux environment on a Windows system, allowing user to execute Bash commands on the terminal and more. For those who don't want to install WSL, it is possible to use cmd and Notepad, but additional research is required. ChromeOS users have the terminal and Bash once they enable the Linux Environment. With the terminal and Bash, it is possible to write and store code. Though, to have the program run, the terminal needs to install a compiler. 
          </p>
          
+         <h3>The Compiler</h3>
          <p>
-            A <b>compiler</b> is software that translates high-level language (like C++) into low level language (such as assembly) for the system to understand. One of the most popular compilers is the GNU C++ Compiler - also known as g++ - and is what this lecture will use to help translate code. It is easy to install one within the terminal, and later sections will explain the installation process. Having to do all these steps can be a hassle, fortunately for some there are applications that simplify this process, allowing them to code right away. 
+            A <b>compiler</b> is software that translates a high-level language (like C++) into low a level language (such as assembly) for the system to understand. One of the most popular compilers is the GNU C++ Compiler - also known as g++ - and is what this lecture will use to help translate code. It is easy to install one within the terminal, and later sections will explain the installation process. It's great to finally have an executable file, but what if something goes wrong? Having a debugger can help reduce time in finding problems.
+         </p>
+
+         <h3>The Debugger</h3>
+         <p>   
+            Debuggers assist the programmer in finding problems within the code. For learning puposes we will use gdb which is the GNU Debugger that can be installed within the terminal as well. Later sections will show commands and how to install it. To some people, all these steps can be a hassle, fortunately there are applications that simplify this process, allowing them to code right away. 
          </p>
          
+         <h3>Integrated Development Environment (IDE)</h3>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/Visual_Studio_pic.png" class="medium align_right"/> 
-            <i>Integrated development environments</i> (IDE)s are applications that come with the same equipment that editors and terminals have, and then some. Warning, some of them state that they are free to use under certain conditions, like Microsoft's Visual Studio - not to get confused with Microsoft's Visual Studio Code which is just the editor. Basically, the software can only be used for studying purposes, and programmers can't make a profit unless they buy the business versions. While text editors and terminals are open source (FREE!). Companies like free, people like free, so it's best to follow the practices. Before writing any code, it is essential to understand what is written. 
+            <i>Integrated development environments</i> are applications that come with the same equipment that editors and terminals have, and then some. Warning, some of them state that they are free to use under certain conditions, like Microsoft's Visual Studio - not to get confused with Microsoft's Visual Studio Code which is just the editor. Basically, the software can only be for individual use, and programmers need to buy the business versions if they plan to work with groups. While text editors, terminals, and the tools used in these lectures are open source (FREE!). Companies like free, people like free, so it's best to follow the practices. Before writing any code, it is essential to understand what is written. 
          </p>
+
          <h2>The Basic Structure of Any Code</h2>
          <p>
-            Here is a simple HelloWorld program which contains a couple lines of code. It provides the fundamental structure of how every C++ program is built. C++ is case-sensitive. For example, the key term <i>return</i> is different from the word Return. It also has a free-form layout, so space and line breaks are ignored during compilation. Caution, compiler doesn't ignore the content between line breaks. For example, "s t d" is interpreted as the letters s, t, and d while "std" is interpreted as the keyword <i>std</i>. Still, a programmer can write each symbol, keyword, integer, and string - a collection of characters encased with double quotation marks ("") - on their own line, and it will still compile like the code below. The following will explain each line in detail.  
+            Here is a simple HelloWorld program which contains a couple lines of code. It provides the fundamental structure of how every C++ program is built. C++ is <i>case-sensitive</i>, for example, the keyword <code class="par">return</code> is different from the word Return. It also has a <i>free-form layout</i>, so space and line breaks are ignored during compilation. Caution, compiler doesn't ignore the content between line breaks and spaces. For example, "s t d" is interpreted as the letters s, t, and d while "std" is interpreted as the namespace called <code class="par">std</code> (more on that later). Still, a programmer can write each symbol, literal, identifier, and more on their own line, and it will still compile like the code below. To clarify, <i>literals</i> are the most fundamental values, like words or numbers. <i>Identifiers</i> are names that describe variables, functions, namespaces, objects, classes, and more; all of which will be discussed throughout the course. From here on, the lectures will use the Standard Library's files to create more complex code. Later sections will show how to install the Standard Library. For now, the following will explain each line in detail.
          </p>
          <code class="example" id="HelloWorld">
-            1 #include &lt;iostream&gt; <br />
-            2 <br />
-            3 using namespace std; <br />
-            4 <br />
-            5 int main() <br />
-            6 {<br />
-            7 cout &lt;&lt; "Hello World!\n";<br />
-            8 return 0;<br />
-            9 }<br />
+            1 //HelloWorld.cpp
+            2 #include &lt;iostream&gt;
+            3 
+            4 using namespace std;
+            5 
+            6 int main()
+            7 {
+            8   cout &lt;&lt; "Hello World!\n";
+            9   return 0;
+           10 }
          </code>
+
+         <h3>//HelloWorld.cpp</h3>
+         <p>
+            The first line is a comment describing the file's name. Comments are one or more lines of text ignored by the compiler. They are used for documentation purposes which help users understand the program. There are two types of comments a programmer can use: single-line comments and multi-line comments.
+         </p>
+         <code class="syntax">
+            // Single-line comment
+
+            /*
+              Multi-line comment
+            */
+         </code>
+         <p>
+            Single-line comments are denoted by the two forward slashes //. Anything after // that's on the same line is ignored by the compiler. The second type is the multi-line comment, and is denoted by /*...*/. Anything between the symbols /*...*/ are ignored by the compiler and can span multiple lines. 
+         </p>
 
          <h3>#include &lt;iostream&gt;</h3>
          <p>
-            On line 1, there is the <i>#include</i> directive, which tells the compiler to look at the contents of the <i>iostream</i> header file that is within the less-than operator (&lt;) and greater-than operator (&gt;). The iostream file contains a list of input and output commands to query the user for information, or to display information to the user. This file will be examined in more detail in the stream manipulation lecture. Note, to use multiple header files in C++, each one needs a #include directives which can span multiple lines in the beginning of a program.   
+            On line 1, the <code class="par">#include</code> is a type of <i>preprocessing directive</i> which tells the compiler to look at and incorporate the contents of the <code class="par">iostream</code> <i>header file</i> before compiling HelloWorld.cpp. 
+         </p>
+         <p>   
+            Preprocessing directives, in a general sense, provide rules for the compiler to follow before compiling the current source file. Later lectures will cover more preprocessing directives. Header files provide a list of identifiers for programmers to implement in their code. Future lectures will discuss string manipulation in more detail. Note, header files can either be user defined (within double quotations "") or part of a library (which are encapsulated in the &lt;...&gt; symbols). In this section we will identify the lines that use such tools from the <code class=par>iostream</code> header file. 
+         </p>
+         <p>
+            More specifically, the header file <code class="par">iostream</code> is a type of file from the standard library. This file contains a list of input and output identifiers and operators that we can use. For now, keep in mind that iostream is just one of the many files existing in the standard library. Note, to use multiple header files in C++, each one needs a #include directives which can span multiple lines in the beginning of a program.   
          </p>
          <h3>using namespace std;</h3>
          <p>
-            Line 3 tells the compiler to use the standard name space to identify keywords in the programmer's code that are a part of the header file's list of commands. An example would be the keyword <i>cout</i>, since it is a part of the iostream's list of commands. It is possible to override the functionality of key terms in the program by calling a different name space, but due to learning circumstances, these lectures will use the standard.
+            The statement on line 4 is a using-directive which allows the source file to use identifiers from the namespace called <code class="par">std</code>. The namespace called <code class="par">std</code> can be found within any of the header files in the standard library. An example can be seen by looking at the synopsis of <code class="par">iostream</code> on the cppreference <a href="https://en.cppreference.com/w/cpp/header/iostream" target="_blank" class="lecture">website</a>. In the synopsis there is a declaration of the namespace with the content between the {...}. The main purpose for a namespace is to avoid naming conflicts in the case where multiple identifiers have the same name, but different values. For studying purposes, this course will only use <code class="par">std</code> throughout. Besides namespaces, a statement is similar to a sentence, where the semicolon is like a period defining the end of a sentence. 
          </p>
          <h3>int main()</h3>
          <p>

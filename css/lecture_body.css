@@ -39,11 +39,11 @@ body.lecture {
  code.example {
     font-family: "Ubuntu Mono", "Major Mono Display", sans-serif;
     display: block;
+    white-space: pre-wrap;
     background-color: #F25C5C;
     color: #012326;
     font-size: 125%;
     border-radius: 10px;
-    padding: 1%;
     margin-top: 1%;
     margin-left: 5%;
     margin-right: 5%;
@@ -52,13 +52,22 @@ body.lecture {
  code.syntax {
    font-family: "Ubuntu Mono", "Major Mono Display", sans-serif;
    display: block;
+   white-space: pre-wrap;
    background-color: #BBF2E2;
    color: #012326;
    font-size: 125%;
    border-radius: 10px;
-   padding: 1%;
    margin-left: 5%;
    margin-right: 5%;
+ }
+
+ code.par {
+   font-family: "Ubuntu Mono", "Major Mono Display", sans-serif;
+   background-color: #BBF2E2;
+   color: #012326;
+   font-size: 115%;
+   border-radius: 10px;
+   padding: .25%;
  }
 
  table {
