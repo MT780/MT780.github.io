@@ -47,7 +47,7 @@ div.non_header_marker li{
  }
 
 
-.actual_body h1, h2, h3, h4 {
+.actual_body h1, h2, h3, h4, h5 {
    margin-left: 5%;
    margin-right: 5%;
 }
@@ -65,7 +65,7 @@ div.non_header_marker li{
 p {
    font-size: 115%;
    min-width: 25%;
-   margin: 5%;
+   margin: 2% 5%;
    line-height: 1.75em;
    word-spacing: .10em;
    overflow: hidden;

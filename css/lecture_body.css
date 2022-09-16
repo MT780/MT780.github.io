@@ -47,6 +47,7 @@ body.lecture {
     margin-top: 1%;
     margin-left: 5%;
     margin-right: 5%;
+    padding-left: 1%;
  }
 
  code.syntax {
@@ -59,11 +60,12 @@ body.lecture {
    border-radius: 10px;
    margin-left: 5%;
    margin-right: 5%;
+   padding-left: 1%;
  }
 
  code.par {
    font-family: "Ubuntu Mono", "Major Mono Display", sans-serif;
-   background-color: #BBF2E2;
+   background-color: #F25C5C;
    color: #012326;
    font-size: 115%;
    border-radius: 10px;
@@ -85,6 +87,10 @@ body.lecture {
    text-align: center;
  }
 
+ ol {
+   font-size: 115%;
+   margin-left: 5%;
+ }
  a.lecture:link, a.lecture:visited {
    text-decoration: none;
    color: #F25C5C;

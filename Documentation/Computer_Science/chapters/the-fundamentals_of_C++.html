@@ -82,17 +82,18 @@
          <p>
             Here is a simple HelloWorld program which contains a couple lines of code. It provides the fundamental structure of how every C++ program is built. C++ is <i>case-sensitive</i>, for example, the keyword <code class="par">return</code> is different from the word Return. It also has a <i>free-form layout</i>, so space and line breaks are ignored during compilation. Caution, compiler doesn't ignore the content between line breaks and spaces. For example, "s t d" is interpreted as the letters s, t, and d while "std" is interpreted as the namespace called <code class="par">std</code> (more on that later). Still, a programmer can write each symbol, literal, identifier, and more on their own line, and it will still compile like the code below. To clarify, <i>literals</i> are the most fundamental values, like words or numbers. <i>Identifiers</i> are names that describe variables, functions, namespaces, objects, classes, and more; all of which will be discussed throughout the course. From here on, the lectures will use the Standard Library's files to create more complex code. Later sections will show how to install the Standard Library. For now, the following will explain each line in detail.
          </p>
-         <code class="example" id="HelloWorld">
-            1 //HelloWorld.cpp
-            2 #include &lt;iostream&gt;
-            3 
-            4 using namespace std;
-            5 
-            6 int main()
-            7 {
-            8   cout &lt;&lt; "Hello World!\n";
-            9   return 0;
-           10 }
+         <code class="example" id="HelloWorld"> 
+ 1 //HelloWorld.cpp 
+ 2 #include &lt;iostream&gt;
+ 3 
+ 4 using namespace std;
+ 5 
+ 6 int main()
+ 7 {
+ 8   cout &lt;&lt; "Hello World!\n";
+ 9   return 0;
+10 }
+
          </code>
 
          <h3>//HelloWorld.cpp</h3>
@@ -100,11 +101,11 @@
             The first line is a comment describing the file's name. Comments are one or more lines of text ignored by the compiler. They are used for documentation purposes which help users understand the program. There are two types of comments a programmer can use: single-line comments and multi-line comments.
          </p>
          <code class="syntax">
-            // Single-line comment
+// Single-line comment
 
-            /*
-              Multi-line comment
-            */
+/*
+Multi-line comment
+*/
          </code>
          <p>
             Single-line comments are denoted by the two forward slashes //. Anything after // that's on the same line is ignored by the compiler. The second type is the multi-line comment, and is denoted by /*...*/. Anything between the symbols /*...*/ are ignored by the compiler and can span multiple lines. 
@@ -126,19 +127,25 @@
          </p>
          <h3>int main()</h3>
          <p>
-            Let's look at the following statement on line 5. The <i>main()</i> is a function for the program. Every program has a main function and can have additional functions. Each function carries out a process, which consist of code. The parentheses are where we can store parameters - additional instructions for the function to use - though since this is a simple program, it is left empty. Functions will be explained in future lectures. Finally, the keyword <i>int</i> is called a data type. This specific data type says that the main function should return an integer.
+            The 6th line creates function called main that should return an integer. Every program has a main function and can have additional functions. Each function carries out a process, which consist of code. The parentheses are where we can store parameters - additional information for the function to use - though since this is a simple program, it is left empty. Functions will be explained in future lectures. Finally, the identifier <code class="par">int</code> is called a data type. This specific data type says that the main function should return an integer.
          </p>
          <h3>{ ... }</h3>
          <p>
-            The curly brackets on lines 6 and 9 help identify where the code of the main function begins and ends. The curly brackets along with the content inside is considered a <i>block statement</i>. This is one of the many locations where programmers will write their code.
+            The curly brackets and the content between lines 7 and 10 is considered a <i>block statement</i> and it defines the <i>scope</i> of the content within the main function. One of the main purposes of a scope is that its a preventative measure. It limits the readability of its content, only giving access when permited by the programmer. Anything outside the function's scope cannot use its content directly, and same applies to the function as it can't access anything outside its scope directly. However, nested scopes can access outer scopes. More will be explained as lectures show examples. 
          </p>
          <h3>cout &lt;&lt; "Hello World!\n";</h3>
          <p>
-            The code above uses the keyword <i>cout</i>, followed by two less-than operators (&lt;&lt;) to send anything on the right side of the operators to the terminal. The part "Hello World!\n" is a <i>string</i> value that is sent and displayed in the terminal. Remember, a string value is a combination of characters surrounded by double quotation marks (""). The double quotation marks help the compiler distinguish a string value from the surrounding code. The <i>escape sequence</i>, newline (\n), is considered one character according to the compiler. It tells the compiler to break from the existing line, and to start on a new line in the terminal. All escape sequences start with a backslash (\), and future lecture will add to the list of escape sequences. The semicolon (;) is like a period and symbolizes the end of a statement.
+            Line 8 sends the content within "" - known as a <i>string</i> - to the terminal to be displayed, using the command <code class="par">cout &lt;&lt;</code>. More specically, a string is a combination of characters like symbols, letters, and <i>escape sequences</i>. Escape sequences are denoted by the backslash (\), and they tell the compiler to do certain tasks. For example, the <i>new line</i> escape sequence <code class="par">\n</code>, like the name suggests, tells the compiler to create a new line and start from there. Keep in mind that even though escape sequences are two character, the compiler sees it as one. More escape sequences will be touched upon in later lectures.
+         </p>
+         <p>
+            To transfer this data to be visually displayed, the programmer uses the <i>insertion operator</i> <code class="par">&lt;&lt;</code>. The insertion operator inserts data in the order it was recieved to an output stream object to handle the rest. The operator is referenced in <i>&lt;iostream&gt;</i>. Keep in mind that it is an overloaded term, which will be discussed in the overloading lecture. 
+         </p>
+         <p>
+            The object the insertion operator sends the data to is <code class="par">cout</code>. This object controls output to a <i>stream buffer</i>. A stream buffer is another object, except this object performs all readding and writing to the terminal. Both the stream buffer and <code class="par">cout</code> are referenced in the iostream file.
          </p>
          <h3>return 0;</h3>
          <p>
-            Remember how I said the main function expects an integer to be returned, well this is it. On line 8, the compiler says to return 0. The digit 0 is considered a flag, it signals the compiler that there were no errors in the program, and that it can be terminated. However, if there are errors, the terminal will provide a long list of what seems like random words at first, but it is actually important information to fix the code.
+            Remember how I said the main function expects an integer to be returned, well this is it. The compiler says to return 0. The digit 0 is considered a flag, it signals the compiler that there were no errors in the program, and that it can be terminated. However, if there are errors, the terminal will provide a long list of what seems like random words at first, but it is actually important information to fix the code.
          </p>
          <h2>Errors</h2>
          <p>
@@ -155,7 +162,7 @@
 
          <h4>pwd Command</h4>
          <code class="syntax"> 
-            $ pwd
+$ pwd
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/pwd_cmd.png" class="small"/> <br /> 
@@ -164,7 +171,7 @@
 
          <h4>ls Command</h4>
          <code class="syntax">
-            $ ls
+$ ls
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/ls_cmd.png" class="small" /> <br />
@@ -173,9 +180,9 @@
 
          <h4>cd Command</h4>
          <code class="syntax">
-            $ cd directory_name <br />
-            $ cd .. <br />
-            $ cd <br />
+$ cd directory_name 
+$ cd .. 
+$ cd 
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/cd_cmd.png" class="small" /> <br />
@@ -184,7 +191,7 @@
 
          <h4>mkdir Command</h4>
          <code class="syntax">
-            $ mkdir directory_name
+$ mkdir directory_name
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/mkdir_cmd.png" class="small" /> <br />
@@ -193,7 +200,7 @@
 
          <h4>vim Command</h4>
          <code class="syntax">
-            $ vim file_name.cpp
+$ vim file_name.cpp
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/vim_cmd.png" class="small" /> <br />
@@ -209,9 +216,100 @@
             Remember, Vim is an open-source editor. It comes with some distributors of Linux like Ubuntu, but if it's not installed, the terminal will complain and suggest installing it using whatever command it provides.
          </p> 
 
+         <h4>gdb Command</h4>
+         <code class="syntax">
+$ gdb file_name
+         </code>
+         <p>
+            Accesses the debugger for a file that was compiled with debugging in mind. Once in the debugger, you are  able turn the following commands.
+         </p>
+         <h5>run</h5>
+         <code class="syntax">
+(gdb) run para_1 ... para_n
+         </code>
+         <p>
+            Runs program normally and can use additional arguments if needed.
+         </p>
+
+         <h5>b</h5>
+         <code class="syntax">
+(gdb) b param_1
+         </code>
+         <p>
+            Sets a breakpoint by provideing: a function name, a line number, or a class member.
+         </p>
+
+         <h5>info b</h5>
+         <code class="syntax">
+(gdb) info b
+         </code>
+         <p>
+            List all current breakpoints that are activated.
+         </p>
+
+         <h5>delete</h5>
+         <code class="syntax">
+(gdb) delete param_1 ... param_n
+         </code>
+         <p>
+            Deletes the specified breakpoints
+         </p>
+
+         <h5>next</h5>
+         <code class="syntax">
+(gdb) next
+         </code>
+         <p>
+            Executes the program one statement at a time, starting at the breakpoint. Useful to figure out on the surface level. 
+         </p>
+
+         <h5>step</h5>
+         <code class="syntax">
+(gdb) step
+         </code>
+         <p>
+            If one statement references a process elsewhere, use this command to step into that process. Useful when program is trying to access another function or class elsewhere.
+         </p>
+
+         <h5>print</h5>
+         <code class="syntax">
+(gdb) print var_1 ... var_n
+         </code>
+         <p>
+            prints the value that is specified. If you want to check the current value of certain variables.
+         </p>
+
+         <h5>where</h5>
+         <code class="syntax">
+(gdb) where
+         </code>
+         <p>
+            Specifies information about your location in the process. Can easily get lost, so this reminds you.  
+         </p>
+
+         <h5>frame</h5>
+         <code class="syntax">
+(gdb) frame
+         </code>
+         <p>
+            Shows values of variables local to the calling function.
+         </p>
+
+         <h5>q</h5>
+         <code class="syntax">
+(gdb) q
+         </code>
+         <p>
+            The command exits the debugger.
+         </p>
+
+         <p>
+            These are just a few of the many commands the debugger uses, but they are essential.
+         </p>
+
          <h4>rmdir Command</h4>
          <code class="syntax">
-            $ rmdir directory_name
+$ rmdir directory_name
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/rmdir_cmd.png" class="small" /> <br />
@@ -220,7 +318,7 @@
 
          <h4>rm Command</h4>
          <code class="syntax">
-            $ rm file_name
+$ rm file_name
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/rm_cmd.png" class="small" /> <br />
@@ -229,11 +327,18 @@
 
          <h4>sudo Command</h4>
          <code class="syntax">
-            $ sudo ...
+$ sudo ...
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/sudo_cmd.png" class="small" /> <br />
             This command gives administrative access over operations. Any commands with sudo tagged onto it will initially ask for a password before doing its task, so make sure to remember the password. Knowing sudo, will allow users to update and install packages.
+         </p>
+         <h4>tmux</h4>
+         <code class="syntax">
+$ tmux
+         </code>
+         <p>
+            Starts an environment where you can have multiple terminals running. To enter a tmux command first enter CTRL+b. Afterwards it will expect an order. For example, to split the terminal horizontally, enter SHIFT+5. To split the terminal vertically, enter SHIFT+'.To traverse any of the windows simply press any of the arrow keys. Keep in mind that you have to enter CTRL+b every time you want to execute a tmux command. 
          </p>
          <p>
             To summarize, the following is a list of the commands that were reviewed during this lecture.
@@ -264,6 +369,10 @@
                <td>Creates and accesses the user defined C++ file</td>
             </tr>
             <tr>
+               <td>gdb</td>
+               <td>Accesses the debugger for a file that was compiled with debugging in mind</td>
+            </tr>
+            <tr>
                <td>rmdir</td>
                <td>Removes a subdirectory in the current directory</td>
             </tr>
@@ -282,94 +391,127 @@
          <p>
             To avoid issues when installing the compiler, you need to check for updates. To do this, there are a set of instructions to follow. First, update the package list by entering the following command:
          </p>
-         <code class="example">
-            $ sudo apt-get update
-         </code>
+         <ol>
+            <li>Updated package list.</li>
+            <code class="par">$ sudo apt-get update</code>
+            <ul>
+               <li>The command is part of the Advanced Package Tool (APT) that helps get updates on the current packages.</li> 
+               <li>Packages are just another way to say applications or software.</li>
+            </ul>
+            <li>Upgrade package list.</li>
+            <code class="par">$ sudo apt-get upgrade</code>
+            <li>Upgrade critical packages while cleaning up unnecessary packages.</li>
+            <code class="par">$ sudo apt-get dist-upgrade</code>
+         </ol>
          <p>
-            The command "apt-get update" is part of the Advanced Package Tool (APT) that helps manage software. In this case, the command above is trying to get updates on the current packages to allow users to upgrade to the proper software. Packages are just another way to say applications or software. To upgrade, type the following in the terminal:
-         </p>
-         <code class="example">
-            $ sudo apt-get upgrade
-         </code>
-         <p>
-            The last step ensures critical packages are upgraded, while cleaning up unnecessary packages. Type the following:
-         </p>
-         <code class="example">
-            $ sudo apt-get dist-upgrade
-         </code>
-         <p>
-            If successful, everything should be up to date. The next step is installing the compiler
+            If using sudo for the first time when starting up the system, it is possible that you must enter a password. Note, for chromeOS and Windows, the password is the one you created when enabling Linux. For MacOS and Linux user the password is just the regular one you log in with. Also, enter the character (y) if it is asking you for permission to upgrade. If successful, everything should be up to date. The next step is installing the compiler
          </p>
 
-         <h3>Installing Compiler</h3>
+         <h3>Installing Compiler and Debugger</h3>
          <p>
-            There are two methods to download the package, but for this instance, use the build-essential route since it includes other key features like: libraries, debuggers, and the compiler itself. To do this, type the following:
+            There are two methods to download the package, but for this instance, use the build-essential route since it includes other key features like: libraries, debugger, and the compiler itself. To do this, type the following:
          </p>
          <code class="example">
-            $ sudo apt install build-essential
+$ sudo apt install build-essential
          </code>
          <p>
             Afterwards, check to see if it is installed by entering:
          </p>
          <code class="example">
-            $ g++ --version
+$ g++ --version
          </code>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/gpp_version.png" class="medium" /> <br />
-            If you see something like the image above, then the compiler has been successfully installed. The next step is to write a program. 
+            If you see something like the image above, then the compiler has been successfully installed. Note, for more information on how to use g++ flags, enter the following command.
          </p>
+         <code class="example">
+$ g++ --help
+         </code>
+         <p>
+            This will provide the basics information for flags used in the following section. Before going on to coding, first check if the gdb program is installed by entering the next command.
+         </p>
+         <code class="example">
+$ gdb -help
+         </code>
+         <p>
+            If successful, it will give you a list of instructions, otherwise install gdb program by entering the following.
+         </p>
+         <code class="example">
+$ sudo apt install gdb
+         </code>
+         <p>Once everything is installed, the next step is to write code.</p>
+
          <h2>Writing, Compiling, and Running Code</h2>
          <p>
-            To begin, set up a user defined directory to store programs, in this case call it "Programs". 
+            To begin: set up a user defined directory to store programs, in this case call it "Programs". 
          </p>
-         <code class="example">
-            $ mkdir Programs
-         </code>
-         <p>
-            After creating a directory, access it with the cd command.
-         </p>
-         <code class="example">
-            $ cd Programs
-         </code>
-         <p>
-            Once inside, begin creating a program file. Use the vim command and call the file "HelloWorld.cpp".
-         </p>
-         <code class="example">
-            $ vim HelloWorld.cpp
-         </code>
-         <p>
-            Once the text editor opens, remember to hit the (i) key to begin insert mode. Type the Hello World <a href="#HelloWorld" class="lecture">example</a> from the beginning of the lecture. Once completed, save the file by getting out of insert mode and type the save quick command (:wq).
-         </p>
-         <p>
-            After exiting the editor, begin compiling the file. Like the terminal and the editor, g++ has its own unique commands. The first step is to translate the (.cpp) file into an object file; it's a file with the extension (.o) attached to it. To clarify, the object file contains machine level code, which is something the system can understand. To start the process type:
-         </p>
-         <code class="syntax">
-            $ g++ -c file_name.cpp
-         </code>
-         <code class="example">
-            $ g++ -c HelloWorld.cpp
-         </code>
-         <p>
-            Once the object file is created, it will be shown in the current directory. Use command (ls) to view the new file. Notice how it has the same name as the C++ file, this is normal. At this point a syntax error may show instead of a file. The error's text in the terminal will identify the location of the error. Simply go back and edit the file. If successful, the next step is to name and create an executable file. For C++, the executable file has a (.out) extension. This file will run teh program and execute any output from the program. Use the following example to create it:
-         </p>
-         <code class="syntax">
-            $ g++ -o executable_file_name file_name.cpp
-         </code>
-         <code class="example">
-            $ g++ -o HelloWorld HelloWorld.cpp
-         </code>
-         <p>
-            Typing the command (ls) will show the updated contents of the current directory. Notice how there is no extension with this file. To run it, use the dot-forward-slash (./) to denote the current directory with the name of the executable file attached like so:
-         </p>
-         <code class="syntax">
-            $ ./executable_file_name
-         </code>
-         <code class="example">
-            $ ./HelloWorld 
-         </code>
+         <ol>
+            <li>Make a specific directory for programs, in this case call it <i>Programs</i></li>
+            <code class="par">$ mkdir Programs</code>
+            <li>After creating a directory, access it with the cd command.</li>
+            <code class="par">$ cd Programs</code>
+            <li>Create and access a HelloWorld.cpp file using vim.</li>
+            <code class="par">$ vim HelloWorld.cpp</code>
+            <li>Write the <a href="#HelloWorld" class="lecture">example</a> from The Basic Structure of Code section into your code.</li>
+            <ul>
+               <li>Remember to enter the character (i) to begin typing</li>
+               <li>When done hit the ESC key and enter the <code class="par">:wq</code> command to save and quit.</li>
+            </ul>
+            <li>Begin compiling using the following command.</li>
+            <code class="par">g++ -c HelloWorld.cpp</code>
+            <ul>
+               <li>The flag -c compiles and assembles the program (.cpp) in an object file (.o).</li>
+               <li>Remember, this file is considered a low level language that the computer can understand and run.
+               </li>
+               <li>At this point a syntax error may show instead of a file. The error's text in the terminal will identify the location of the error. Simply repeat steps 4-6.</li>
+            </ul>
+            <li>Examine the content of the folder to find an object file</li>
+            <code class="par">ls</code>
+            <ul>
+               <li>Notice how it has the same name as the C++ file.</li>
+            </ul>
+            <li>Create executable file using the object file created.</li>
+            <code class="par">$ g++ -o HelloWorld HelloWorld.cpp</code>
+            <ul>
+               <li>By default, the executable file has a (.out) extension, but can't see it when you declare your name.</li>
+            </ul>
+            <li>Enter executable file using ./… to run it.</li>
+            <code class="par">$ ./HelloWorld</code>
+         </ol>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/output.png" class="small" /> <br />
-            Once submitted, the output will be displayed on the next line in the terminal. If it runs and there are issues with the output, then it is considered a logical error. To fix this, go back into the file and carefully look for the problem. Once fixed, use the last 3 steps to compile and execute the program again. Congratulations, you are officially a programmer! If you wish to continue, please read the next section.
+            Once submitted, the output will be displayed on the next line in the terminal. If it runs and there are issues with the output, then it is considered a logical error. To fix this, we will use this opportunity to introduce the debugger. 
+         </p>
+
+         <h3>Debugging</h3>
+         <p>
+            The following is one of the many ways to aproach the issue.
+         </p>
+         <ol>
+            <li>Enter <code class="par">tmux</code> to create a session to split terminal.</li>
+            <li>Enter CTRL+B followed by either vertical split SHIFT+5 or horizontal split SHIFT+'.</li>
+            <ul>
+               <li>To traverse through either of the windows simply type CTRL+B followed by any directions from the arrow keys.</li>
+            </ul>
+            <li>On one window open up the program.</li>
+            <li>On the other window compile the program, except use the -g flag instead.</li>
+            <code class="par">g++ -c HelloWorld.cpp</code>
+            <ul>
+               <li>This will compile and create a generic executable file with C++ debugger in mind</li>
+            </ul>
+            <li>Enter the command to use the debugger with the executable file.</li>
+            <code class="par">gdb a.out</code>
+            <li>Create a break point at the beginning of the program, or at the area where you think the problem lies.</li>
+            <li>Run the program so it stops at the breakpoint.</li>
+            <li>Enter the command next to go through statement by statement.</li>
+            <ul>
+               <li>The program will display information like the current function name, the file's name, the output (if there is one), current line, and any syntax on that line</li>
+            </ul>
+            <li>Once you found what the issue is you can easily fix it in the other window and compile the program again to run it normally.</li>
+         </ol>
+
+         <p>
+            Keep in mind, you can technically skip using the -c and -o flag, but in some scenarios you will want to name the executable file. For now, we will compile programs using the -g flag to make life easier. Congratulations, you are officially a programmer! If you wish to continue, please read the next section.
          </p>
       </div>
    </body>
