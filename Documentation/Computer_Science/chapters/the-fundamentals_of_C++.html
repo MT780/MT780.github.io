@@ -59,7 +59,7 @@
             The <b>terminal</b> is a text interface. It looks like a simple window with a couple of characters and a blinking cursor. All operating systems have a terminal. Unfortunately, the terminal by itself isn't useful, which is why there are shells. A <b>shell</b> is a program - also known as a <b>command-line interpreter</b> - that gives a user access to the operating system services by providing a list of commands the user can input in the terminal. There are many shells that can be used with the terminal. Some popular ones include <i>Bash</i>, <i>PowerShell</i>, and <i>Command Prompt (cmd)</i>. Caution, the shell isn't a visible application, it works in the background only giving hints of its existence through the terminal and its commands. Together, they allow users to access command-line applications (like Vim), manipulate files, install other tools, and other services a programmer needs.   
          </p>
          <p>   
-            For learning purposes, this lecture and future lectures will use the terminal along with bash. Both Linux OS and MacOS come with Bash shells in the terminal. Windows users need to take an extra step by installing <i>Windows Subsystem for Linux</i> (WSL) using the guide on the Microsoft <a href = "https://docs.microsoft.com/en-us/windows/wsl/install" target = "_blank" class = "lecture">website</a>. WSL creates a Linux environment on a Windows system, allowing user to execute Bash commands on the terminal and more. For those who don't want to install WSL, it is possible to use cmd and Notepad, but additional research is required. ChromeOS users have the terminal and Bash once they enable the Linux Environment. With the terminal and Bash, it is possible to write and store code. Though, to have the program run, the terminal needs to install a compiler. 
+            For learning purposes, this lecture and future lectures will use the terminal along with Bash. Both Linux OS and MacOS come with Bash shells in the terminal. Windows users need to take an extra step by installing <i>Windows Subsystem for Linux</i> (WSL) using the guide on the Microsoft <a href = "https://docs.microsoft.com/en-us/windows/wsl/install" target = "_blank" class = "lecture">website</a>. WSL creates a Linux environment on a Windows system, allowing user to execute Bash commands on the terminal and more. For those who don't want to install WSL, it is possible to use cmd and Notepad, but additional research is required. ChromeOS users have the terminal and Bash once they enable the Linux Environment. With the terminal and Bash, it is possible to write and store code. Though, to have the program run, the terminal needs to install a compiler. 
          </p>
          
          <h3>The Compiler</h3>
@@ -131,21 +131,21 @@ Multi-line comment
          </p>
          <h3>{ ... }</h3>
          <p>
-            The curly brackets and the content between lines 7 and 10 is considered a <i>block statement</i> and it defines the <i>scope</i> of the content within the main function. One of the main purposes of a scope is that its a preventative measure. It limits the readability of its content, only giving access when permited by the programmer. Anything outside the function's scope cannot use its content directly, and same applies to the function as it can't access anything outside its scope directly. However, nested scopes can access outer scopes. More will be explained as lectures show examples. 
+            The curly brackets and the content between lines 7 and 10 is considered a <i>block statement</i> and it defines the <b>scope</b> of the content within the main function. One of the main purposes of a scope is that its a preventative measure. It limits the readability of its content, only giving access when permited by the programmer. Anything outside the function's scope cannot use its content directly, and same applies to the function as it can't access anything outside its scope directly. However, nested scopes can access outer scopes. More will be explained as lectures show examples. 
          </p>
          <h3>cout &lt;&lt; "Hello World!\n";</h3>
          <p>
-            Line 8 sends the content within "" - known as a <i>string</i> - to the terminal to be displayed, using the command <code class="par">cout &lt;&lt;</code>. More specically, a string is a combination of characters like symbols, letters, and <i>escape sequences</i>. Escape sequences are denoted by the backslash (\), and they tell the compiler to do certain tasks. For example, the <i>new line</i> escape sequence <code class="par">\n</code>, like the name suggests, tells the compiler to create a new line and start from there. Keep in mind that even though escape sequences are two character, the compiler sees it as one. More escape sequences will be touched upon in later lectures.
+            Line 8 sends the content within "" - known as a <i>string</i> - to the terminal to be displayed, using the command <code class="par">cout &lt;&lt;</code>. More specically, a string is a combination of characters like symbols, letters, and <b>escape sequences</b>. Escape sequences are denoted by the backslash (\), and they tell the compiler to do certain tasks. For example, the <i>new line</i> escape sequence <code class="par">\n</code>, like the name suggests, tells the compiler to create a new line and start from there. Keep in mind that even though escape sequences are two character, the compiler sees it as one. More escape sequences will be touched upon in later lectures.
          </p>
          <p>
-            To transfer this data to be visually displayed, the programmer uses the <i>insertion operator</i> <code class="par">&lt;&lt;</code>. The insertion operator inserts data in the order it was recieved to an output stream object to handle the rest. The operator is referenced in <i>&lt;iostream&gt;</i>. Keep in mind that it is an overloaded term, which will be discussed in the overloading lecture. 
+            To transfer this data to be visually displayed, the programmer uses the <b>insertion operator</b> <code class="par">&lt;&lt;</code>. The insertion operator inserts data in the order it was recieved to an output stream object to handle the rest. The operator is referenced in <i>&lt;iostream&gt;</i>. Keep in mind that it is an overloaded term, which will be discussed in the overloading lecture. 
          </p>
          <p>
-            The object the insertion operator sends the data to is <code class="par">cout</code>. This object controls output to a <i>stream buffer</i>. A stream buffer is another object, except this object performs all readding and writing to the terminal. Both the stream buffer and <code class="par">cout</code> are referenced in the iostream file.
+            In this case, the output stream object that recieves the data is called <code class="par">cout</code>. This object controls output to a <b>stream buffer</b>. A stream buffer is another object, except this object performs all readding and writing to the terminal. Both the stream buffer and <code class="par">cout</code> are referenced in the iostream file.
          </p>
          <h3>return 0;</h3>
          <p>
-            Remember how I said the main function expects an integer to be returned, well this is it. The compiler says to return 0. The digit 0 is considered a flag, it signals the compiler that there were no errors in the program, and that it can be terminated. However, if there are errors, the terminal will provide a long list of what seems like random words at first, but it is actually important information to fix the code.
+            Remember how the main function expects an integer to be returned, well this is it. The compiler says to return 0. The digit 0 is considered a flag, it signals the compiler that there were no errors in the program, and that it can be terminated. However, if there are errors, the terminal will provide a long list of what seems like random words at first, but it is actually important information to fix the code.
          </p>
          <h2>Errors</h2>
          <p>
@@ -153,11 +153,11 @@ Multi-line comment
          </p>
          <h2>Preparing and Understanding the Terminal</h2>
          <p>
-            In this section I assume that you have your terminal with Bash opened and are ready for the next instructions. This lecture will try to anticipate any issues, but for further assistance please search online. For now, this lecture will go over the basic commands, updating the terminal, installing the compiler, and running code. 
+            Before using the terminal this section will go over fundamental commands. Afterwards, there will be step-by-step instructions for updating and installing tools. Finally, the lecture will end with a simple tutorial on how to run your first program. This section will try to anticipate any issues, but for further assistance please search online.
          </p>
          <h3>Commands</h3>
          <p>
-            Before writing a program, this section will go over fundamental commands and how to traverse the directory. Consider a directory as tree-like collection of files, where each directory branches to subdirectories (files within files), and where the root of the tree is usually the storage location.
+            Commands for this instance will allow the user to traverse and manipulate the directory and files. Consider a directory as tree-like collection of files, where each directory branches to subdirectories (files within files), and where the root of the tree is usually the storage location.
          </p>
 
          <h4>pwd Command</h4>
@@ -209,7 +209,55 @@ $ vim file_name.cpp
          </p>
          <p>
             <img src="../../../images/C++/the_fundamentals_of_C++/set_nmbr_cmd.png" class="small align_left"/>
-            Vim has unique commands that can be entered in the command line, located at the bottom of the window. Before typing a command, exit out of any mode. Each command starts with a colon (:). <img src="../../../images/C++/the_fundamentals_of_C++/override.png" class="small align_right"/>To know more about Vim, enter (:help) on the command line. This lecture will go over a few of the basic commands. To get line numbering, enter (:set number) in the command line. For saving files, type (:w) in the command line and press enter. To quit Vim and go back to the terminal, use the following command (:q). Note, if a file has been edited and the quit command is executed before saving, Vim will warn the user about unsaved changes. To bypass this, enter the force quit command (:q!). Warning, all progress will be lost, so the better option is to use the save and quit command (:wq).
+            Vim has unique commands that can be entered in the command line, located at the bottom of the window. Before typing a command, exit out of any mode. Each command starts with a colon (:). <img src="../../../images/C++/the_fundamentals_of_C++/override.png" class="small align_right"/>
+         </p>
+
+         <h5>Help Command</h5>
+         <code class="syntax">
+:help
+         </code>
+         <p>
+            This command provides a list of topic the user can traverse for more information. Fortunately, this lecture will go over a few of the basic commands. 
+         </p>
+
+         <h5>Set Number Command</h5>
+         <code class="syntax">
+:set number
+         </code>
+         <p>
+            Provides line number to new or preexisting code. This makes it easier to distinguish where parts of the code are. 
+         </p>
+
+         <h5>Save Command</h5>
+         <code class="syntax">
+:w
+         </code>
+         <p>
+            Saves the current state of the file. 
+         </p>
+
+         <h5>Quit Command</h5>
+         <code class="syntax">
+:q
+         </code>
+         <p>
+            Quits Vim and goes back to the terminal without saving.
+         </p>
+
+         <h5>Force Quit Command</h5>
+         <code class="syntax">
+:q!
+         </code>
+         <p>
+            Note, if a file has been edited and the quit command is executed before saving, Vim will warn the user about unsaved changes. To bypass this, enter the force quit command. Warning, anything that wasn't saved will be lost. 
+         </p>
+         
+         <h5>Save Quit Command</h5>
+         <code class="syntax">
+:wq
+         </code>
+         <p>
+            Instead of potentially loosing data, the better option is to use the save and quit command. This will save the file then exit out of Vim.
          </p>
          <p>   
             <img src="../../../images/C++/the_fundamentals_of_C++/saved_file.png" class="small align_left"/>
@@ -221,7 +269,7 @@ $ vim file_name.cpp
 $ gdb file_name
          </code>
          <p>
-            Accesses the debugger for a file that was compiled with debugging in mind. Once in the debugger, you are  able turn the following commands.
+            Accesses the debugger for a file that was compiled with debugging in mind. Just like Vim, the debugger has its own set of commands.
          </p>
          <h5>run</h5>
          <code class="syntax">
@@ -276,7 +324,7 @@ $ gdb file_name
 (gdb) print var_1 ... var_n
          </code>
          <p>
-            prints the value that is specified. If you want to check the current value of certain variables.
+            prints the value that is specified. This value can be any variable that hold data.
          </p>
 
          <h5>where</h5>
@@ -284,7 +332,7 @@ $ gdb file_name
 (gdb) where
          </code>
          <p>
-            Specifies information about your location in the process. Can easily get lost, so this reminds you.  
+            Specifies information about the current location during debugging.  
          </p>
 
          <h5>frame</h5>
@@ -338,7 +386,7 @@ $ sudo ...
 $ tmux
          </code>
          <p>
-            Starts an environment where you can have multiple terminals running. To enter a tmux command first enter CTRL+b. Afterwards it will expect an order. For example, to split the terminal horizontally, enter SHIFT+5. To split the terminal vertically, enter SHIFT+'.To traverse any of the windows simply press any of the arrow keys. Keep in mind that you have to enter CTRL+b every time you want to execute a tmux command. 
+            Starts an environment where multiple terminals can run. To enter a tmux command first enter CTRL+b. Afterwards it will expect an order. For example, to split the terminal horizontally, enter SHIFT+5. To split the terminal vertically, enter SHIFT+'.To traverse any of the windows simply press any of the arrow keys. Keep in mind to enter CTRL+b every time before entering a tmux command. 
          </p>
          <p>
             To summarize, the following is a list of the commands that were reviewed during this lecture.
@@ -384,12 +432,16 @@ $ tmux
                <td>sudo</td>
                <td>Gives administrative access over operations</td>
             </tr>
+            <tr>
+               <td>tmux</td>
+               <td>Starts an environment where multiple terminals can run</td>
+            </tr>
          </table>
 
 
          <h3>Updating</h3>
          <p>
-            To avoid issues when installing the compiler, you need to check for updates. To do this, there are a set of instructions to follow. First, update the package list by entering the following command:
+            To avoid issues when installing the compiler, check for updates. To do this, there are a set of instructions to follow.
          </p>
          <ol>
             <li>Updated package list.</li>
@@ -404,7 +456,7 @@ $ tmux
             <code class="par">$ sudo apt-get dist-upgrade</code>
          </ol>
          <p>
-            If using sudo for the first time when starting up the system, it is possible that you must enter a password. Note, for chromeOS and Windows, the password is the one you created when enabling Linux. For MacOS and Linux user the password is just the regular one you log in with. Also, enter the character (y) if it is asking you for permission to upgrade. If successful, everything should be up to date. The next step is installing the compiler
+            If using sudo for the first time when starting up the system, it will require a password. Note, for chromeOS and Windows, the password is the one created when enabling Linux. For MacOS and Linux users, the password is just the regular one that is used to log into the PC. Also, enter the character (y) if it is asks for permission to upgrade. If successful, everything should be up to date. The next step is installing the compiler.
          </p>
 
          <h3>Installing Compiler and Debugger</h3>
@@ -434,7 +486,7 @@ $ g++ --help
 $ gdb -help
          </code>
          <p>
-            If successful, it will give you a list of instructions, otherwise install gdb program by entering the following.
+            If successful, it will give a list of instructions, otherwise install gdb program by entering the following.
          </p>
          <code class="example">
 $ sudo apt install gdb
@@ -473,7 +525,7 @@ $ sudo apt install gdb
             <li>Create executable file using the object file created.</li>
             <code class="par">$ g++ -o HelloWorld HelloWorld.cpp</code>
             <ul>
-               <li>By default, the executable file has a (.out) extension, but can't see it when you declare your name.</li>
+               <li>By default, the executable file has a (.out) extension, but it can't be seen if the name was user defined.</li>
             </ul>
             <li>Enter executable file using ./… to run it.</li>
             <code class="par">$ ./HelloWorld</code>
@@ -501,17 +553,17 @@ $ sudo apt install gdb
             </ul>
             <li>Enter the command to use the debugger with the executable file.</li>
             <code class="par">gdb a.out</code>
-            <li>Create a break point at the beginning of the program, or at the area where you think the problem lies.</li>
+            <li>Create a break point at the beginning of the program, or at the area where the problem might be.</li>
             <li>Run the program so it stops at the breakpoint.</li>
             <li>Enter the command next to go through statement by statement.</li>
             <ul>
                <li>The program will display information like the current function name, the file's name, the output (if there is one), current line, and any syntax on that line</li>
             </ul>
-            <li>Once you found what the issue is you can easily fix it in the other window and compile the program again to run it normally.</li>
+            <li>Once the issue is found, fix it in the other window and compile the program again to run it normally.</li>
          </ol>
 
          <p>
-            Keep in mind, you can technically skip using the -c and -o flag, but in some scenarios you will want to name the executable file. For now, we will compile programs using the -g flag to make life easier. Congratulations, you are officially a programmer! If you wish to continue, please read the next section.
+            Keep in mind, it is possible to avoid using the -c and -o flag, but in some scenarios it is required to have a user defined name for the executable file. For future lecture, examples will be compiled using the -g flag to make life easier. Congratulations, you are officially a programmer! If you wish to continue, please read the next section.
          </p>
       </div>
    </body>
